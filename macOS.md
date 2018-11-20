@@ -15,13 +15,13 @@ To compile the iOS app, just open the Xcode project and click run. There are scr
 
 ## Further setup
 To enable local development there are a few more steps that need to be done.
-* Go to the project settings in Xcode find the `iSH` target.
-* Under `General`, change the bundle identifier to a specific identifier for you.
-* Under `Capabilities` change the name of the `App Group` and remove the old app group.
-* Go to the "iSHFileProvider" target
-* Under `General` use the same bundle identifier you created before and add `.FileProvider` to it.
-* Under `Capabilities` use the same name of the `App Group` as for the `iSH` target.
-* Go to the file `app/AppDelegate.m`.
-* Change the string in the function manager `containerURLForSecurityApplicationGroupIdentifier:` to your App Group e that you entered in the step before.
+- Go to the project settings in Xcode find the `iSH` target.
+- Under `General`, change the bundle identifier to a specific identifier for you.
+- Under `Capabilities` change the name of the `App Group` and remove the old app group.
+- Go to the "iSHFileProvider" target
+- Under `General` use the same bundle identifier you created before and add `.FileProvider` to it.
+- Under `Capabilities` use the same name of the `App Group` as for the `iSH` target.
+ Go to the file `app/AppDelegate.m`.
+- Change the string in the function manager `containerURLForSecurityApplicationGroupIdentifier:` to your App Group e that you entered in the step before.
 
 **Congratulations!** You should now have the app running!
