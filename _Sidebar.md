@@ -8,5 +8,7 @@
 **The JIT**
 
 **Troubleshooting**
+- [Troubleshooting](https://github.com/tbodt/ish/wiki/Troubleshooting)
 
 **Frequently Asked Questions**
+- [FAQ](https://github.com/tbodt/ish/wiki/FAQ)
