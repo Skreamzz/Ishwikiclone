@@ -7,3 +7,5 @@ Ideas for pages:
 * List of working and non-working programs (in addition to [the project](https://github.com/tbodt/ish/projects/7) I guess)
 * How to use debug logging (or should that go in HACKING.md?)
 * How the "JIT" actually works
+
+If you want to help out by writing documentation on iSH, go ahead and create a page. It's a wiki, after all.
