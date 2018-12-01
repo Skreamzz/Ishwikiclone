@@ -10,7 +10,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `ncurse`      | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `tput`        | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `irssi`       | No            | _Bad system call_  | iPad Air 2 (iOS 12.0.1 - 33)        |
-| `ifconfig`    | Yes           | _ioctl 0x8912 failed: Invalid argument_  | iPad Air 2 (iOS 12.0.1 - 33)  |
+| `ifconfig`    | No            | _ioctl 0x8912 failed: Invalid argument_  | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `ip`          | No            | _ip: socket(AF_NETLINK,3,0): Invalid argument_ (`ip route get 1`) | iPad Air 2 (iOS 12.0.1 - 33) |        
 | `weechat`     | No            | _Bad system call_  | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `bash`        | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
