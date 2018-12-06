@@ -27,7 +27,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `curl`        | Yes           | HTTPS too          | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `wget`        | Yes           | HTTPS too          | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `python3`     | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)  |
-| `youtube-dl`  | ?             | Infinite loading   | iPad Air 2 (iOS 12.0.1 - 33)  |
+| `youtube-dl`  | Yes           | Cannot merge video and audio because ffmpeg doesn't work yet | iPhone 8 (iOS 12.1 - 34)  |
 | `cmus`        | No            | _bind: No such file or directory_ | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `ffmpeg`      | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `emacs`       | No            | _Bad system call_  | iPad Air 2 (iOS 12.0.1 - 33)  |
