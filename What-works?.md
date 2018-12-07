@@ -29,7 +29,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `python3`     | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `youtube-dl`  | Yes           | Very slow, cannot merge audio and video (ffmpeg issue) | iPhone X (iOS 12.1.1 - 34)  |
 | `cmus`        | No            | _bind: No such file or directory_ | iPad Air 2 (iOS 12.0.1 - 33)  |
-| `ffmpeg`      | Partially     | `youtube-dl` can't merge audio and video | iPad Air 2 (iOS 12.0.1 - 33)  |
+| `ffmpeg`      | Partially     | `youtube-dl` can't merge audio and video | iPhone X (iOS 12.1.1 - 34) |
 | `emacs`       | No            | _Bad system call_  | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `openssh` (client)| Yes       |                    | iPad Air 2 (iOS 12.0.1 - 31)  |
 | `openssh` (server)| No        |                    | iPad Air 2 (iOS 12.0.1 - 31)  |
