@@ -16,6 +16,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `bash`        | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `zsh`         | Barely        | shows `\h:\w\$` with default config, _Bad system call_ after a command| iPad Air 2 (iOS 12.0.1 - 33)  |
 | `nano`        | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
+| `nvim`        | No            | _Bad system call_  | iPhone 8 (iOS 12.1 - 34)            |
 | `vim`         | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `vi`          | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `fish`        | No            | Infinite loading, can't stop | iPhone X (iOS 12.1.1 - 34)        |
@@ -39,4 +40,4 @@ If you add a new test for a package, please add a line (same if package was alre
 | `gem`         | Barely        | Runs, `gem install` gives `Bad file descriptor`. | iPhone X (iOS 12.1.1 - 34)  |
 
 Testers:
-jusdepatate, Mnpn
+jusdepatate, Mnpn, elchris414
