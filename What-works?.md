@@ -12,7 +12,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `irssi`       | No            | _Bad system call_  | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `ifconfig`    | No            | _ioctl 0x8912 failed: Invalid argument_  | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `ip`          | No            | _ip: socket(AF_NETLINK,3,0): Invalid argument_ (`ip route get 1`) | iPad Air 2 (iOS 12.0.1 - 33) |        
-| `weechat`     | No            | _Bad system call_  | iPad Air 2 (iOS 12.0.1 - 33)        |
+| `weechat`     | No            | Starts but fails  | iPhone 8 (iOS 12.1 - 35)        |
 | `bash`        | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
 | `zsh`         | Barely        | shows `\h:\w\$` with default config, _Bad system call_ after a command| iPad Air 2 (iOS 12.0.1 - 33)  |
 | `nano`        | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)        |
@@ -28,9 +28,9 @@ If you add a new test for a package, please add a line (same if package was alre
 | `curl`        | Yes           | HTTPS too          | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `wget`        | Yes           | HTTPS too          | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `python3`     | Yes           |                    | iPad Air 2 (iOS 12.0.1 - 33)  |
-| `youtube-dl`  | Yes           | Very slow, cannot merge audio and video (ffmpeg issue) | iPhone X (iOS 12.1.1 - 34)  |
+| `youtube-dl`  | Yes           | Very slow to start | iPhone 8 (iOS 12.1 - 35)  |
 | `cmus`        | No            | _bind: No such file or directory_ | iPad Air 2 (iOS 12.0.1 - 33)  |
-| `ffmpeg`      | Partially     | `youtube-dl` can't merge audio and video | iPhone X (iOS 12.1.1 - 34) |
+| `ffmpeg`      | Yes           |                    | iPhone 8 (iOS 12.1 - 35) |
 | `emacs`       | No            | _Bad system call_  | iPad Air 2 (iOS 12.0.1 - 33)  |
 | `openssh` (client)| Yes       |                    | iPad Air 2 (iOS 12.0.1 - 31)  |
 | `openssh` (server)| No        |                    | iPad Air 2 (iOS 12.0.1 - 31)  |
