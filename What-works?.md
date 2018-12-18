@@ -39,6 +39,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `irb`         | No            | Slow, displays Ruby error | iPhone X (iOS 12.1.1 - 34)  |
 | `gem`         | Barely        | Runs, `gem install` gives `Bad file descriptor`. | iPhone X (iOS 12.1.1 - 34)  |
 | `go`          | No            | Says `This program can only be run on processors with MMX support. | iPhone 8 (iOS 12.1 - 34) |
+| `mate-session`| No.           | _Bad system call_. | iPad 6th gen (iOS 12.1.1 - 37) |
 
 Testers:
 jusdepatate, Mnpn, elchris414
