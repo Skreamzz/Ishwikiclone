@@ -41,6 +41,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `go`          | No            | Says `This program can only be run on processors with MMX support. | iPhone 8 (iOS 12.1 - 34) |
 | `mate-session`| No.           | _Bad system call_. | iPad 6th gen (iOS 12.1.1 - 37) |
 | `tmux`        | No            | _lost server_ | iPad pro 2018 (iOS 12.1)|
+| `figlet`      | Yes | | iPad pro 2018 (iOS 12.1)|
+| `uptime` | Yes | | iPad pro 2018 (iOS 12.1)| 
 
 Testers:
 jusdepatate, Mnpn, elchris414
