@@ -44,3 +44,10 @@ If you add a new test for a package, please add a line (same if package was alre
 
 Testers:
 jusdepatate, Mnpn, elchris414
+
+
+Test Requests:
+If you want a specific package to be tested, please add it here including special use cases you are interested in. This makes it easier to test meaningful things.
+| Package name  | What to test / Note        | 
+| :-------------|---------------------------:|
+| `example`     | ... |                   
