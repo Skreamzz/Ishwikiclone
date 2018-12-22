@@ -43,9 +43,13 @@ If you add a new test for a package, please add a line (same if package was alre
 | `tmux`        | No            | _lost server_ | iPad pro 2018 (iOS 12.1 - 37) |
 | `figlet`      | Yes | | iPad pro 2018 (iOS 12.1 - 37)|
 | `uptime` | Yes | | iPad pro 2018 (iOS 12.1 - 37)| 
+| `links` | No | Starts, but no option to enter commands | iPad pro 2018 (iOS 12.1 - 37)| 
+| `lynx` | No | Starts, but cannot connect to its startpage | iPad pro 2018 (iOS 12.1 - 37)| 
+| `w3m` | Yes | | iPad pro 2018 (iOS 12.1 - 37)| 
+
 
 Testers:
-jusdepatate, Mnpn, elchris414
+jusdepatate, Mnpn, elchris414, JaquesBoum
 
 
 **Test Requests:**
