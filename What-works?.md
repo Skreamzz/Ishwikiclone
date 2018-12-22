@@ -52,7 +52,8 @@ Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
 
 
-**Test Requests:**
+## Test Requests
+
 If you want a specific package to be tested, please add it here including special use cases you are interested in. This makes it easier to test meaningful things.
 
 | Package name  | What to test / Note        | 
