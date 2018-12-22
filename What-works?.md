@@ -40,9 +40,9 @@ If you add a new test for a package, please add a line (same if package was alre
 | `gem`         | Barely        | Runs, `gem install` gives `Bad file descriptor`. | iPhone X (iOS 12.1.1 - 34)  |
 | `go`          | No            | Says `This program can only be run on processors with MMX support. | iPhone 8 (iOS 12.1 - 34) |
 | `mate-session`| No.           | _Bad system call_. | iPad 6th gen (iOS 12.1.1 - 37) |
-| `tmux`        | No            | _lost server_ | iPad pro 2018 (iOS 12.1)|
-| `figlet`      | Yes | | iPad pro 2018 (iOS 12.1)|
-| `uptime` | Yes | | iPad pro 2018 (iOS 12.1)| 
+| `tmux`        | No            | _lost server_ | iPad pro 2018 (iOS 12.1 - 37) |
+| `figlet`      | Yes | | iPad pro 2018 (iOS 12.1 - 37)|
+| `uptime` | Yes | | iPad pro 2018 (iOS 12.1 - 37)| 
 
 Testers:
 jusdepatate, Mnpn, elchris414
