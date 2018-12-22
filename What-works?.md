@@ -5,7 +5,7 @@ A list of what @tbodt is working on is available [here](https://github.com/tbodt
 If you add a new test for a package, please add a line (same if package was already tested). Feel free to update the device tested if the build is newer.
 
 | Package name  | Is working ?  | Why? / Note        | iSH version number |
-| :-------------|--------------:|:-------------------|:------------------------------------|
+| :-------------|--------------|:-------------------|:------------------------------------|
 | `grep`, `head`, `cut`, `wc` |Yes||33|
 | `tput` |Yes||33|
 | `irssi` |Yes|| 38 (unreleased) |
