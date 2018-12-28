@@ -40,11 +40,11 @@ If you add a new test for a package, please add a line (same if package was alre
 | `go` | No | Says `This program can only be run on processors with MMX support. |34|
 | `mate-session`| No. | _Bad system call_. |37|
 | `tmux` | No | _lost server_ |37|
-| `figlet` | Yes | |37|
-| `uptime` | Yes | |37|
-| `links` | No | Starts, but no option to enter commands |37|
-| `lynx` | Yes ||37|
-| `w3m` | Yes | |37|
+| `figlet` | Yes | |40|
+| `uptime` | Yes | |40|
+| `links` | Yes |  |40|
+| `lynx` | Yes ||40|
+| `w3m` | Yes, quits with `GC Warning: Couldn't read /proc/stat` ||40|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
