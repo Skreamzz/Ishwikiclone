@@ -19,7 +19,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `vim` | Yes ||33|
 | `vi` | Yes ||33|
 | `fish` | Yes ||38 (unreleased)|
-| `neofetch` | Yes | Memory and Uptime and broken|33|
+| `neofetch` | Yes | Memory and Uptime and broken|40|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
 | `nodejs` | No | _Bad system call_ |33|
 | `npm` | No | _Bad system call_ |33|
@@ -44,7 +44,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `uptime` | Yes | |40|
 | `links` | Yes |  |40|
 | `lynx` | Yes ||40|
-| `w3m` | Yes, quits with `GC Warning: Couldn't read /proc/stat` ||40|
+| `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat`` |40|
 |`nmap`| No | `Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307)` | 40|
 
 Testers:
