@@ -5,7 +5,7 @@ A list of what @tbodt is working on is available [here](https://github.com/tbodt
 If you add a new test for a package, please add a line (same if package was already tested). Feel free to update the device tested if the build is newer.
 
 | Package name | Is working? | Notes | iSH version number |
-|:-|-|:-|:-|
+|:-|:-|:-|:-|
 | `grep`, `head`, `cut`, `wc` |Yes||33|
 | `tput` |Yes||33|
 | `irssi` |Yes|| 38 (unreleased) |
@@ -45,6 +45,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `links` | Yes |  |40|
 | `lynx` | Yes ||40|
 | `w3m` | Yes, quits with `GC Warning: Couldn't read /proc/stat` ||40|
+|`nmap`| No | `Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307)` | 40|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
