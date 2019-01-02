@@ -15,7 +15,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `bash` | Yes || 33 |
 | `zsh` | Barely | `Bad system call` after running a command| 33 |
 | `nano` | Yes ||33|
-| `nvim` | No | _Bad system call_ |34|
+| `nvim` | Yes | |41|
 | `vim` | Yes ||33|
 | `vi` | Yes ||33|
 | `fish` | Yes ||38 (unreleased)|
