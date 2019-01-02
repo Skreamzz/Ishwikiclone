@@ -44,6 +44,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `uptime` | Yes | |40|
 | `links` | Yes |  |40|
 | `lynx` | Yes ||40|
+| `gdb` | No | Segfault, socketcall 16 |40|
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat`` |40|
 |`nmap`| No | `Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307)` | 40|
 
