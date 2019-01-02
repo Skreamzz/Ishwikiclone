@@ -21,8 +21,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `fish` | Yes ||38 (unreleased)|
 | `neofetch` | Yes | Memory and Uptime and broken|40|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
-| `nodejs` | No | _Bad system call_ |33|
-| `npm` | No | _Bad system call_ |33|
+| `nodejs` | No | Illegal instruction, socketcall 16, shared futexes |41|
+| `npm` | No | Illegal instruction, socketcall 16, shared futexes |41|
 | `yarn` | No | _Bad system call_ |33|
 | `curl` | Yes | HTTPS too |33|
 | `wget` | Yes | HTTPS too |33|
