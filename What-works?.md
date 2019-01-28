@@ -18,7 +18,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `nvim` | Yes | |41|
 | `vim` | Yes ||33|
 | `vi` | Yes ||33|
-| `fish` | Yes ||38 (unreleased)|
+| `fish` | Yes ||45|
 | `neofetch` | Yes | Memory and Uptime and broken|40|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
 | `nodejs` | No | Illegal instruction, socketcall 16, shared futexes |41|
@@ -32,14 +32,14 @@ If you add a new test for a package, please add a line (same if package was alre
 | `ffmpeg` | Yes | |35|
 | `emacs` | Yes ||36|
 | `openssh` (client)| Yes | |31|
-| `openssh` (server)| No | |31|
+| `openssh` (server)| Yes | Follow the instructions in the release notes |45|
 | `ps` | Partially | Runs, but /proc is empty. |34|
 | `ruby` | Yes ||34|
 | `irb` | Yes ||35|
 | `gem` | Yes ||38|
-| `go` | No | Says `This program can only be run on processors with MMX support. |34|
-| `mate-session`| No. | _Bad system call_. |37|
-| `tmux` | No | _lost server_ |37|
+| `go` | No | Requires the MMX instruction set. |34|
+| `mate-session`| No. | Bad system call |37|
+| `tmux` | No | lost server |37|
 | `figlet` | Yes | |40|
 | `uptime` | Yes | |40|
 | `links` | Yes |  |40|
