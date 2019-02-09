@@ -32,8 +32,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `ffmpeg` | Yes | |35|
 | `emacs` | Yes ||36|
 | `openssh` (client)| Yes | |31|
-| `openssh` (server)| Yes | Follow the instructions in the release notes |45|
-| `ps` | Partially | Runs, but /proc is empty. |34|
+| `openssh` (server)| Yes | Follow the [instructions in the wiki](Running-an-SSH-server) |45|
+| `ps` | Yes ||34|
 | `ruby` | Yes ||34|
 | `irb` | Yes ||35|
 | `gem` | Yes ||38|
