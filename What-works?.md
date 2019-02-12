@@ -8,12 +8,12 @@ If you add a new test for a package, please add a line (same if package was alre
 |:-|:-|:-|:-|
 | `grep`, `head`, `cut`, `wc` |Yes||33|
 | `tput` |Yes||33|
-| `irssi` |Yes|| 38 (unreleased) |
+| `irssi` |Yes|| 38 |
 | `ifconfig` |No| `ioctl 0x8912 failed: Invalid argument` | 33 |
 | `ip` | No | `ip: socket(AF_NETLINK,3,0): Invalid argument` (`ip route get 1`) | 33 |
 | `weechat` | No | Starts but fails  |35|
 | `bash` | Yes || 33 |
-| `zsh` | Barely | `Bad system call` after running a command| 33 |
+| `zsh` | Yes | | 48 |
 | `nano` | Yes ||33|
 | `nvim` | Yes | |41|
 | `vim` | Yes ||33|
@@ -48,7 +48,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat`` |40|
 |`nmap`| No | `Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307)` | 40|
 |`&`, `bg`, `fg`, `jobs`|Yes||44|
-|`mc`| No | Crashes App | 44|
+|`mc`| Yes | F-keys don't work | 48|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
