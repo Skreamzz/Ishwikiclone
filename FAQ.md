@@ -7,4 +7,4 @@
 **A:** Sooner than it took for build 32 to come out. New builds are more frequent, and the app will be updated when something new has been added or fixed.
 
 ### Q: Is iSH 32-bit or 64-bit
-**A:** The app itself is 64-bit, as it's a requirement from Apples side, for apps to be able to run, the OS iSH emulates is Alpine 32-bit, so it will only be able to run 32-bit software.
+**A:** The app itself is 64-bit, as it's a requirement from Apples side, for apps to be able to run, the OS iSH emulates is Alpine x86, so it will only be able to run 32-bit software compiled for the x86 instruction set.
