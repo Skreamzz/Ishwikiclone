@@ -13,4 +13,4 @@
 **A**: Mostly because x86 was what @tbodt was comfortable with at the time. Using x86 also has the added benefit of letting us access to the rich set of software that’s already been built for this platform. Performance-wise the choice of architecture is not all that important, since the code is being emulated anyways (that is, using ARM wouldn’t actually help much).
 
 ### Q: Why is iSH on TestFlight and not on the App Store? I’m scared that Apple will find this in violation of the App Store Guidelines; will it ever be on the App Store?
-**A**: We is really have no idea. iSH is currently in beta (hence us using TestFlight) and Apple has continued to approve the app for this, but we have not tried to submit to for full App Store review and cannot say what would happen if we did. 
+**A**: We is really have no idea. iSH is currently in beta (hence the use of TestFlight) and Apple has continued to approve the app for this, but we have not tried to submit to for full App Store review and cannot say what would happen if we did. 
