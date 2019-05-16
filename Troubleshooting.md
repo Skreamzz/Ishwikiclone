@@ -7,7 +7,8 @@ If you are running macOS, make sure you've followed the [further setup guide](ht
 ## Issues with networking/apk
 If you've received an error when installing a program or running `apk update`, e.g.
 ```
-       ERROR: http://dl-cdn.alpinelinux.org/alpine/v3.8/main: temporary error (try again later)
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/x86/APKINDEX.tar.gz
+ERROR: http://dl-cdn.alpinelinux.org/alpine/v3.8/main: temporary error (try again later)
 ```
 check the output of `cat /etc/resolv.conf`.
 
@@ -18,4 +19,4 @@ Solutions to this:
 ```
 $ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 ```
-Now try 
+Now try it again!
