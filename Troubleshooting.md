@@ -15,7 +15,8 @@ check the output of `cat /etc/resolv.conf`.
 If that returns nothing, you might be on a cellular network.
 Solutions to this:
 
-1. Connect to a WiFi network so iSH can get the nameservers automatically, or set your own nameservers:
+1. Connect to a WiFi network so iSH can get the nameservers automatically, or
+2. Set your own nameservers:
 ```
 $ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 ```
