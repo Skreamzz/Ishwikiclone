@@ -19,7 +19,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `vim` | Yes ||33|
 | `vi` | Yes ||33|
 | `fish` | Yes ||45|
-| `neofetch` | Yes | Memory and Uptime and broken|40|
+| `neofetch` | Yes | Memory and Uptime and broken|52|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
 | `nodejs` | No | Illegal instruction, socketcall 16, shared futexes |41|
 | `npm` | No | Illegal instruction, socketcall 16, shared futexes |41|
@@ -28,18 +28,18 @@ If you add a new test for a package, please add a line (same if package was alre
 | `wget` | Yes | HTTPS too |33|
 | `python3` | Yes ||33|
 | `youtube-dl` | Yes | Very slow to start |35|
-| `cmus` | No | _bind: No such file or directory_ |33|
+| `cmus` | No | Bad system call |52|
 | `ffmpeg` | Yes | |35|
 | `emacs` | Yes ||36|
 | `openssh` (client)| Yes | |31|
-| `openssh` (server)| Yes | Follow the [instructions in the wiki](Running-an-SSH-server) |45|
+| `openssh` (server)| Yes | Follow the [instructions on the wiki](Running-an-SSH-server) |45|
 | `ps` | Yes ||34|
 | `ruby` | Yes ||34|
 | `irb` | Yes ||35|
 | `gem` | Yes ||38|
 | `go` | No | Requires the MMX instruction set. |34|
 | `mate-session`| No. | Bad system call |37|
-| `tmux` | No | lost server |37|
+| `tmux` | No | Freezes iSH |52|
 | `figlet` | Yes | |40|
 | `uptime` | Yes | |40|
 | `links` | Yes |  |40|
@@ -48,7 +48,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat`` |40|
 |`nmap`| No | `Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307)` | 40|
 |`&`, `bg`, `fg`, `jobs`|Yes||44|
-|`mc`| Yes | F-keys don't work | 48|
+|`mc`| Yes | F-keys don't work |48|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
