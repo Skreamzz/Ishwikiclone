@@ -49,6 +49,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`nmap`| No | `Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307)` | 40|
 |`&`, `bg`, `fg`, `jobs`|Yes||44|
 |`mc`| Yes | F-keys don't work |48|
+|`ed`| Yes | |52|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
