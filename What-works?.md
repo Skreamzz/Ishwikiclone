@@ -50,6 +50,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`&`, `bg`, `fg`, `jobs`|Yes||44|
 |`mc`| Yes | F-keys don't work |48|
 |`ed`| Yes | |52|
+|`git`| Yes | |53|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
