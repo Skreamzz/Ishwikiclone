@@ -11,7 +11,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `irssi` |Yes|| 38 |
 | `ifconfig` |No| `ioctl 0x8912 failed: Invalid argument` | 33 |
 | `ip` | No | `ip: socket(AF_NETLINK,3,0): Invalid argument` (`ip route get 1`) | 33 |
-| `weechat` | No | Starts but fails  |35|
+| `weechat` | Yes ||53|
 | `bash` | Yes || 33 |
 | `zsh` | Yes | | 48 |
 | `nano` | Yes ||33|
