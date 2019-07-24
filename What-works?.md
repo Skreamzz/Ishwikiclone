@@ -39,7 +39,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `gem` | Yes ||38|
 | `go` | No | Requires the MMX instruction set. |34|
 | `mate-session`| No. | Bad system call |37|
-| `tmux` | No | Freezes iSH |52|
+| `tmux` | Yes ||53|
+| `screen` | Yes |Detaches and reattaches!|53|
 | `figlet` | Yes | |40|
 | `uptime` | Yes | |40|
 | `links` | Yes |  |40|
