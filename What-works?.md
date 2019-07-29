@@ -50,7 +50,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`mc`| Yes | F-keys don't work |48|
 |`ed`| Yes | |52|
 |`git`| Yes | |53|
-|`mosh`| No | [Issue #440](https://github.com/tbodt/ish/issues/440) |53|
+|`mosh`| Yes | |54|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum
