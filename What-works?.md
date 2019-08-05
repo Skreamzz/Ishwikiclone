@@ -51,9 +51,12 @@ If you add a new test for a package, please add a line (same if package was alre
 |`ed`| Yes | |52|
 |`git`| Yes | |53|
 |`mosh`| Yes | |54|
+|`gcc `| Yes | |55|
+|`gawk`| Yes | |55|
+|`clang`| Yes | |55|
 
 Testers:
-jusdepatate, Mnpn, elchris414, JaquesBoum
+jusdepatate, Mnpn, elchris414, JaquesBoum, wjid
 
 
 ## Test Requests
