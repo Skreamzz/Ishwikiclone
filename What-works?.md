@@ -1,7 +1,5 @@
 As said [here](https://github.com/tbodt/ish/wiki/FAQ#q-x-does-not-work) many programs do fail, so here is a list of programs known to be working (or not).
 
-A list of what @tbodt is working on is available [here](https://github.com/tbodt/ish/projects/7)
-
 If you add a new test for a package, please add a line (same if package was already tested). Feel free to update the device tested if the build is newer.
 
 | Package name | Is working? | Notes | iSH version number |
