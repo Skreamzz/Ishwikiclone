@@ -43,7 +43,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `lynx` | Yes ||40|
 | `gdb` | No | Segfault, socketcall 16 |40|
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat` |40|
-|`nmap`| No | Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307) | 40|
+|`nmap`| No | Assertion failed | 40|
 |`&`, `bg`, `fg`, `jobs`|Yes||44|
 |`mc`| Yes | F-keys don't work |48|
 |`ed`| Yes | |52|
