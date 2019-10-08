@@ -8,7 +8,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `tput` |Yes||33|
 | `irssi` |Yes|| 38 |
 | `ifconfig` |No| `ioctl 0x8912 failed: Invalid argument` | 33 |
-| `ip` | No | `ip: socket(AF_NETLINK,3,0): Invalid argument` (`ip route get 1`) | 33 |
+| `ip` | No | `ip: socket(AF_NETLINK,3,0): Invalid argument` | 33 |
 | `weechat` | Yes ||53|
 | `bash` | Yes || 33 |
 | `zsh` | Yes | | 48 |
@@ -42,8 +42,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `links` | Yes |  |40|
 | `lynx` | Yes ||40|
 | `gdb` | No | Segfault, socketcall 16 |40|
-| `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat`` |40|
-|`nmap`| No | `Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307)` | 40|
+| `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat` |40|
+|`nmap`| No | Assertion failed: res > 7 (nsock_pool.c: nsock_library_initialize: 307) | 40|
 |`&`, `bg`, `fg`, `jobs`|Yes||44|
 |`mc`| Yes | F-keys don't work |48|
 |`ed`| Yes | |52|
