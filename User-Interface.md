@@ -16,7 +16,7 @@ Navigating with the arrow key is simple! Press the key and slide your finger in 
 
 ## Settings
 <img src="https://ish.app/assets/settings-full.png" alt="Settings page" width="40%" height="auto" align="left" />
-Pressing the (i) in the extra row of keys will bring you to the settings page.<br />
-From here you can quickly set a theme, re-map Caps lock to Control or Escape, or disable screen dimming.
+On iOS versions earlier than 13, pressing the (i) in the extra row of keys will bring you to the settings page. In iOS 13 or later, the button is a cog instead.<br />
+From here you can quickly set a theme, re-map keys, or disable screen dimming.
 <br /><br />
 There is also a button to quickly send email feedback. Links to iSH on other websites are also located here.
