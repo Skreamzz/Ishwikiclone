@@ -3,3 +3,5 @@ apk add alpine-baselayout alpine-keys  apk-tools busybox consolekit2 libc-utils 
 cat /dev/location > /dev/null &
 
 x11vnc -create -noshm
+
+Open VNC viewer and connect to 127.0.0.1:5900
