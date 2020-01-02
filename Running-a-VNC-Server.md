@@ -1,4 +1,4 @@
-Run `apk add alpine-baselayout alpine-keys  apk-tools busybox consolekit2 libc-utils lxdm sudo x11vnc xfce4 xfce4-terminal xorg-server xvfb xterm` to add all the required packages to run the VNC Server. 
+Run `apk add x11vnc xvfb xterm` to add all the required packages to run the VNC Server. 
 
 Start backgrounding so we can connect with app not open`cat /dev/location > /dev/null &`
 **Make sure to accept always**
