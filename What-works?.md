@@ -26,7 +26,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `youtube-dl` | Yes | Very slow to start |35|
 | `cmus` | No | Bad system call |52|
 | `ffmpeg` | Yes | |35|
-| `emacs` | Yes ||36|
+| `emacs` | Yes |works recursively in `M-x term` !|36|
 | `openssh` (client)| Yes | |31|
 | `openssh` (server)| Yes | Follow the [instructions on the wiki](Running-an-SSH-server) |45|
 | `ps` | Yes ||34|
