@@ -17,7 +17,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `vim` | Yes ||33|
 | `vi` | Yes ||33|
 | `fish` | Yes ||45|
-| `neofetch` | Yes | Memory and Uptime and broken|52|
+| `neofetch` | Yes ||52|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
 | `nodejs` | No | Illegal instruction |41|
 | `curl` | Yes | HTTPS too |33|
