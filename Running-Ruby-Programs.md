@@ -15,9 +15,15 @@ These are all necessary libraries, in case you're interested:
 Test to make sure Ruby is installed by typing `ruby -v`, you should see something along the lines of 
 
 ```bash
-ruby 2.5.7p206 (2019-10-1 revision 67816) [i586-linux-musl]```
+ruby 2.5.7p206 (2019-10-1 revision 67816) [i586-linux-musl]
+```
 
 Congrats! You should now be able to install most Ruby gems. Edit below if there's errors.
+
+## FAQ
+
+### Can I install RVM?
+Unfortunately, it doesn't look possible to install RVM at this time. I will update this if I find a way.
 
 ## Ruby Related Errors
 
