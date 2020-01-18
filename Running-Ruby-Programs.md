@@ -27,12 +27,12 @@ Unfortunately, it doesn't look possible to install RVM at this time. I will upda
 
 ## Ruby Related Errors
 
-<!-- If you have an error, put n+1 (n being most recent error #) and your problem. A solution will be posted, if one exists -->
+<!-- If you have an error, put ### and your problem. A solution will be posted, if one exists -->
 
-1) Gems won't install due to "Can't find ruby headers in [path]"
+### Gems won't install due to "Can't find ruby headers in [path]"
 Solution: Make sure you installed `ruby-dev` from before. Remember, both `ruby` and `ruby-dev` are required.
 
-2) Gems won't install due to "Can't find lsc++" etc
+### Gems won't install due to "Can't find lsc++" etc
 Solution: Make sure you installed `build-base` from before. This is required for native extensions to be built.
 
 ## Gems that won't install
