@@ -17,3 +17,4 @@
 * [Running an SSH server](Running-an-SSH-server)
 * [Running in background](Running-in-background)
 * [View iSH files in Files App](View-iSH-files-in-Files-App)
+* [Running Ruby Programs](Running-Ruby-Programs)
