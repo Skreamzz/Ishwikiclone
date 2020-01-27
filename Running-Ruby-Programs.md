@@ -1,12 +1,4 @@
-Running Ruby via iSH isn't all that difficult, it's actually quite simple!
-
-First, go ahead and boot up the app.
-
-Next, we're going to need to install various libraries to get ruby up and running!
-
-Now, type `apk add ruby ruby-dev build-base`
-
-These are all necessary libraries, in case you're interested:
+Run `apk add ruby ruby-dev build-base`. These packages are all necessary. If you're interested:
 
 * `ruby` is Ruby
 * `ruby-dev` is for Ruby headers that are required to build native extensions
