@@ -52,9 +52,13 @@ If you add a new test for a package, please add a line (same if package was alre
 |`gcc `| Yes | |55|
 |`gawk`| Yes | |55|
 |`clang`| Yes | |55|
+|`php`| Yes | |65|
+|`php (extensions)`| Yes | |65|
+|`stunnel3`| Yes | perl and bash needs to be installed |65|
+|`perl`| Yes | |65|
 
 Testers:
-jusdepatate, Mnpn, elchris414, JaquesBoum, wjid
+jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital
 
 
 ## Test Requests
