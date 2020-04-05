@@ -4,7 +4,7 @@
 
 This tutorial will guide you through the installation and setup of php with a certificate.
 
-I did every step in the iSH build 66, and tried out every step afterwards.\
+I did every step in the iSH build 65, and tried out every step afterwards.\
 If you get stuck somewhere feel free to mention me on the iSH discord Server. (Username 404#0404)
 
 We won't use nginx or apache2 as I couldn't get those two working.\
