@@ -56,6 +56,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`php (extensions)`| Yes | |65|
 |`stunnel3`| Yes | perl needs to be installed |65|
 |`perl`| Yes | |65|
+|`openssl`| Yes | Even signing certificates work perfectly fine |65|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital
