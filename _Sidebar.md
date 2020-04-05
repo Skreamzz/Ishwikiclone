@@ -18,3 +18,4 @@
 * [Running in background](Running-in-background)
 * [View iSH files in Files App](View-iSH-files-in-Files-App)
 * [Running Ruby Programs](Running-Ruby-Programs)
+* [Installing PHP with a TLS certificate and a php filemanager](Installing-PHP-with-a-TLS-certificate-and-a-php-filemanager)
