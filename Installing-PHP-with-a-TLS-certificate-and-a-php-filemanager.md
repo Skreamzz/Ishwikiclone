@@ -1,6 +1,6 @@
 # Installing PHP with a TLS certificate and a php filemanager
 
-### Prolog
+### Prologue
 
 This tutorial will guide you through the installation and setup of php with a certificate.
 
@@ -12,7 +12,7 @@ To get around this problem we will use the built-in php webserver and use the st
 
 In this tutorial we will also cover how to create your own root certificate authority on iSH and how you get it to your PC wirelessly without using extra tools.
 
-We'll do following things in this tutorial
+We'll do the following things in this tutorial:
 
 1. Create a TLS certificate with root CA (You can skip this if you already have a PEM file with Certificate and key)
 2. Install php modules that we'll later on use for a php filemanager called "Tiny File Manager" (You can skip the installation of those modules if you want to run something else on it)
@@ -21,11 +21,11 @@ We'll do following things in this tutorial
 
 #### What is a certificate and a root certificate authority?
 
-Nowadays almost every website uses a certificate, not only can it be used to secure the connection to a website, but you can also use it to secure other services that didn't have encryption in mind by design. If you're curious about securing unsecured protocols please research stunnel, as there's a lot of information available. A certificate is usually signed by a trusted root certificate authority which every up-to-date device knows through updates. Those certificate authorities can be paid so they will create and sign a certificate for you. This only works for real webpages. Fortunately we aren't working on a real webpage, but rather your iPhone as webserver. So we can create our own certificate and root authority.
+Nowadays, almost every website uses a certificate: not only can it be used to secure the connection to a website, but you can also use it to secure other services that didn't have encryption in mind by design. If you're curious about securing unsecured protocols, please research stunnel, as there's a lot of information available. A certificate is usually signed by a trusted root certificate authority, which every up-to-date device knows through updates. Those certificate authorities can be paid so they will create and sign a certificate for you. This only works for real webpages. Fortunately we aren't working on a real webpage, but rather your iPhone as webserver. So we can create our own certificate and root authority.
 
 ##### Why not just create the certificate and skip the root certificate authority?
 
-Good question! If you skip it your certificate will have no certificate authority, most browsers will see this as a huge problem and will display an error for you.
+Good question! If you skip it, your certificate will have no certificate authority: most browsers will see this as a huge problem and will display an error for you.
 
 ##### How much is an own certificate with authority?
 
@@ -34,7 +34,7 @@ It is completely free. So keep on following this tutorial and you'll soon profit
 #### Composition of a certificate
 
 When you create a certificate there'll be a bunch of files.\
-To make this simpler to understand here's the explanation:
+To make this simpler to understand here's an explanation:
 
 * .CRT files: this contains the certificate, not containing a key.
 * .KEY files: this contains the key for the certificate only
@@ -49,7 +49,7 @@ For more information on certificates please use google, there is many pages abou
 
 #### Needed packages
 
-Before installing anything please run following:
+Before installing anything, please run following:
 
 ```
 apk update
@@ -98,9 +98,9 @@ Next we create your root certificate:
 openssl req -x509 -new -nodes -key DiscordDigital.key -sha256 -days 825 -out DiscordDigital.pem
 ```
 
-**Warning**: If you change the days to be above 825 then you'll encounter certificate errors when using that certificate in safari. Safari changed their security policies with iOS 13.
+**Warning**: If you change the days to be above 825 then you'll encounter certificate errors when using that certificate in Safari. Safari changed their security policies with iOS 13.
 
-There will be a lot of questions, but most importantly what matters is the Common name, as that'll be the name displayed in your OS for your certificate. In my case I type in DiscordDigital, but you can type in anything even with spaces.
+There will be a lot of questions, but most importantly what matters is the Common name, as that'll be the name displayed in your OS for your certificate. In my case I type in DiscordDigital, but you can type in anything, even with spaces.
 
 Now let's make a directory and move our CA files into.
 
@@ -113,9 +113,9 @@ You now have a certificate authority and you can continue to create a certificat
 
 ### Creating and signing your certificate for your iPhone
 
-Make sure you can reach your iPhone via DNS resolution. This means if you open a command prompt or a terminal and type in "ping YouriPhoneName" that you get the correct IP address of your iPhone back. You may need to adjust your DNS Server or check your hostname of your iPhone. If you can't get DNS resolution to work then you won't finish this tutorial with a valid certificate. IP addresses work with TLS too but they can't be valid. In my case I manage my own DNS Server where I've reserved my iPhones IP in my DHCP pool and assigned a name to the IP in my DNS server.
+Make sure you can reach your iPhone via DNS resolution. This means if you open a command prompt or a terminal and type in "ping YouriPhoneName" that you get the correct IP address of your iPhone back. You may need to adjust your DNS Server or check your hostname of your iPhone. If you can't get DNS resolution to work then you won't finish this tutorial with a valid certificate. IP addresses work with TLS too but they can't be valid. In my case, I manage my own DNS Server where I've reserved my iPhones IP in my DHCP pool and assigned a name to the IP in my DNS server.
 
-My iPhones name will be "iphone" if it's something else like "iphone11pro" that'll work perfectly fine, as long as you can reach it over your network by name.
+My iPhone's name will be "iphone" if it's something else like "iphone11pro" that'll work perfectly fine, as long as you can reach it over your network by name.
 
 #### Creating your iPhone certificate
 
@@ -124,7 +124,7 @@ openssl genrsa -out iphone.key 2048
 openssl req -new -key iphone.key -out iphone.csr
 ```
 
-You'll be asked for many things, you can skip most of those. On common name however you've to enter the hostname of your iPhone as explained above. For me I typed iphone and pressed enter.
+You'll be asked for many things, you can skip most of those. On common name however you have to enter the hostname of your iPhone as explained above. For me I typed iphone and pressed enter.
 
 Next we will create the EXT file to add some options to our certificate. (Filename: iphone.ext)
 
@@ -165,13 +165,13 @@ mv iphone.pem /etc/stunnel/
 php -S 0.0.0.0:8000 -t /root/CA/
 ```
 
-Now you can access your certificate by typing following into your desktops browser:
+Now you can access your certificate by typing the following into your desktops browser:
 
 ```
 http://<iphone hostname>:8000/DiscordDigital.pem
 ```
 
-You'll see the certificate displayed as a webpage, copy the contents and save it as "DiscordDigital.cer" into your documents folder (Using notepad for example).
+You'll see the certificate displayed as a webpage. Copy the contents and save it as "DiscordDigital.cer" into your documents folder (Using notepad for example).
 
 Next open your computer certificates (Search computer certificates in Windows)
 
@@ -182,7 +182,7 @@ Select your file and click yourself through the wizard. Once your certificate is
 
 This process is different for every operating system, so feel free to do a quick google search.
 
-Once you're done you can close the php server on iSH by hitting **CTRL + C**
+Once you're done you can close the php server on iSH by hitting **CTRL + C** (tap "^" then type "c")
 
 #### Downloading a filemanager
 
@@ -199,7 +199,7 @@ rm index_.php
 
 ### Last steps and final test
 
-On firefox you'll have to open a new tab and type in "about:config" into the URL bar.
+On Firefox you'll have to open a new tab and type in "about:config" into the URL bar.
 
 This should open a page that warns you about possible dangers. Click that you accept the risk.
 
