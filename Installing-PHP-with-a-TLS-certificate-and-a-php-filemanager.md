@@ -1,11 +1,16 @@
-# Installing PHP with a TLS certificate and a php filemanager
-
 ### Prologue
 
 This tutorial will guide you through the installation and setup of php with a certificate.
 
 I did every step in the iSH build 65, and tried out every step afterwards.\
 If you get stuck somewhere feel free to mention me on the iSH discord Server. (Username 404#0404)
+
+#### What you need
+* Basic network knowledge (DNS, DHCP, IPv4)
+* Administrator privileges on the computer you want to install the certificate
+
+If you don't have Administrator permissions you can still follow the tutorial,\
+you will get a certificate error but you'll be able to "continue anyways", the connection will still be encrypted.
 
 We won't use nginx or apache2 as I couldn't get those two working.\
 To get around this problem we will use the built-in php webserver and use the stunnel package to put a certificate ontop of it.
@@ -37,8 +42,8 @@ When you create a certificate there'll be a bunch of files.\
 To make this simpler to understand here's an explanation:
 
 * .CRT files: this contains the certificate, not containing a key.
-* .KEY files: this contains the key for the certificate only
-* .PEM files: this either has a certificate only or both.\
+* .KEY files: this contains the private key for the certificate only
+* .PEM files: this either has a certificate only or both, the certificate and the private key.\
   It is important to use a pem file with both in this tutorial
 * .EXT files: in this file you can define alternative DNS names and other options
 * .CSR file: this is a signing request file, it is needed for the creation of the certificate.
@@ -84,13 +89,13 @@ At this point you probably figured out the best way to connect to your iSH insta
 We start by defining a name for our certificate authority.\
 In my case I'll go with DiscordDigital. You'll need to replace DiscordDigital with your certificate authority name. Make sure to not put spaces in the filenames. You can have spaces in the Common name of your authority later
 
-Run following to create your KEY file:
+Run following to create your **key** file:
 
 ```
 openssl genrsa -des3 -out DiscordDigital.key 2048
 ```
 
-While running it'll ask you for a passphrase, type in a password you can remember. This will be your certificate authority password to sign certificates.
+While running it'll ask you for a passphrase, type in a password you can remember. This will be your certificate authority password to sign certificates. You need this later.
 
 Next we create your root certificate:
 
@@ -100,7 +105,7 @@ openssl req -x509 -new -nodes -key DiscordDigital.key -sha256 -days 825 -out Dis
 
 **Warning**: If you change the days to be above 825 then you'll encounter certificate errors when using that certificate in Safari. Safari changed their security policies with iOS 13.
 
-There will be a lot of questions, but most importantly what matters is the Common name, as that'll be the name displayed in your OS for your certificate. In my case I type in DiscordDigital, but you can type in anything, even with spaces.
+There will be a lot of questions, but most importantly what matters is the **common name**, as that'll be the name displayed in your OS for your certificate. In my case I type in DiscordDigital, but you can type in anything, even with spaces.
 
 Now let's make a directory and move our CA files into.
 
@@ -151,7 +156,7 @@ openssl x509 -req -in iphone.csr -CA CA/DiscordDigital.pem -CAkey CA/DiscordDigi
 
 #### Preparing our files and downloading our CA certificate
 
-##### Creating a PEM file out of your certificate files
+##### Creating a **PEM** file out of your certificate files
 
 ```
 cat iphone.key >> iphone.crt
@@ -171,14 +176,21 @@ Now you can access your certificate by typing the following into your desktops b
 http://<iphone hostname>:8000/DiscordDigital.pem
 ```
 
-You'll see the certificate displayed as a webpage. Copy the contents and save it as "DiscordDigital.cer" into your documents folder (Using notepad for example).
+You'll see the certificate displayed as a webpage. Copy the contents and save it as "DiscordDigital**.cer**" into your documents folder (Using notepad for example).
 
 Next open your computer certificates (Search computer certificates in Windows)
 
 If you opened the right management console then you'll see "Trusted Root Certification Authorities",\
 open it then right click Certificates, hover "All Tasks" and hit Import...
 
+Here's how it looks on Windows 10:\
+![](https://download.discord.digital/screenshots/computer_certificates.PNG)
+
 Select your file and click yourself through the wizard. Once your certificate is imported, it'll show up in the Certificates folder.
+
+If you want other computers to show no errors with your certificate, you need to install the root CA certificate on them as well.\
+You can still use the encrypted connection without importing that certificate, it'll show an error, however you can continue anyways.\
+In fact it's even possible to use it by https://\<iphone ip\> by skipping the certificate error, it'll still be encrypted.
 
 This process is different for every operating system, so feel free to do a quick google search.
 
@@ -214,6 +226,9 @@ On iSH run:
 ```
 php -S 0.0.0.0:8000 -t /root/ > /dev/null 2>&1 & stunnel3 -d 443 -r 8000 -p /etc/stunnel/iphone.pem
 ```
+
+Usually you don't want to type in that long command to start a webserver,\
+you can put it in an .sh script and run it whenever you need that webserver running. 
 
 You may want to remove "/dev/null 2>&1" if you want to debug php code that isn't working.\
 After running this it shouldn't output any text, but it should run two processes in the background that you can see with the "ps" command.
