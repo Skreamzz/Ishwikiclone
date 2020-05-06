@@ -57,6 +57,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`stunnel3`| Yes | perl needs to be installed |65|
 |`perl`| Yes | |65|
 |`openssl`| Yes | Even signing certificates work perfectly fine |65|
+|`yarn` | No | `Fatal error in , line 0 / Check failed: cpu.has_sse2(). / FailureMessage Object: 0xffffd744Illegal instruction` | 67 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital
