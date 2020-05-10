@@ -19,7 +19,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `fish` | Yes ||45|
 | `neofetch` | Yes ||52|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
-| `nodejs` | No | Illegal instruction |41|
+| `node` | No | `Fatal error in , line 0 / Check failed: cpu.has_sse2(). / FailureMessage Object: 0xffffd744Illegal instruction` | 67 |
 | `curl` | Yes | HTTPS too |33|
 | `wget` | Yes | HTTPS too |33|
 | `python3` | Yes ||33|
@@ -57,7 +57,6 @@ If you add a new test for a package, please add a line (same if package was alre
 |`stunnel3`| Yes | perl needs to be installed |65|
 |`perl`| Yes | |65|
 |`openssl`| Yes | Even signing certificates work perfectly fine |65|
-|`yarn` | No | `Fatal error in , line 0 / Check failed: cpu.has_sse2(). / FailureMessage Object: 0xffffd744Illegal instruction` | 67 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital
