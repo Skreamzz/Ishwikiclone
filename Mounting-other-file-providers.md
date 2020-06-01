@@ -20,3 +20,9 @@ To mount the whole iOS file system into iSH’s `/mnt` run:
 ```bash
 mount -t real / /mnt
 ```
+
+To unmount when finished you can run:
+```bash
+umount <dir>
+```
+where `<dir>` is the directory where files were previously mounted. 
