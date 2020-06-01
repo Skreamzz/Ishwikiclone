@@ -19,3 +19,4 @@
 * [View iSH files in Files App](View-iSH-files-in-Files-App)
 * [Running Ruby Programs](Running-Ruby-Programs)
 * [Installing PHP with a TLS certificate and a php filemanager](Installing-PHP-with-a-TLS-certificate-and-a-php-filemanager)
+* [Mounting other file providers](Mounting-other-file-providers)
