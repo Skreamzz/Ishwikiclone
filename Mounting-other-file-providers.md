@@ -10,7 +10,7 @@ mount -t ios . /mnt
 ```
 a file picker will show up and you may select which folder to mount. 
 
-Additionally, if jailbroken, you can also mount using real, absolute paths. To do so run:
+Additionally, if jailbroken or using the psychic paper exploit (not available through TestFlight nor will we help you do it), you can also mount using real, absolute paths. To do so run:
 ```bash
 mount -t real <src> <dst>
 ```
