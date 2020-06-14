@@ -57,7 +57,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`stunnel3`| Yes | perl needs to be installed |65|
 |`perl`| Yes | |65|
 |`openssl`| Yes | Even signing certificates work perfectly fine |65|
-|`dillo`| Partially working | Follow the instructions to install VNC server. Requires fonts-noto to be installed. Some websites don’t work |67|
+|`dillo`| Partially working | Follow the [instructions ](https://github.com/ish-app/ish/wiki/Running-a-VNC-Server) to install VNC server. Requires fonts-noto to be installed. Some websites don’t work |67|
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital
