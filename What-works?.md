@@ -58,6 +58,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`perl`| Yes | |65|
 |`openssl`| Yes | Even signing certificates work perfectly fine |65|
 
+
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital
 
