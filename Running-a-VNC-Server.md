@@ -39,7 +39,7 @@ Section "Screen"
 EndSection
 ```
 
-Now you can install your window manager. For this tutorial, we're going to use i3wm. It's a tiling window manager with good configuration options. Run `apk add i3wm i3status i3bar i3lock` to install the required packages. The last step before starting our GUI is to specify the window manager that we want to use. Create a `.xinitrc` file in your home directory and add the following line:
+Now you can install your window manager. For this tutorial, we're going to use i3wm. It's a tiling window manager with good configuration options. Run `apk add i3wm i3status i3lock` to install the required packages. The last step before starting our GUI is to specify the window manager that we want to use. Create a `.xinitrc` file in your home directory and add the following line:
 
 ```
 exec i3
