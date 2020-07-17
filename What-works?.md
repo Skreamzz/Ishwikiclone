@@ -52,6 +52,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`gcc `| Yes | |55|
 |`gawk`| Yes | |55|
 |`clang`| Yes | |55|
+|`arp`| No | can't open '/proc/net/arp': No such file or directory | 73 |
 |`php`| Yes | |65|
 |`php (extensions)`| Yes | |65|
 |`stunnel3`| Yes | perl needs to be installed |65|
