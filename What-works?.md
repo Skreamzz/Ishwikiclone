@@ -62,7 +62,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`dpkg`| No | Bad System Call |67|
 
 Testers:
-jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux
+jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
 
 
 ## Test Requests
