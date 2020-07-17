@@ -19,7 +19,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `fish` | Yes ||45|
 | `neofetch` | Yes ||52|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
-| `node` | No | `Fatal error in , line 0 / Check failed: cpu.has_sse2(). / FailureMessage Object: 0xffffd744Illegal instruction` | 67 |
+| `node` | Yes || 73 |
 | `curl` | Yes | HTTPS too |33|
 | `wget` | Yes | HTTPS too |33|
 | `python3` | Yes ||33|
