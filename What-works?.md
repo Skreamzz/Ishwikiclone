@@ -61,6 +61,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`dillo`| Partially working | Follow the [instructions ](https://github.com/ish-app/ish/wiki/Running-a-VNC-Server) to install VNC server. Requires fonts-noto to be installed. Some websites don’t work |67|
 |`dpkg`| No | Bad System Call |67|
 |`wine`| No | Illegal Instruction when trying to run any program | 73 |
+|`r-base`| Yes | | 73 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
