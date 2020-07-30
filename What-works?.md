@@ -62,6 +62,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`dpkg`| No | Bad System Call |67|
 |`wine`| No | Illegal Instruction when trying to run any program | 73 |
 |`R`| Yes | | 73 |
+|`lftp`| Yes | | 73 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
