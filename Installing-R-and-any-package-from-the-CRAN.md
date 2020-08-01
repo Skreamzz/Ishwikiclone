@@ -95,9 +95,13 @@ tar -zxf libs.tar.gz --directory /
 This is done. Now you can run R and use the packages you compiled before.
 
 # Packages that were tested
-
-
-
+| Package name | Is working? | Notes | iSH version number |
+|:-|:-|:-|:-|
+| stringr |Yes||73|
+| lubridate |Yes||73|
+| dplyr |Yes||73|
+| purrr |Yes||73|
+| sqldf |Yes||73|
 
 
 
