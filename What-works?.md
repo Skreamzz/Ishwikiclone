@@ -59,7 +59,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`perl`| Yes | |65|
 |`openssl`| Yes | Even signing certificates work perfectly fine |65|
 |`dillo`| Partially working | Follow the [instructions ](https://github.com/ish-app/ish/wiki/Running-a-VNC-Server) to install VNC server. Requires fonts-noto to be installed. Some websites don’t work |67|
-|`dpkg`| No | Bad System Call |67|
+|`dpkg`| No | Illegal Instruction  |73|
 |`wine`| No | Illegal Instruction when trying to run any program | 73 |
 |`R`| Yes | For installing CRAN packages follow the [instructions on the wiki](Installing-R-and-any-package-from-the-CRAN) | 73 |
 |`lftp`| Yes | | 73 |
