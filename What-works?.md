@@ -68,6 +68,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`sshfs`| No | fuse: device not found, try 'modprobe fuse' first | 74 |
 |`apt`,`apt-*`| No | Illegal instruction | 74 |
 |`plistutil` | Yes | | 74 |
+|`img4tool` | Yes | | 74 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
