@@ -29,6 +29,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `emacs` | Yes |works recursively in `M-x term` !|36|
 | `openssh` (client)| Yes | |31|
 | `openssh` (server)| Yes | Follow the [instructions on the wiki](Running-an-SSH-server) |45|
+| `openssh` (server)| No | tested on Ubuntu 18.04.5 `illegal instruction at 0xf79f981d: 0f de d8 66 0f de e2 66 `| 74 |
 | `ps` | Yes ||34|
 | `ruby` | Yes ||34|
 | `irb` | Yes ||35|
