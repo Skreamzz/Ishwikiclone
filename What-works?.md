@@ -66,6 +66,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`R`| Yes | For installing CRAN packages follow the [instructions on the wiki](Installing-R-and-any-package-from-the-CRAN) | 73 |
 |`lftp`| Yes | | 73 |
 |`sshfs`| No | fuse: device not found, try 'modprobe fuse' first | 74 |
+|`apt`,`apt-*`| No | Illegal instruction | 74 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
