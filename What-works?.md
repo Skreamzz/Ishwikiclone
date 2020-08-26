@@ -69,6 +69,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`apt`,`apt-*`| No | Illegal instruction | 74 |
 |`plistutil` | Yes | | 74 |
 |`img4tool` | Yes | | 74 |
+|`brew` (tigerbrew) | No | `Error: Cannot find a vendored version of curl for your i686 processor on Linuxbrew! Error: Failed to install vendor Curl. `| 74 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
