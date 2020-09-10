@@ -71,7 +71,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`img4tool` | Yes | | 74 |
 |`brew` (tigerbrew) | No | `Error: Cannot find a vendored version of curl for your i686 processor on Linuxbrew! Error: Failed to install vendor Curl. `| 74 |
 |`systemd`| No | | 74|
-|`plasma-desktop` | | No | 74 |
+|`plasma-desktop`| No |  74 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
