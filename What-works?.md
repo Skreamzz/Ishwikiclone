@@ -88,4 +88,5 @@ If you want a specific package to be tested, please add it here including specia
 
 | Package name  | What to test / Note        | 
 | :-------------|:---------------------------|
-| `example`     | ...   |                   
+| `example`     | ...   |   
+| `docker-ce`   | For running webapps |             
