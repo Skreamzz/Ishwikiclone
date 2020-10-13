@@ -77,7 +77,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`dumb-init` | Yes | | 74 |
 |`openrc`| Yes | both the openrc command and init system works | 74 |
 |`runit`| No | | 74 |
-
+|`dpkg` (busybox| Yes | compile with -mtune=i386 | 74 |
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
 
