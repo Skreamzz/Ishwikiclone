@@ -13,6 +13,7 @@
 ## Tutorials
 
 * [Extracting a dump of your files](Extracting-a-dump-of-your-files)
+* [Installing `apk` on the App Store Version](Installing-apk-on-the-App-Store-Version)
 * [Running a python web server](Running-a-Python-Web-Server)
 * [Running a VNC Server](Running-a-VNC-Server)
 * [Running an SSH server](Running-an-SSH-server)
