@@ -16,7 +16,7 @@
 **A:** iOS devices lack support for hardware virtualization, and even if such a thing did exist it would need to be exposed to applications before it could be used. Generating code on the fly, which is required for JIT compilation, is not intended for use by third-party applications and such a technique requires entitlements that cannot be used when uploading to App Store Connect (as is necessary for distribution via TestFlight).
 
 ### Q: Why is iSH on TestFlight and not on the App Store? I’m scared that Apple will find this in violation of the App Store Guidelines; will it ever be on the App Store?
-**A:** We really have no idea. iSH is currently in beta (hence the use of TestFlight) and Apple has continued to approve the app for this, but we have not tried to submit the app for full App Store review and cannot say what would happen if we did. 
+**A:** ~~We really have no idea. iSH is currently in beta (hence the use of TestFlight) and Apple has continued to approve the app for this, but we have not tried to submit the app for full App Store review and cannot say what would happen if we did.~~ iSH is now [available on the App Store](https://apps.apple.com/us/app/ish-shell/id1436902243)!
 
 ### Q: I lost access to the TestFlight?
 **A:** That might be because we hit the limit of testers, at 10,000, so we did some house cleaning and removed testers who have either been inactive, or haven't updated. If need be [you can join the TestFlight again.](https://testflight.apple.com/join/97i7KM8O)
