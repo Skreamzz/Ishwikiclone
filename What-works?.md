@@ -79,6 +79,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`runit`| No | | 74 |
 |`dpkg` (busybox) | Yes | compile with -mtune=i386 | 74 |
 |`lighttpd` | No | `(stat_cache.c.601) server.stat-cache-engine can be one of "disable", "simple", but not: fam` | 76 |
+|`jq`| Yes | | 76 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
