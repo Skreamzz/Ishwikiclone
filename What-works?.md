@@ -82,6 +82,8 @@ If you add a new test for a package, please add a line (same if package was alre
 |`jq`| Yes | | 76 |
 |`nautilus`| Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
 |`gnome-calculator`| Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
+|`dig`| No | Runtime check fails but you can use `drill` as a drop-in replacement | 1.0.1 |
+|`drill`| Yes | | 1.0.1 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
