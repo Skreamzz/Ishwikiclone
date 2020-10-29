@@ -1,5 +1,3 @@
-# Installing  Golang on ISH
-
 This is a quick guide on how to Install a Golang ISH
 
 1. Run `apk update`
