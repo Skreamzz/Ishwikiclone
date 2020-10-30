@@ -1,1 +1,0 @@
-Hi Maked A Web For install pkg in app ish My Ish app say : pkg not found
