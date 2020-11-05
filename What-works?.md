@@ -85,9 +85,10 @@ If you add a new test for a package, please add a line (same if package was alre
 |`dig`| No | Runtime check fails but you can use `drill` as a drop-in replacement | 1.0.1 |
 |`drill`| Yes | | 1.0.1 |
 |`wptc-track`| Yes | | 78 |
+|`ddate` | Yes | | 1.0.1 |
 
 Testers:
-jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil
+jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan
 
 
 ## Test Requests
