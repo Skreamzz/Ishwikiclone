@@ -23,5 +23,6 @@
 * [Running Ruby Programs](Running-Ruby-Programs)
 * [Installing PHP with a TLS certificate and a php filemanager](Installing-PHP-with-a-TLS-certificate-and-a-php-filemanager)
 * [Mounting other file providers](Mounting-other-file-providers)
+* [How To Enable OpenRC & Start Services When iSH App Starts](How-To-Enable-OpenRC-&-Start-Services-When-iSH-App-Starts)
 * [Installing R and any package from the CRAN](Installing-R-and-any-package-from-the-CRAN)
-* [How To Enable OpenRC & Start Services When iSH App Starts] (How-To-Enable-OpenRC-&-Start-Services-When-iSH-App-Starts)
+
