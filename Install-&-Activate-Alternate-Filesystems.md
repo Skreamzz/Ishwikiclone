@@ -16,3 +16,6 @@ Now navigate to the Downloads folder and click on the Alpine mini root.  After a
 
 You will see several options including "Boot From This Filesystem".  Choose that.  iSH will appear to crash.  This is expected.  When you open it again you will have booted from the filesystem you imported and selected.
 
+----
+
+**Note:** Most filesystem don't work yet and it is because /bin/login or /sbin/init encountered a illegal instruction,bad system call,segmentation fault or abort trap. In addition,some filesystem will never work in iSH because they don't have /sbin/init. Those filesystem needs to be patched.
