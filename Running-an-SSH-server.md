@@ -3,7 +3,7 @@ Here's a quick step by step guide for running an ssh server.
 1. `$ apk add openssh` — install the ssh tools and the ssh server.
 1. `$ ssh-keygen -A` — create the host keys.
 1. `$ passwd` — Set a password for root to protect your iOS device
-1. edit `/etc/ssh/sshd_config` and set `PermitRootLogin` to `yes`
+1. `$ echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config`
 1. `$ /usr/sbin/sshd`
 
 You should now be able to ssh to your device with username root and the password you typed.
