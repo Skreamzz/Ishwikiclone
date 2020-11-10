@@ -23,3 +23,6 @@
 
 ### Q: Why am I getting apk not found?
 **A:** App Store restrictions, however, you can [install it](https://github.com/ish-app/ish/wiki/Installing-apk-on-the-App-Store-Version).
+
+### Q: How do you know what an instruction does?
+**A:** Generally we look [here](https://www.felixcloutier.com/x86/).
