@@ -18,7 +18,7 @@ In other words, delete 'sysinit'.
 
 While you are there you might want to comment out the extra tty's a little further down in the file.  There is currently no way to access them and they take up a bit of extra memory when they run.  To do that you would insert a 
 
-# (hash) 
+\# (hash) 
 
 In front of all the lines that begin "tty" EXCEPT "tty1".  Commenting that one out would be a bad plan.
 
