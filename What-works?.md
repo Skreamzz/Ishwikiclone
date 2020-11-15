@@ -86,7 +86,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`drill`| Yes | | 1.0.1 |
 |`wptc-track`| Yes | | 78 |
 |`ddate` | Yes | | 1.0.1 |
-|`metasploit-framework` | Yes | at least msfconsole launches | 78 |
+|`metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan
