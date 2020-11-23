@@ -1,4 +1,4 @@
-apk is removed from the rootfs. Thankfully it is very simple to get it back installed.
+apk is removed from the rootfs. This is due because apk is like an App Store so the App Store doesn’t allow it. Thankfully it is very simple to get it back installed.
 
 1. Run
 ```console
