@@ -1,4 +1,4 @@
-# First, install needed software.
+# First, install needed software.  I assume the i3 window manager will be used to keep things simple.
 
 `apk add x11vnc x11vnc-doc xvfb xterm xorg-server xf86-video-dummy i3wm i3status i3lock xdpyinfo xdpyinfo-doc i3wm-doc i3lock-doc i3status-doc ttf-dejavu`
 
