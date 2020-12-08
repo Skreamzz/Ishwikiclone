@@ -1,102 +1,91 @@
-# First, install needed software..
+# First, install needed software.
 
-apk add x11vnc x11vnc-doc xvfb xterm xorg-server xf86-video-dummy i3wm i3status i3lock xdpyinfo xdpyinfo-doc i3wm-doc i3lock-doc i3status-doc ttf-dejavu
+`apk add x11vnc x11vnc-doc xvfb xterm xorg-server xf86-video-dummy i3wm i3status i3lock xdpyinfo xdpyinfo-doc i3wm-doc i3lock-doc i3status-doc ttf-dejavu`
 
-# Next created needed files and directories.
+## Next create needed files and directories.
 
-if [ ! -e /etc/X11/xorg.conf.d ]; then
-   mkdir -p /etc/X11/xorg.conf.d # If it doesn't exist, create it.
-fi
+    if [ ! -e /etc/X11/xorg.conf.d ]; then
+       mkdir -p /etc/X11/xorg.conf.d # If it doesn't exist, create it.
+    fi
 
-# Create X11 headless config
+## Create X11 headless config
+    cat <<HERE > /etc/X11/xorg.conf.d/10-headless.conf
+    Section "Monitor"
+            Identifier "dummy_monitor"
+            HorizSync 28.0-80.0
+            VertRefresh 48.0-75.0
+            DisplaySize  250 174    # In millimeters, iPad gen 7 & 8
+    EndSection
 
-cat <<HERE > /etc/X11/xorg.conf.d/10-headless.conf
-Section "Monitor"
-        Identifier "dummy_monitor"
-        HorizSync 28.0-80.0
-        VertRefresh 48.0-75.0
-        DisplaySize  250 174    # In millimeters, iPad gen 7 & 8
-EndSection
+    Section "Device"
+            Identifier "dummy_card"
+            VideoRam 256000
+            Driver "dummy"
+    EndSection
 
-Section "Device"
-        Identifier "dummy_card"
-        VideoRam 256000
-        Driver "dummy"
-EndSection
-
-Section "Screen"
-        Identifier "dummy_screen"
-        Device "dummy_card"
-        Monitor "dummy_monitor"
-        SubSection "Display"
-           depth 24
-           Modes "1024x768"  # Works OK on ~10 inch iPad's
-#          Modes "1280x1024"  # Likely to work on larger iPads
-        EndSubSection
-EndSection
-HERE
-
-# Create a place for logs to go.
-
-if [ ! -e /root/i3logs ]; then
-   mkdir /root/i3logs
-fi
-
-# Create default .xinitrc file.
-
-cat <<THERE > /root/.xinitrc
-xrdb -merge ~/.Xresources
-xterm -geometry 80x50+494+51 &
-xterm -geometry 80x20+494-0 &
-exec i3 -V >> /root/i3logs/i3log-$(date +'%F-%k-%M-%S') 2>&1
-THERE
-
-# Create .Xresources file
-
-cat <<EVERYWHERE > /root/.Xresources
-Xft.dpi: 264
-xterm*VT100.Translations: #override \
-    Ctrl <Key> minus: smaller-vt-font() \n\
-    Ctrl <Key> plus: larger-vt-font() \n\
-    Ctrl <Key> 0: set-vt-font(d)
-EVERYWHERE
-
-# That is the prep work done
-
-*# The following script can be used to start vnc*
-
-#!/bin/ash
-#
-# Stupidly simple script to start vnc.  
-
-# Remove stale locks from /tmp
-
-CHECK=`ps -o args | grep "{startx} /bin/sh /usr/bin/startx" | wc -l`
+    Section "Screen"
+            Identifier "dummy_screen"
+            Device "dummy_card"
+            Monitor "dummy_monitor"
+            SubSection "Display"
+               depth 24
+               Modes "1024x768"  # Works OK on ~10 inch iPad's
+     #          Modes "1280x1024"  # Likely to work on larger iPad
+            EndSubSection
+    EndSection
+    HERE
 
 
-# Do minimal sanity check to see if vnc/X11 are installed
-if [ ! -f /etc/X11/xorg.conf.d/10-headless.conf ]; then
-    echo "You must run 'enable_vnc' first"
-    exit 1
-fi
+## Create a place for logs to go.
+    if [ ! -e /root/i3logs ]; then
+       mkdir /root/i3logs
+    fi
 
-# Only run once.  The grep causes CHECK to equal 1
-if [ $CHECK -eq 1 ]; then # Nothing running, clear stale locks
-   rm -rf /tmp/.X* 
-else
-   echo "$0 is already running.  We're done here."
-   exit 1
-fi
+## Create default .xinitrc file.
+    cat <<THERE > /root/.xinitrc
+    xrdb -merge ~/.Xresources
+    xterm -geometry 80x50+494+51 &
+    xterm -geometry 80x20+494-0 &
+    exec i3 -V >> /root/i3logs/i3log-$(date +'%F-%k-%M-%S') 2>&1
+    THERE
 
-startx &
+## Create .Xresources file
 
-x11vnc -display :0 -noshm -forever & 
+    cat <<EVERYWHERE > /root/.Xresources
+    Xft.dpi: 264
+    xterm*VT100.Translations: #override \
+        Ctrl <Key> minus: smaller-vt-font() \n\
+        Ctrl <Key> plus: larger-vt-font() \n\
+        Ctrl <Key> 0: set-vt-font(d)
+    EVERYWHERE
+
+## That is the prep work done
+
+# The following script can be used to start vnc
+
+    #!/bin/ash
+    #
+    # Stupidly simple script to start vnc.  
+
+    # Remove stale locks from /tmp
+
+    CHECK=`ps -o args | grep "{startx} /bin/sh /usr/bin/startx" | wc -l`
+
+    # Only run once.  The grep causes CHECK to equal 1
+    if [ $CHECK -eq 1 ]; then # Nothing running, clear stale locks
+       rm -rf /tmp/.X* 
+    else
+       echo "$0 is already running.  We're done here."
+       exit 1
+    fi
+
+    startx &
+    x11vnc -display :0 -noshm -forever & 
 
 
 
 
-
---------------------------- Original Instructions Below -------------------------------
+# --------------- Original Instructions Below -------------------
 Run `apk add x11vnc xvfb xterm` to add all the required packages to run the VNC Server. 
 
 
