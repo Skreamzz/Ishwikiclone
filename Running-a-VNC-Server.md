@@ -67,8 +67,6 @@
     #
     # Stupidly simple script to start vnc.  
 
-    # Remove stale locks from /tmp
-
     CHECK=`ps -o args | grep "{startx} /bin/sh /usr/bin/startx" | wc -l`
 
     # Only run once.  The grep causes CHECK to equal 1
@@ -81,9 +79,6 @@
 
     startx &
     x11vnc -display :0 -noshm -forever & 
-
-
-
 
 # --------------- Original Instructions Below -------------------
 Run `apk add x11vnc xvfb xterm` to add all the required packages to run the VNC Server. 
