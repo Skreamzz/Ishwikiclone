@@ -14,7 +14,6 @@
 ## Tutorials
 
 * [Extracting a dump of your files](Extracting-a-dump-of-your-files)
-* [Installing `apk`](Installing-apk)
 * [Install & Activate Alternate Filesystems](Install-&-Activate-Alternate-Filesystems)
 * [Running a python web server](Running-a-Python-Web-Server)
 * [Running a VNC Server](Running-a-VNC-Server)
