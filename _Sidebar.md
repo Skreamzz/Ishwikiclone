@@ -9,6 +9,7 @@
 * [Using iSH](Using-iSH)
 * [User Interface](User-Interface)
 * [What Works?](What-works%3F)
+* [iSH's built in APK](iSH's-built-in-APK)
 
 ## Tutorials
 
