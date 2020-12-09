@@ -1,0 +1,1 @@
+See [iSH's built-in APK](https://github.com/ish-app/ish/wiki/iSH's-built-in-APK)
