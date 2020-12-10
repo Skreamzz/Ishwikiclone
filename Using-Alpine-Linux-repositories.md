@@ -1,5 +1,5 @@
 # Using Alpine Linux repositories
-The packages in Alpine Linux repositories are more updated the iSH's own repositories. To use it to replace iSH's own repositories, run:
+The packages in Alpine Linux repositories are more updated the iSH's own repositories and have more packages as well. To use it to replace iSH's own repositories, run:
 
  ```sh
 grep -v "file:///ish/apk/" /etc/apk/repositories | dd of=/etc/apk/repositories bs=4194304
