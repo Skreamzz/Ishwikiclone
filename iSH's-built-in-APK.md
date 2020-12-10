@@ -1,6 +1,6 @@
 iSH 1.1 includes the [APK package manager](https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management). To keep the app self contained while also not including gigabytes of packages, files are downloaded from the App Store as [on-demand resources](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide).
 
-If you updated from a previous version, you won't have the iSH-provided APK, since enabling it is a potentially destructive action (overwriting /etc/apk/repositories). To enable it manually, run this command:
+If you updated from a previous version, you won't have the iSH-provided APK, since enabling it is a potentially destructive action (overwriting /etc/apk/repositories). To enable it manually, run this command after installing the 1.1 update:
 
 ```
 mkdir -p /ish/apk && printf 'file:///ish/apk/main\nfile:///ish/apk/community\n' > /etc/apk/repositories && mount -t apk apk /ish/apk && tar -xf /ish/apk/main/x86/apk-tools-static-2.10.5-r1.apk -C / && apk.static add apk-tools && rm /sbin/apk.static && apk upgrade
