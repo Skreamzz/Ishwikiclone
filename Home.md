@@ -8,5 +8,3 @@ I want to put some technical documentation and stuff here, but I haven't actuall
 * How the "JIT" actually works
 
 If you want to help out by writing documentation on iSH, go ahead and create a page. It's a wiki, after all.
-
-**Please note that the tutorials here assume that `apk` is installed. If it isn't (`apk not found`), install it by following the steps [here](https://github.com/ish-app/ish/wiki/Installing-apk-on-the-App-Store-Version).**
