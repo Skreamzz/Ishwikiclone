@@ -6,6 +6,12 @@ If you updated from a previous version, you won't have the iSH-provided APK, sin
 mkdir -p /ish/apk && printf 'file:///ish/apk/main\nfile:///ish/apk/community\n' > /etc/apk/repositories && mount -t apk apk /ish/apk && tar -xf /ish/apk/main/x86/apk-tools-static-2.10.5-r1.apk -C / && apk.static add apk-tools && rm /sbin/apk.static && apk upgrade
 ```
 
+If this fails with `mkdir: can't create directory \`/ish/apk\`: Operation not permitted`, run this slightly different command:
+
+```
+printf 'file:///ish/apk/main\nfile:///ish/apk/community\n' > /etc/apk/repositories && tar -xf /ish/apk/main/x86/apk-tools-static-2.10.5-r1.apk -C / && apk.static add apk-tools && rm /sbin/apk.static && apk upgrade
+```
+
 Alternatively, if you have no important data, you may delete and reinstall the app to use the new default filesystem.
 
 Starting from this build, the default iSH filesystem reserves the directory /ish for its own internal bookkeeping. A “default” filesystem is identified by the existence of a directory at /ish. The command above will create this directory. Current uses for this directory include updating the version file to match the build of iSH that it was opened with and mounting a synthetic filesystem to provide the ODRs necessary for the built-in APK. If you don't want this, run `umount /ish/apk && rm -rf /ish`.
