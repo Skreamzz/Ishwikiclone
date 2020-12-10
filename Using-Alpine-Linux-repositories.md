@@ -7,4 +7,4 @@ echo https://dl-cdn.alpinelinux.org/alpine/v3.12/main >> /etc/apk/repositories
 echo https://dl-cdn.alpinelinux.org/alpine/v3.12/community >> /etc/apk/repositories
 ```
 
-Details: The reason why iSH has it's own repositories is so that the app is entirely self-contained so that iSH with `apk` can pass app review. The repositories is a pseudo `apk` filesystem that when read, will actually download from App Store as on-demand resources. It also means that Apple can review all packages in iSH's repositories.
+Note : The reason why iSH has it's own repositories is so that the app is entirely self-contained so that iSH with `apk` can pass app review. The repositories is a pseudo `apk` filesystem that when read, will actually download from App Store as on-demand resources. It also means that Apple can review all packages in iSH's repositories.
