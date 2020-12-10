@@ -1,4 +1,4 @@
-# Using Alpine Linux's repositories
+# Using Alpine Linux repositories
 The packages in Alpine Linux repositories are more updated the iSH's own repositories. To use it to replace iSH's own repositories, run:
 
  ```sh
