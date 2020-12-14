@@ -5,7 +5,7 @@ iPad:~#
 ```
 
 - Can we still put URLs in repositories file?
-- What version should we use: v3.xx, v3.11, v3.12, 
+- What version should we use? v3.xx, v3.11, v3.12
 
 ```
 #example: alpine
