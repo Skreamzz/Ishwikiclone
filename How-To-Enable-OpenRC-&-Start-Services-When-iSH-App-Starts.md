@@ -76,4 +76,6 @@ exim
 mysqld/mariadb
 syslog-ng: Starts but programs that attempt to log lock-up
 rsyslog: Starts but programs that attempt to log lock up
+dbus
+avahi-daemon
 
