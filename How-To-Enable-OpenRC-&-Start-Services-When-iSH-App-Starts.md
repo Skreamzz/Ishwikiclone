@@ -65,17 +65,17 @@ Dynamic Runlevel: manual
 ```
 I've verified that the following service at least start and appear to work as of iSH 1.0.1 Build 77
 
-sshd: Extensively tested
-dcron: Moderately tested
-apche2: Minimally tested
-nginx: Minimally tested
+* sshd: Extensively tested
+* dcron: Moderately tested
+* apche2: Minimally tested
+* nginx: Minimally tested
 
-In addition I've tested the following and they do not work as of this time.
+In addition I've tested the following and they do not work at this time.
 
-exim
-mysqld/mariadb
-syslog-ng: Starts but programs that attempt to log lock-up
-rsyslog: Starts but programs that attempt to log lock up
-dbus
-avahi-daemon
+* exim
+* mysqld/mariadb
+* syslog-ng: Starts but programs that attempt to log lock-up
+* rsyslog: Starts but programs that attempt to log lock up
+* dbus
+* avahi-daemon
 
