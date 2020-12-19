@@ -20,6 +20,6 @@ If you run into any issues (which is not unlikely as we barely tested this), ple
 
 ## Known issues
 
-* We forgot to include the community repository in this version. We will fix this in the next update. Workaround: `echo 'file:///ish/apk/community' >> /etc/apk/repositories`
+* We forgot to include the community repository in this version. This is fixed in 1.1.1 (build 88). Workaround: `echo 'file:///ish/apk/community' >> /etc/apk/repositories`
 * If you already have a /ish directory, iSH will "take it over" by creating /ish/version. We realize this may cause problems for people who have created and are using /ish for other reasons. The next update will only reserve it for internal use if /ish/version exists. Workaround: `umount /ish/apk`, `rm /ish/version`, rename the directory.
 * Resizing the terminal (e.g. hiding the keyboard, rotating the screen) will cancel any ongoing package downloads. We will fix this in the next update. Workaround: don't resize the terminal.
