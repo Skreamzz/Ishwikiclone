@@ -1,8 +1,9 @@
-Run `apk add ruby ruby-dev build-base`. These packages are all necessary. If you're interested:
+Run `apk add ruby ruby-dev build-base ruby-json`. These packages are all necessary. If you're interested:
 
 * `ruby` is Ruby
 * `ruby-dev` is for Ruby headers that are required to build native extensions
 * `build-base` is also required to build native extensions
+* `ruby-json` is required to enable any gems that require JSON to work
 
 Test to make sure Ruby is installed by typing `ruby -v`, you should see something along the lines of 
 
@@ -26,6 +27,9 @@ Solution: Make sure you installed `ruby-dev` from before. Remember, both `ruby` 
 
 ### Gems won't install due to "Can't find lsc++" etc
 Solution: Make sure you installed `build-base` from before. This is required for native extensions to be built.
+
+### Gems won't run due to "ruby `require': cannot load such file -- json (LoadError)"
+Solution: Alpine packages JSON separately. Make sure you install `ruby-json`
 
 ## Gems that won't install
 
