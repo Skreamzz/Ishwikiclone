@@ -1,4 +1,4 @@
-# Running a python web server
+# Running a Python web server
 This works surprisingly well and you can use this to host your static html page
 1. Run `apk update`
 2. Run `apk add python3`
