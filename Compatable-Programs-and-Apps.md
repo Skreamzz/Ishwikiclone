@@ -13,7 +13,7 @@ disclaimer; some of these programs install but installation or execution may cau
 *     1).  git--------------------works----------download tool----------"apk add git"
       2).  lynx-------------------works----------browser----------------"apk add lynx"
       3).  man-pages--------------works----------manual tool------------"apk add mandoc man-pages less less-doc"
-      4).  cheat.sh---------------partiall-------manual tool------------"git clone <link>"
+      4).  Cheat.sh---------------partiall-------manual tool------------"git clone <link>" [cheat.sh](https://github.com/chubin/cheat.sh)
       5).  cmatrix----------------works----------tty screensaver--------"apk add cmatrix"
       6).  alpine firewall--------unsure---------firewall---------------"apk add -u awall"
       7).  ip6tables--------------unsure--------------------------------"apk add iptables ip6tables"
