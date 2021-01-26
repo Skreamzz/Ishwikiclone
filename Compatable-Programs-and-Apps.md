@@ -1,7 +1,7 @@
 > **# ISH COMPATABLE PROGRAMS AND APPS**
 
 After setting up your package manager, you might be looking for programs that are compatable with iSH. This list may be a helpful start.
-disclaimer; some of these programs download but installation or execution may cause issues, some have issues but will work partially (check STATUS).
+disclaimer; some of these programs download but installation or execution may cause issues, some only work partially (check STATUS).
 
 ***
 
@@ -32,6 +32,7 @@ disclaimer; some of these programs download but installation or execution may ca
       20). neofetch---------------works----------OS logo display--------"apk add neofetch"
       21). spreadsheet calculator-unsure---------spreadsheet calc-------"apk add ncurses-dev" & "git clone <link>
       22). Ssh--------------------works----------secure shell-----------"apk add openssh"
+      23). 
 
 ***
  1. [cheat.sh](https://github.com/chubin/cheat.sh)
