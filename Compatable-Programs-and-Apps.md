@@ -6,7 +6,7 @@ disclaimer; some of these programs install but installation or execution may cau
 ***
 
 
-*       APPLICATION            STATUS         TYPE                   DOWNLOAD METHOD
+*          APPLICATION            STATUS         TYPE                   DOWNLOAD METHOD
 
 ***
 
