@@ -96,7 +96,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`Ranger` | Yes | |
 |`metadelta` | Yes | |
 |`cmatrix` | Yes | |
-|`cheat.sh` | Partialy workling |  |
+|`cheat.sh` | Partially workling |  |
 
 
 Testers:
