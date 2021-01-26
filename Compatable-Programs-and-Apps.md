@@ -1,7 +1,7 @@
 > **# ISH COMPATABLE PROGRAMS AND APPS**
 
-After setting up your package manager, you might be looking for programs that are compatable with iSH. This list may help be a helpful start.
-disclaimer; some of these programs install but installation or execution may cause issues, some have issues but will work partially (check STATUS).
+After setting up your package manager, you might be looking for programs that are compatable with iSH. This list may be a helpful start.
+disclaimer; some of these programs download but installation or execution may cause issues, some have issues but will work partially (check STATUS).
 
 ***
 
