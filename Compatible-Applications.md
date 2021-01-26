@@ -1,3 +1,7 @@
+
+ ![](https://photos.smugmug.com/Ish/i-2MXm8VF/0/384caaa2/S/iSHPHONE-S.png) 
+
+
 As said [here](https://github.com/tbodt/ish/wiki/FAQ#q-x-does-not-work) many programs do fail, so here is a list of programs known to be working (or not).
 
 If you add a new test for a package, please add a line (same if package was already tested). Feel free to update the device tested if the build is newer.
@@ -87,6 +91,13 @@ If you add a new test for a package, please add a line (same if package was alre
 |`wptc-track`| Yes | | 78 |
 |`ddate` | Yes | | 1.0.1 |
 |`metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
+|`git` | Yes | |
+|`man-pages` | Yes | |
+|`Ranger` | Yes | |
+|`metadelta` | Yes | |
+|`cmatrix` | Yes | |
+|`cheat.sh` | Partialy workling |  |
+
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan
