@@ -37,3 +37,5 @@ disclaimer; some of these programs install but installation or execution may cau
  1. [cheat.sh](https://github.com/chubin/cheat.sh)
  2. [Ranger](https://github.com/ranger/ranger)
  3. [Metadelta](https://github.com/metadelta/mdlt)
+
+***
