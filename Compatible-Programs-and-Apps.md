@@ -1,16 +1,19 @@
 > **# ISH COMPATABLE PROGRAMS AND APPS**
 
-After setting up your package manager, you might be looking for programs that are compatable with iSH. This list may be a helpful start.
-disclaimer; some of these programs download but installation or execution may cause issues, some only work partially (check STATUS).
+ ![](https://photos.smugmug.com/Ish/i-2MXm8VF/0/384caaa2/S/iSHPHONE-S.png) 
+     
+
+     after setting up your package manager, you might be looking for programs that are compatible with iSH. This list may be a helpful start.
+     disclaimer; some of these programs download but installation or execution may cause issues, some only work partially (check STATUS).
 
 ***
 
 
-*          APPLICATION            STATUS         TYPE                   DOWNLOAD METHOD
+          APPLICATION            STATUS         TYPE                   DOWNLOAD METHOD
 
 ***
 
-*     1).  git--------------------works----------download tool----------"apk add git"
+      1).  git--------------------works----------download tool----------"apk add git"
       2).  lynx-------------------works----------browser----------------"apk add lynx"
       3).  man-pages--------------works----------manual tool------------"apk add mandoc man-pages less less-doc"
       4).  Cheat.sh---------------partiall-------manual tool------------"git clone <link>" 
