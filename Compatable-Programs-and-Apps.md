@@ -23,13 +23,14 @@ disclaimer; some of these programs install but installation or execution may cau
       11). Tmux-------------------works----------term multiplexer-------"apk add tmux"
       12). Fortune----------------works----------quote generator--------"apk add fortune"
       13). Figlet-----------------works----------text tool--------------"apk add figlet"
-      14). Taskwarrior------------unsure---------task scheduler--------"git clone <link>"
+      14). Taskwarrior------------unsure---------task scheduler---------"git clone <link>"
       15). Ranger-----------------works----------file manager-----------"pip install ranger-fm" (install from git fails)
       16). Peaclock---------------unsure---------clock/timer------------"git clone <link>"
       17). tty-table--------------unsure---------table/formating--------"git clone <Link>"
       18). NPM--------------------unsure---------node.js package man----"apk add npm"
       19). metadelta--------------works----------calculator-------------"git clone <link>"
       20). neofetch---------------works----------OS logo display--------"apk add neofetch"
-      21). spreadsheet calculator-unsure---------spreadsheet calc-------"apk add ncurses-dev" & "git clone <li>
+      21). spreadsheet calculator-unsure---------spreadsheet calc-------"apk add ncurses-dev" & "git clone <link>
+      22). Ssh--------------------works----------secure shell-----------"apk add openssh"
 
 ***
