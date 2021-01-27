@@ -81,7 +81,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `nmap`| No | Assertion failed | 40|
 | `node` | Yes || 73 |
 | `R`| Yes | For installing CRAN packages follow the [instructions on the wiki](Installing-R-and-any-package-from-the-CRAN) | 73 |
-| `Ranger` | Yes | | | git glone | 
+| `Ranger` | Yes | | | "pip install ranger-fm"  | 
 | `runit`| No | | 74 |
 | `screen` | Yes |Detaches and reattaches!|53|
 | `sddm`| No | Illegal Instruction| 74 |
