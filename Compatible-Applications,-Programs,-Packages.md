@@ -74,7 +74,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `man-pages` | Yes | | 4.20.69 | apk add mandoc man-pages less less-doc |
 | `metadelta` | Yes | | 4.20.69 | [git clone ](https://github.com/metadelta/mdlt) |
 | `metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
-| `Midnight Commander`| Yes | F-keys don't work |48| apk add mc |
+| `Midnight Commander`| Yes | F-keys don't work, use 'escape + number' |48| apk add mc |
 | `mosh`| Yes | |54|
 | `nano` | Yes ||33|
 | `neofetch` | Yes ||52|
@@ -88,6 +88,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `sddm` | No | Illegal Instruction| 74 |
 | `spreadsheet calculator` | unsure | | 4.20.69 | "apk add ncurses-dev" & "git clone <link>" |
 | `sshfs` | No | fuse: device not found, try 'modprobe fuse' first | 74 |
+| `strace` | partially working | `strace: PTRACE_SEIZE doesn't work` `strace:PTRACE_SETOPTIONS: invalid argument` | 4.20.69 | [git clone](https://github.com/strace/strace)|
 | `stunnel3` | Yes | perl needs to be installed |65|
 | `systemd` | No | | 74|
 | `tput` |Yes||33|
