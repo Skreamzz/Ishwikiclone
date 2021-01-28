@@ -12,14 +12,17 @@ If you add a new test for a package, please add a line (same if package was alre
 | `arp` | No | can't open '/proc/net/arp': No such file or directory | 73 |
 | `bash` | Yes || 33 |
 | `brew` (tigerbrew) | No | `Error: Cannot find a vendored version of curl for your i686 processor on Linuxbrew! Error: Failed to install vendor Curl. `| 74 |
-| `cmatrix` | Yes | | | apk add cmatrix |
+| `cmatrix` | Yes | | 4.20.69 | apk add cmatrix |
 | `cmus` | No | Bad system call |52|
-| `cheat.sh` | Partially workling |  | | git clone |
+| `cheat.sh` | Partially workling |  | 4.20.69 | [git clone](https://github.com/chubin/cheat.sh) |
 | `clang` | Yes | |55|
+| `Clc` | yes | | | [git clone](https://github.com/betafcc/clc) |
 | `curl` | Yes | HTTPS too |33| apk add curl |
 | `ddate` | Yes | | 1.0.1 |
 | `dillo` | Partially working | Follow the [instructions ](https://github.com/ish-app/ish/wiki/Running-a-VNC-Server) to install VNC server. Requires fonts-noto to be installed. Some website don’t work |67|
 | `dig`| No | Runtime check fails but you can use `drill` as a drop-in replacement | 1.0.1 |
+| `dpkg`| No | Illegal Instruction  |73|
+| `dpkg` (busybox) | Yes | compile with -mtune=i386 | 74 |
 | `drill`| Yes | | 1.0.1 |
 | `dumb-init` | Yes | | 74 |
 | `emacs` | Yes |works recursively in `M-x term` !|36|
@@ -39,13 +42,10 @@ If you add a new test for a package, please add a line (same if package was alre
 | `init` (busybox) | Yes | | 74 |
 | `weechat` | Yes ||53|
 | `nvim` | Yes | |41|
-| `vim` | Yes ||33|
-| `vi` | Yes ||33|
 | `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
 | `wget` | Yes | HTTPS too |33| apk add wget |
 | `python3` | Yes ||33|
 | `ps` | Yes ||34|
-| `youtube-dl` | Yes | Very slow to start |35|
 | `ffmpeg` | Yes | |35|
 | `openssh` (client)| Yes | |31| apk add openssh |
 | `openssh` (server)| Yes | Follow the [instructions on the wiki](Running-an-SSH-server) |45|
@@ -53,11 +53,12 @@ If you add a new test for a package, please add a line (same if package was alre
 | `resolvconf` | Yes | Tested on Ubuntu 18.04.5 | 74 |
 | `ruby` | Yes ||34|
 | `irb` | Yes ||35|
-| `mate-session`| No | Bad system call |37|
 | `tmux` | Yes ||53|
 | `uptime` | Yes | |40|
 | `links` | Yes |  |40|
 | `lynx` | Yes ||40|
+| `lftp`| Yes | | 73 |
+| `lighttpd` | No | `(stat_cache.c.601) server.stat-cache-engine can be one of "disable", "simple", but not: fam` | 76 |
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat` |40|
 | `&`, `bg`, `fg`, `jobs`|Yes||44|
 | `ed`| Yes | |52|
@@ -65,37 +66,37 @@ If you add a new test for a package, please add a line (same if package was alre
 | `php (extensions)`| Yes | |65|
 | `perl`| Yes | |65|
 | `openssl`| Yes | Even signing certificates work perfectly fine |65|
-| `dpkg`| No | Illegal Instruction  |73|
-| `wine`| No | Illegal Instruction when trying to run any program | 73 |
-| `lftp`| Yes | | 73 |
+| `plasma-desktop`| No | Illegal Instruction| 74 |
+| `openrc`| Yes | both the openrc command and init system works | 74 |
 | `plistutil` | Yes | | 74 |
 | `img4tool` | Yes | | 74 |
-| `man-pages` | Yes | | | apk add mandoc man-pages less less-doc |
-| `metadelta` | Yes | | | git clone |
+| `mate-session`| No | Bad system call |37|
+| `man-pages` | Yes | | 4.20.69 | apk add mandoc man-pages less less-doc |
+| `metadelta` | Yes | | 4.20.69 | [git clone ](https://github.com/metadelta/mdlt) |
 | `metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
 | `Midnight Commander`| Yes | F-keys don't work |48| apk add mc |
 | `mosh`| Yes | |54|
 | `nano` | Yes ||33|
 | `neofetch` | Yes ||52|
-| `nautilus`| Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
-| `nmap`| No | Assertion failed | 40|
+| `nautilus` | Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
+| `nmap` | No | Assertion failed | 40|
 | `node` | Yes || 73 |
-| `R`| Yes | For installing CRAN packages follow the [instructions on the wiki](Installing-R-and-any-package-from-the-CRAN) | 73 |
-| `Ranger` | Yes | | | "pip install ranger-fm"  | 
-| `runit`| No | | 74 |
+| `R` | Yes | For installing CRAN packages follow the [instructions on the wiki](Installing-R-and-any-package-from-the-CRAN) | 73 |
+| `Ranger` | Yes | install from git fails, check [install instructions](https://github.com/ranger/ranger)| 4.20.69 | "pip install ranger-fm"  | 
+| `runit` | No | | 74 |
 | `screen` | Yes |Detaches and reattaches!|53|
-| `sddm`| No | Illegal Instruction| 74 |
-| `spreadsheet calculator` | unsure | | | "apk add ncurses-dev" & "git clone <link>" |
-| `sshfs`| No | fuse: device not found, try 'modprobe fuse' first | 74 |
-| `stunnel3`| Yes | perl needs to be installed |65|
-| `systemd`| No | | 74|
+| `sddm` | No | Illegal Instruction| 74 |
+| `spreadsheet calculator` | unsure | | 4.20.69 | "apk add ncurses-dev" & "git clone <link>" |
+| `sshfs` | No | fuse: device not found, try 'modprobe fuse' first | 74 |
+| `stunnel3` | Yes | perl needs to be installed |65|
+| `systemd` | No | | 74|
 | `tput` |Yes||33|
-| `plasma-desktop`| No | Illegal Instruction| 74 |
-| `openrc`| Yes | both the openrc command and init system works | 74 |
-| `dpkg` (busybox) | Yes | compile with -mtune=i386 | 74 |
-| `lighttpd` | No | `(stat_cache.c.601) server.stat-cache-engine can be one of "disable", "simple", but not: fam` | 76 |
-| `jq`| Yes | | 76 |
-| `wptc-track`| Yes | | 78 |
+| `vim` | Yes ||33|
+| `vi` | Yes ||33|
+| `jq` | Yes | | 76 |
+| `wine` | No | Illegal Instruction when trying to run any program | 73 |
+| `wptc-track` | Yes | | 78 |
+| `youtube-dl` | Yes | Very slow to start |35|
 | `zsh` | Yes | | 48 |
 
 Testers:
