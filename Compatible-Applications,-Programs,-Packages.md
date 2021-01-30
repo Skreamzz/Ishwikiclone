@@ -2,9 +2,10 @@
  ![](https://photos.smugmug.com/Ish/i-2MXm8VF/0/384caaa2/S/iSHPHONE-S.png) 
 
 
-As said [here](https://github.com/tbodt/ish/wiki/FAQ#q-x-does-not-work) many programs do fail, so here is a list of programs known to be working (or not).
-
-If you add a new test for a package, please add a line (same if package was already tested). Feel free to update the device tested if the build is newer.
+As said [here](https://github.com/tbodt/ish/wiki/FAQ#q-x-does-not-work) many programs do fail
+    
+      here is a list of programs known to be working (or not). If you add a new test for a package, please add a line 
+      (same if package was already tested). Feel free to update the device tested if the build is newer.
 
 | Package name | Status | Notes | iSH version number | Method |
 |:-|:-|:-|:-|:-|
