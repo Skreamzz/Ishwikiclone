@@ -64,6 +64,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `ed`| Yes | |52|
 | `php`| Yes | |65|
 | `php (extensions)`| Yes | |65|
+| `pip` | yes | | | apk add python3-pip |
 | `perl`| Yes | |65|
 | `openssl`| Yes | Even signing certificates work perfectly fine |65|
 | `plasma-desktop`| No | Illegal Instruction| 74 |
