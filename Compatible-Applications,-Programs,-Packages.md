@@ -89,6 +89,7 @@ As said [here](https://github.com/tbodt/ish/wiki/FAQ#q-x-does-not-work) many pro
 | `runit` | No | | 74 |
 | `screen` | Yes |Detaches and reattaches!|53|
 | `sddm` | No | Illegal Instruction| 74 |
+| `setup script` | yes | | | [git clone](https://github.com/JordanCarr/iSH-Setup-Script) |
 | `spreadsheet calculator` | unsure | | 4.20.69 | "apk add ncurses-dev" & "git clone <link>" |
 | `sshfs` | No | fuse: device not found, try 'modprobe fuse' first | 74 |
 | `strace` | partially working | `strace: PTRACE_SEIZE doesn't work` `strace:PTRACE_SETOPTIONS: invalid argument` | 4.20.69 | [git clone](https://github.com/strace/strace)|
