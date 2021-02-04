@@ -41,6 +41,7 @@ As said [here](https://github.com/tbodt/ish/wiki/FAQ#q-x-does-not-work) many pro
 | `ifconfig` |No| `ioctl 0x8912 failed: Invalid argument` | 33 |
 | `ip` | No | `ip: socket(AF_NETLINK,3,0): Invalid argument` | 33 |
 | `ipscan` | yes | | 4.20.69 | [git clone](https://github.com/LoganRan625/iSH-IP-Scanner.git) |
+| `ish-tools` | yes | | 4.20.69 | [git clone](https://github.com/jaclu/ishTools.git) |
 | `init` (busybox) | Yes | | 74 |
 | `weechat` | Yes ||53|
 | `nvim` | Yes | |41|
