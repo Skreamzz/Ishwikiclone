@@ -26,3 +26,6 @@ Solutions to this:
 $ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 ```
 Now try it again!
+
+### Issues on running commands such as bash or neofetch
+Sometimes you will receive an error `error relocating ... symbol not found` when running bash or any installed tool. This is because `musl` and other alpine packages need to be upgraded. A simple `apk upgrade -a` will fix it.
