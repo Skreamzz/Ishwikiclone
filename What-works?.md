@@ -18,7 +18,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `vi` | Yes ||33|
 | `fish` | Yes ||45|
 | `neofetch` | Yes ||52|
-| `screenfetch` | No | _/proc/cpuinfo: No such file or directory_ |33|
+| `screenfetch` | Yes w/ errors | /proc/cpuinfo: No such file or directory |33|
 | `node` | Yes || 73 |
 | `curl` | Yes | HTTPS too |33|
 | `wget` | Yes | HTTPS too |33|
