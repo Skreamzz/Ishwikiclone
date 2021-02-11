@@ -24,7 +24,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `wget` | Yes | HTTPS too |33|
 | `python3` | Yes ||33|
 | `youtube-dl` | Yes | Very slow to start |35|
-| `cmus` | No | Bad system call |52|
+| `cmus` | No? | First launch resulted in a failure to initialize error. Subsequent launches seemed OK | 91 |
 | `ffmpeg` | Yes | |35|
 | `emacs` | Yes |works recursively in `M-x term` !|36|
 | `openssh` (client)| Yes | |31|
