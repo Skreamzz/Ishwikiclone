@@ -1,1 +1,0 @@
-How can I use button “CTRL” or just stop the process? Sometimes in different programs I have to use “ctrl” to stop it, but I cant use this button.
