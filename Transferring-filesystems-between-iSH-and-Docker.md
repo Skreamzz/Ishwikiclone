@@ -37,8 +37,8 @@ To avoid it, please run the following command inside the container:
 `tar czvf /tmp/ish-fs.tar.gz / --exclude=proc/* --exclude=sys/*`
 
 then after you exit the container (you can simply type `exit`), run the last above-mentioned Docker command, for example,  
-`docker cp default:/tmp/ish-fs.gz ~/Documents/ish-fs.gz` (on MacOS or Linux)  
-`docker cp glibc:/tmp/ish-fs.gz ~/Documents/ish-fs.gz` (on MacOS or Linux)
+`docker cp default:/tmp/ish-fs.tar.gz ~/Documents/ish-fs.tar.gz` (on MacOS or Linux)  
+`docker cp glibc:/tmp/ish-fs.tar.gz ~/Documents/ish-fs.tar.gz` (on MacOS or Linux)
 
 
 That's it. Now you can import the filesystem into the iSH App and boot from them without issues!
