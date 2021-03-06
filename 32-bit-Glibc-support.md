@@ -1,4 +1,4 @@
-Here's a Docker repository for a default iSH filesystem with a **32-bit Glibc library** https://hub.docker.com/repository/docker/econcz/x86-alpine-glibc
+Here's a Docker repository for the default iSH filesystem with a **32-bit Glibc library** https://hub.docker.com/repository/docker/econcz/x86-alpine-glibc
 
 **Description**:  
 A glibc 32-bit docker image for Alpine Linux built for https://ish.app (:ish-glibc-3.12 etc., the original iSH App image is :ish-import). This time the Alpine itself is also 32 bit!
