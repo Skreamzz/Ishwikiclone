@@ -3,8 +3,8 @@ The packages in Alpine Linux repositories are more updated than iSH's own reposi
 <!-- 3.13+ is not used due to missing seccomp(2) support -->
  ```sh
 grep -v "file:///ish/apk/" /etc/apk/repositories | dd of=/etc/apk/repositories bs=4194304
-echo https://dl-cdn.alpinelinux.org/alpine/v3.13/main >> /etc/apk/repositories
-echo https://dl-cdn.alpinelinux.org/alpine/v3.13/community >> /etc/apk/repositories
+echo https://dl-cdn.alpinelinux.org/alpine/v3.12/main >> /etc/apk/repositories
+echo https://dl-cdn.alpinelinux.org/alpine/v3.12/community >> /etc/apk/repositories
 ```
 
 Note : The reason why iSH has its own repositories is so that the app is entirely self-contained so that iSH with `apk` can pass app review. The repositories are a pseudo `apk` filesystem mounted on /ish/apk that when read, will actually download from App Store as on-demand resources. It also means that Apple can review all packages in iSH's repositories.
