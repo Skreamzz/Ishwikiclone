@@ -18,4 +18,4 @@ You will see several options including "Boot From This Filesystem".  Choose that
 
 ----
 
-**Note:** Most filesystem don't work yet and it is because /bin/login or /sbin/init encountered a fatal error. In addition,some filesystem will never work in iSH because they don't have /sbin/init. Those filesystem needs to be patched.
+**Note:** Most filesystems don't work yet because /bin/login or /sbin/init encounters a fatal error. In addition, some filesystems will never work in iSH because they don't have /sbin/init. These types of filesystems need to be patched before they can work in iSH.
