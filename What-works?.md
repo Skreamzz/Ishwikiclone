@@ -102,3 +102,4 @@ If you want a specific package to be tested, please add it here including specia
 | `docker-ce`   | For running webapps |   
 | `code-server`   | To run vs code in browser |   
 | `ghc`         | Haskell file compiling     |
+| `ocaml`       | Ocaml compiling / Installing Opam packages |
