@@ -18,8 +18,8 @@ or, if you need a default iSH filesystem with GLibc (some software like Calibre 
 
 
 To create a container, run the second command, for example,  
-`docker --privileged -it --name default econcz/x86-alpine-glibc:ish-import /bin/ash`  
-`docker --privileged -it --name glibc econcz/x86-alpine-glibc:ish-glibc-latest /bin/ash`
+`docker run --privileged -it --name default econcz/x86-alpine-glibc:ish-import /bin/ash`  
+`docker run --privileged -it --name glibc econcz/x86-alpine-glibc:ish-glibc-latest /bin/ash`
 
 To be able to use **apk** to install software, you need to run these commands inside the container (the default iSH filesystem comes without a fully configured APK):  
 `export ALPINE_VERSION=3.12`  or any other version that you wish to use  
