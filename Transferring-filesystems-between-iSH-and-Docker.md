@@ -34,7 +34,7 @@ The tricky part is to export the filesystem from the container back to iSH.
 The filesystem exported with the help of `docker export [[container name]] > ish-fs.tar.gz` may fail on importing it back into iSH because of the difference in **tar** versions on your computer and in the iSH App. **The typical error is linkname/pathname locale conversion from UTF-8**.
 
 To avoid it, please run the following command inside the container:  
-`tar czvf /tmp/ish-fs.tar.gz / --exclude=proc/* --exclude=sys/*`
+`tar czvf /tmp/ish-fs.tar.gz / --exclude=dev/ --exclude=proc/* --exclude=sys/*`
 
 then after you exit the container (you can simply type `exit`), run the last above-mentioned Docker command, for example,  
 `docker cp default:/tmp/ish-fs.tar.gz ~/Documents/ish-fs.tar.gz` (on MacOS or Linux)  
