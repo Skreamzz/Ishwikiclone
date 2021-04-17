@@ -36,7 +36,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `irb` | Yes ||35|
 | `gem` | Yes ||38|
 | `go` | Yes | |67|
-| `mate-session`| No | Bad system call |37|
+| `mate-session` | No | Bad system call |37|
 | `tmux` | Yes ||53|
 | `screen` | Yes |Detaches and reattaches!|53|
 | `figlet` | Yes | |40|
@@ -45,50 +45,51 @@ If you add a new test for a package, please add a line (same if package was alre
 | `lynx` | Yes ||40|
 | `gdb` | No | Segfault, socketcall 16 |40|
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat` |40|
-|`nmap`| No | Assertion failed | 40|
-|`&`, `bg`, `fg`, `jobs`|Yes||44|
-|`mc`| Yes | F-keys don't work |48|
-|`ed`| Yes | |52|
-|`git`| Yes | |53|
-|`mosh`| Yes | |54|
-|`gcc `| Yes | |55|
-|`gawk`| Yes | |55|
-|`clang`| Yes | |55|
-|`arp`| No | can't open '/proc/net/arp': No such file or directory | 73 |
-|`php`| Yes | |65|
-|`php (extensions)`| Yes | |65|
-|`stunnel3`| Yes | perl needs to be installed |65|
-|`perl`| Yes | |65|
-|`openssl`| Yes | Even signing certificates work perfectly fine |65|
-|`dillo`| Partially working | Follow the [instructions ](https://github.com/ish-app/ish/wiki/Running-a-VNC-Server) to install VNC server. Requires fonts-noto to be installed. Some websites don’t work |67|
-|`dpkg`| No | Illegal Instruction  |73|
-|`wine`| No | Illegal Instruction when trying to run any program | 73 |
-|`R`| Yes | For installing CRAN packages follow the [instructions on the wiki](Installing-R-and-any-package-from-the-CRAN) | 73 |
-|`lftp`| Yes | | 73 |
-|`sshfs`| No | fuse: device not found, try 'modprobe fuse' first | 74 |
-|`apt`,`apt-*`| No | Illegal instruction | 74 |
-|`plistutil` | Yes | | 74 |
-|`img4tool` | Yes | | 74 |
-|`brew` (tigerbrew) | No | `Error: Cannot find a vendored version of curl for your i686 processor on Linuxbrew! Error: Failed to install vendor Curl. `| 74 |
-|`systemd`| No | | 74|
-|`plasma-desktop`| No | Illegal Instruction| 74 |
-|`sddm`| No | Illegal Instruction| 74 |
-|`init` (busybox) | Yes | | 74 |
-|`dumb-init` | Yes | | 74 |
-|`openrc`| Yes | both the openrc command and init system works | 74 |
-|`runit`| No | | 74 |
-|`dpkg` (busybox) | Yes | compile with -mtune=i386 | 74 |
-|`lighttpd` | No | `(stat_cache.c.601) server.stat-cache-engine can be one of "disable", "simple", but not: fam` | 76 |
-|`jq`| Yes | | 76 |
-|`nautilus`| Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
-|`gnome-calculator`| Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
-|`dig`| No | Runtime check fails but you can use `drill` as a drop-in replacement | 1.0.1 |
-|`drill`| Yes | | 1.0.1 |
-|`wptc-track`| Yes | | 78 |
-|`ddate` | Yes | | 1.0.1 |
-|`metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
-|`apache2`| Yes | launch with `/usr/sbin/httpd` | 91 |
-|`mysql`| No | ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (2) | 91 |
+| `nmap` | No | Assertion failed | 40|
+| `&`, `bg`, `fg`, `jobs`|Yes||44|
+| `mc` | Yes | F-keys don't work |48|
+| `ed` | Yes | |52|
+| `git` | Yes | |53|
+| `mosh` | Yes | |54|
+| `gcc ` | Yes | |55|
+| `gawk` | Yes | |55|
+| `clang` | Yes | |55|
+| `arp` | No | can't open '/proc/net/arp': No such file or directory | 73 |
+| `php` | Yes | |65|
+| `php (extensions)`| Yes | |65|
+| `stunnel3` | Yes | perl needs to be installed |65|
+| `perl` | Yes | |65|
+| `openssl` | Yes | Even signing certificates work perfectly fine |65|
+| `dillo` | Partially working | Follow the [instructions ](https://github.com/ish-app/ish/wiki/Running-a-VNC-Server) to install VNC server. Requires fonts-noto to be installed. Some websites don’t work |67|
+| `dpkg` | No | Illegal Instruction  |73|
+| `wine` | No | Illegal Instruction when trying to run any program | 73 |
+| `R` | Yes | For installing CRAN packages follow the [instructions on the wiki](Installing-R-and-any-package-from-the-CRAN) | 73 |
+| `lftp` | Yes | | 73 |
+| `sshfs` | No | fuse: device not found, try 'modprobe fuse' first | 74 |
+| `apt`,`apt-*` | No | Illegal instruction | 74 |
+| `plistutil` | Yes | | 74 |
+| `img4tool` | Yes | | 74 |
+| `brew` (tigerbrew) | No | `Error: Cannot find a vendored version of curl for your i686 processor on Linuxbrew! Error: Failed to install vendor Curl. `| 74 |
+| `systemd` | No | | 74|
+| `plasma-desktop` | No | Illegal Instruction| 74 |
+| `sddm` | No | Illegal Instruction| 74 |
+| `init` (busybox) | Yes | | 74 |
+| `dumb-init` | Yes | | 74 |
+| `openrc` | Yes | both the openrc command and init system works | 74 |
+| `runit` | No | | 74 |
+| `dpkg` (busybox) | Yes | compile with -mtune=i386 | 74 |
+| `lighttpd` | No | `(stat_cache.c.601) server.stat-cache-engine can be one of "disable", "simple", but not: fam` | 76 |
+| `jq` | Yes | | 76 |
+| `nautilus` | Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
+| `gnome-calculator` | Yes | Will illegal instruction after first use, need to delete configuration. | 76 |
+| `dig` | No | Runtime check fails but you can use `drill` as a drop-in replacement | 1.0.1 |
+| `drill` | Yes | | 1.0.1 |
+| `wptc-track` | Yes | | 78 |
+| `ddate` | Yes | | 1.0.1 |
+| `metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
+| `apache2` | Yes | launch with `/usr/sbin/httpd` | 91 |
+| `mysql` | No | ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (2) | 91 |
+| `useradd` | No | useradd: not found | 91 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno
