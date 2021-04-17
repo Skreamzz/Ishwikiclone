@@ -88,6 +88,7 @@ If you add a new test for a package, please add a line (same if package was alre
 |`ddate` | Yes | | 1.0.1 |
 |`metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
 |`apache2`| Yes | launch with `/usr/sbin/httpd` | 91 |
+|`mysql`| No | ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (2) | 91 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan
