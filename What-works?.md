@@ -87,7 +87,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `wptc-track` | Yes | | 78 |
 | `ddate` | Yes | | 1.0.1 |
 | `metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
-| `apache2` | Yes | launch with `/usr/sbin/httpd` | 91 |
+| `apache2` | Yes | launch with `/usr/sbin/httpd` note: couldn't get php to work in apache2 | 91 |
 | `mysql` | No | ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (2) note: running with --user=root the program hard crashes.| 91 |
 | `useradd` | No | useradd: not found | 91 |
 | `htop` | No | upon execution it hangs with no prompt and no htop readout | 91 |
