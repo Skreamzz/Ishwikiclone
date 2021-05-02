@@ -2,7 +2,7 @@
 The packages in Alpine Linux repositories are more updated than iSH's own repositories and have packages whose size > 512 MB as well. To use it to replace iSH's own repositories, run:
 <!-- 3.13+ is not used due to missing seccomp(2) support -->
  ```sh
-grep -v "file:///ish/apk/" /etc/apk/repositories | dd of=/etc/apk/repositories bs=4194304
+grep -v "file:///apk.ish.app" /etc/apk/repositories | dd of=/etc/apk/repositories bs=4194304
 echo https://dl-cdn.alpinelinux.org/alpine/v3.12/main >> /etc/apk/repositories
 echo https://dl-cdn.alpinelinux.org/alpine/v3.12/community >> /etc/apk/repositories
 ```
