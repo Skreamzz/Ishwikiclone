@@ -25,7 +25,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `python3` | Yes ||33|
 | `youtube-dl` | Yes | Very slow to start |35|
 | `cmus` | No? | First launch resulted in a failure to initialize error. Subsequent launches seemed OK | 91 |
-| `ffmpeg` | Yes | Transcoding is slow, use `-c copy` to copy frames ans save time. |35|
+| `ffmpeg` | Yes | Transcoding is slow, use `-c copy` to copy frames and save time. |35|
 | `emacs` | Yes |works recursively in `M-x term` !|36|
 | `openssh` (client)| Yes | |31|
 | `openssh` (server)| Yes | Follow the [instructions on the wiki](Running-an-SSH-server) |45|
