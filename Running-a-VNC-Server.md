@@ -1,7 +1,7 @@
 **These instructions assume you are running as root in the default iSH root Filesystem.  If this is not the case then some things will fail.  Most notably, if you are running the AOK iSH root FS you will be the 'ish' user by default.  In recent versions of AOK there are two scripts to assist you.  One is 'enable_vnc' which will essentially do everything listed here except what is in the the final script.  The other is 'vnc_start' which is essentially the last script included in this tutorial.  If these scripts are not present then 'sudo su -' to become root before following the instructions below.**
 
 
-# First, install needed software.  I assume the i3 window manager will be used to keep things simple.
+# First, install needed software.  I assume the [i3 window manager](https://i3wm.org/docs/) will be used to keep things simple.
 
 `apk add x11vnc x11vnc-doc xvfb xterm xorg-server xf86-video-dummy i3wm i3status i3lock xdpyinfo xdpyinfo-doc i3wm-doc i3lock-doc i3status-doc ttf-dejavu`
 
