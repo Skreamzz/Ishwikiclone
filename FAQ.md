@@ -21,8 +21,5 @@
 ### Q: I lost access to the TestFlight?
 **A:** That might be because we hit the limit of testers, at 10,000, so we did some house cleaning and removed testers who have either been inactive, or haven't updated. If need be [you can join the TestFlight again.](https://testflight.apple.com/join/97i7KM8O)
 
-### Q: Why am I getting apk not found?
-**A:** App Store restrictions, however, you can [install it](https://github.com/ish-app/ish/wiki/Installing-apk-on-the-App-Store-Version).
-
 ### Q: How do you know what an instruction does?
 **A:** Generally we look [here](https://www.felixcloutier.com/x86/).
