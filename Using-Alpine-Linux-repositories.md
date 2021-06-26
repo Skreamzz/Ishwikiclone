@@ -4,7 +4,7 @@ The packages in Alpine Linux repositories are more updated than iSH's own reposi
  ```sh
 echo https://dl-cdn.alpinelinux.org/alpine/v3.12/main >> /etc/apk/repositories
 echo https://dl-cdn.alpinelinux.org/alpine/v3.12/community >> /etc/apk/repositories
-sed -i -e '|http://apk.ish.app|d' /etc/apk/repositories 
+sed -i -e '/http:\/\/apk.ish.app/d' /etc/apk/repositories 
 ```
 
 Note : https://github.com/ish-app/ish/blob/master/deps/aports/community/x86/index.txt currently points to v3.12. Once this file points to a newer version, the above commands can be updated to match.
