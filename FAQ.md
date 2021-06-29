@@ -23,3 +23,5 @@
 
 ### Q: How do you know what an instruction does?
 **A:** Generally we look [here](https://www.felixcloutier.com/x86/).
+
+You can look up the instructions by number [here](https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_32.tbl)
