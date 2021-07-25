@@ -7,8 +7,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `grep`, `head`, `cut`, `wc` |Yes||33|
 | `tput` |Yes||33|
 | `irssi` |Yes|| 38 |
-| `ifconfig` |No| `/proc/net/dev: No such file or directory` `ioctl 0x8912 failed: Not a tty`| 91 |
-| `ip` | No | `ip: socket(AF_NETLINK,3,0): Invalid argument` | 91 |
+| `ifconfig` |No| `/proc/net/dev: No such file or directory` `ioctl 0x8912 failed: Not a tty`| 178 |
+| `ip` | No | `ip: socket(AF_NETLINK,3,0): Invalid argument` | 178 |
 | `weechat` | Yes ||53|
 | `bash` | Yes || 33 |
 | `zsh` | Yes | | 48 |
