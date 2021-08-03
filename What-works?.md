@@ -93,9 +93,11 @@ If you add a new test for a package, please add a line (same if package was alre
 | `htop` | No | upon execution it hangs with no prompt and no htop readout | 91 |
 | `top` | Yes | | 91 |
 | `kill` | Yes | | 91 |
+| `xmodmap` | No | xmodmap: unable to open display '' | 178 |
+| `setxkbmap` | No | Cannot open display "default display" | 178 |
 
 Testers:
-jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno
+jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
 
 
 ## Test Requests
