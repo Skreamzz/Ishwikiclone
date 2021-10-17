@@ -95,6 +95,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `kill` | Yes | | 91 |
 | `xmodmap` | No | xmodmap: unable to open display '' | 178 |
 | `setxkbmap` | No | Cannot open display "default display" | 178 |
+| `snmpwalk` | Yes | | 178 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
