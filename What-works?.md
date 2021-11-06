@@ -96,6 +96,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `xmodmap` | No | xmodmap: unable to open display '' | 178 |
 | `setxkbmap` | No | Cannot open display "default display" | 178 |
 | `snmpwalk` | Yes | | 178 |
+| `nginx` | No | [#137](https://github.com/ish-app/ish/issues/137) |  |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
@@ -112,4 +113,3 @@ If you want a specific package to be tested, please add it here including specia
 | `code-server`   | To run vs code in browser |   
 | `ghc`         | Haskell file compiling     |
 | `ocaml`       | Ocaml compiling / Installing Opam packages |
-| `nginx`       | Hosting static files for WEB / Stream videos |
