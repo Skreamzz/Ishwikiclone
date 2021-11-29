@@ -27,4 +27,3 @@
 * [Installing R and any package from the CRAN](Installing-R-and-any-package-from-the-CRAN)
 * [Using Alpine Linux repositories](https://github.com/ish-app/ish/wiki/Using-Alpine-Linux-repositories)
 
-🖕
