@@ -97,6 +97,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `setxkbmap` | No | Cannot open display "default display" | 178 |
 | `snmpwalk` | Yes | | 178 |
 | `nginx` | No | [#137](https://github.com/ish-app/ish/issues/137) |  |
+| `dropbear` | Yes | Client works, server runs if invoked with -E and port higher than 1024 |  |
+| `cadaver` | No | Hangs on start, no message |  |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
