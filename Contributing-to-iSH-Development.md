@@ -34,9 +34,53 @@ Now you can clone the iSH repository.  If you don't have a preference then I'd r
 user@my-mac ~> git clone https://github.com/ish-app/ish.git
 user@my-mac ~> cd ish
 user@my-mac ~> git submodule update --init deps/libapps
+user@my-mac ~> git remote set-url upstream https://github.com/ish-app/ish.git
 ```
 
 You should now have a working copy of the iSH repo.
+
+## Creating your PR
+First of all, you should never alter your master branch.  It should always track the upstream/mainline iSHE master branch.  I recommend creating an alternate branch if you want to make your own changes.  For instance...
+
+user@my-mac ~> git branch myiSH
+
+You would of course have to switch into that branch when you wanted to make changes.  Rather than get into a detailed conversation on iSH I'll stop there and get to the main point.
+
+### The PR
+Once you are confident that your change does what you want create a clean new branch off of your master branch
+
+```
+user@my-mac ~> git switch master
+user@my-mac ~> git checkout -b my_proposed_pr   # The branch should be named something descriptive like 'add_proc_cpuinfo'
+user@my-mac ~> git fetch upstream               # Keep things 
+git submodule update --init deps/libapps
+git fetch upstream
+git reset --hard upstream/master
+git cherry-pick 4fa0397613434742f53038219ae0e243b9b23137
+
+git update-index --assume-unchanged app/iSH.xcconfig
+
+# To make changes to a PR
+
+git commit --amend
+
+git switch enhance_stub_syscall_dmesg
+git status
+git reset --hard 585cf94
+vi kernel/calls.c
+git commit --amend
+git status
+git diff
+git add kernel/calls.c
+git status
+git commit --amend
+git push
+git push --force
+
+git pull --no-ff https://github.com/nimelehin/ish procfs
+
+
+
 
 
 
