@@ -3,6 +3,8 @@ This document is intended to detail what I've learned in the process of contribu
 
 The bulk of this document came from a discussion on the iSH #dev forum where @saagarjha walked me through the process which was a huge help.  I honestly never would have figured this stuff out on my own.
 
+This document assumes that your clone of iSH is hosted on GitHub
+
 ## What you want at the end
 
 At the end of this process you should have a published PR with exactly one commit.  The PR should apply cleanly to the current iSH master branch and should include only the bare minimum number of files needed.  In particular it should NOT include files such as...
@@ -11,9 +13,10 @@ At the end of this process you should have a published PR with exactly one commi
 .gitignore
 app/FileProvider/iSHFileProvider.entitlements
 app/iSH.entitlements
-app/iSH.xcconfig
+app/iSH.xcconfig                                       # More below on avoiding this one
 iSH.xcodeproj/project.pbxproj
 ```
+
 
 ## Cloning and preparation
 
@@ -37,7 +40,19 @@ user@my-mac ~> git submodule update --init deps/libapps
 user@my-mac ~> git remote set-url upstream https://github.com/ish-app/ish.git
 ```
 
-You should now have a working copy of the iSH repo.
+You should now have a working copy of the iSH repo.  You'll need to make some modifications to get Xcode to work cleanly with git.
+
+Make sure you edit 
+
+```
+app/iSH.xcconfig
+```
+
+to reflect your own Developers ID and bundle identifier.  The run the following command so that git will ignore future changes...
+
+```
+user@my-mac ~> git update-index --assume-unchanged app/iSH.xcconfig           # Make git ignore this file
+```
 
 ## Creating your PR
 First of all, you should never alter your master branch.  It should always track the upstream/mainline iSHE master branch.  I recommend creating an alternate branch if you want to make your own changes.  For instance...
@@ -52,7 +67,8 @@ Once you are confident that your change does what you want create a clean new br
 ```
 user@my-mac ~> git switch master
 user@my-mac ~> git checkout -b my_proposed_pr   # The branch should be named something descriptive like 'add_proc_cpuinfo'
-user@my-mac ~> git fetch upstream               # Keep things 
+user@my-mac ~> git fetch upstream               # Keep things up to date
+user@my-mac ~> git reset --hard upstream/master # Make really sure that we are in sync with the upstream master
 git submodule update --init deps/libapps
 git fetch upstream
 git reset --hard upstream/master
