@@ -7,11 +7,13 @@ The bulk of this document came from a discussion on the iSH #dev forum where @sa
 
 At the end of this process you should have a published PR with exactly one commit.  The PR should apply cleanly to the current iSH master branch and should include only the bare minimum number of files needed.  In particular it should NOT include files such as...
 
-`.gitignore`
-`app/FileProvider/iSHFileProvider.entitlements `
-`app/iSH.entitlements `
-`app/iSH.xcconfig`
-`iSH.xcodeproj/project.pbxproj `
+```
+.gitignore
+app/FileProvider/iSHFileProvider.entitlements
+app/iSH.entitlements
+app/iSH.xcconfig
+iSH.xcodeproj/project.pbxproj
+```
 
 ## Cloning and preparation
 
