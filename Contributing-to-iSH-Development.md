@@ -13,10 +13,9 @@ At the end of this process you should have a published PR with exactly one commi
 .gitignore
 app/FileProvider/iSHFileProvider.entitlements
 app/iSH.entitlements
-app/iSH.xcconfig                                       # More below on avoiding this one
+app/iSH.xcconfig                                       # More below on avoiding this one below
 iSH.xcodeproj/project.pbxproj
 ```
-
 
 ## Cloning and preparation
 
@@ -69,36 +68,27 @@ user@my-mac ~> git switch master
 user@my-mac ~> git checkout -b my_proposed_pr   # The branch should be named something descriptive like 'add_proc_cpuinfo'
 user@my-mac ~> git fetch upstream               # Keep things up to date
 user@my-mac ~> git reset --hard upstream/master # Make really sure that we are in sync with the upstream master
-git submodule update --init deps/libapps
-git fetch upstream
-git reset --hard upstream/master
-git cherry-pick 4fa0397613434742f53038219ae0e243b9b23137
+```
 
-git update-index --assume-unchanged app/iSH.xcconfig
+Now incorporate your changes into this new branch, verify they work and then do the following...
 
-# To make changes to a PR
+```
+user@my-mac ~> git commit -a                                    # Log a meaningful message
+user@my-mac ~> git push --set-upstream origin my_proposed_pr    # Push to your GitHub repo
+```
 
-git commit --amend
+Assuming your are logged in, if you go to the main GitHub iSH page you should see an option near the top of the page to submit a PR based on your newly pushed branch.  Click that and follow the instructions.
 
-git switch enhance_stub_syscall_dmesg
-git status
-git reset --hard 585cf94
-vi kernel/calls.c
-git commit --amend
-git status
-git diff
-git add kernel/calls.c
-git status
-git commit --amend
-git push
-git push --force
+In particular, be sure that only one commit appears in the Pull request and that only the files that are needed by your change are included.
 
-git pull --no-ff https://github.com/nimelehin/ish procfs
+Do not delete your PR branch yet. 
 
+### Dealing with requests for modifications
+If changes are requested you will make them in your local branch and issue the following commands
 
+```
+user@my-mac ~> git commit --amend
+user@my-mac ~> push
+```
 
-
-
-
-
-
+This will automatically update the PR request, no further action is needed, though you may need to iterate depending on the feedback you get.
