@@ -24,16 +24,16 @@ Next you will need to follow the instructions on the main iSH page (https://gith
 If you do not already have a .gitignore file in you home directory I recommend doing the following in your home directory.  You'll need to be in the Terminal program. 
 
 ```
-curl  https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore > .gitignore # Get a reasonable set of defaults
-`git config --global core.excludesFile '~/.gitignore                                              # Make sure git actually pays attention`
+prompt: curl  https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore > .gitignore # Get a reasonable set of defaults
+prompt: git config --global core.excludesFile '~/.gitignore                                              # Make sure git actually pays attention`
 
 ```
 Now you can clone the iSH repository.  If you don't have a preference then I'd recommend ~/git.
 
 ```
-git clone https://github.com/ish-app/ish.git
-cd ish
-git submodule update --init deps/libapps
+prompt: git clone https://github.com/ish-app/ish.git
+prompt: cd ish
+prompt: git submodule update --init deps/libapps
 ```
 
 You should now have a working copy of the iSH repo.
