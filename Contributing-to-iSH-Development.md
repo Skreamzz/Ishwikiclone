@@ -1,9 +1,9 @@
 # Introduction
 This document is intended to detail what I've learned in the process of contributing code to iSH.  It is not meant to be a guide to coding style.  The only goal is to detail the process of creating a clean Pull Request (PR) that can be submitted for consideration by the lead developers.
 
-The bulk of this document came from a discussion on the iSH #dev forum where @saagarjha walked me through the process which was a huge help.  I honestly never would have figured this stuff out on my own.
+The bulk of this document came from a discussion on the iSH #dev forum where @saagarjha walked me through the process, which was a huge help.  I never would have figured this stuff out on my own.
 
-This document assumes that your clone of iSH is hosted on GitHub
+This document assumes that you have a fork of iSH hosted on GitHub
 
 ## What you want at the end
 
@@ -13,7 +13,7 @@ At the end of this process you should have a published PR with exactly one commi
 .gitignore
 app/FileProvider/iSHFileProvider.entitlements
 app/iSH.entitlements
-app/iSH.xcconfig                                       # More below on avoiding this one below
+app/iSH.xcconfig                                       # More on avoiding this one below
 iSH.xcodeproj/project.pbxproj
 ```
 
@@ -23,14 +23,14 @@ First of all, you will need a valid paid or free Apple developer account.
 
 Next you will need to follow the instructions on the main iSH page (https://github.com/ish-app/ish), specifically the 'Hacking' section.
 
-If you do not already have a .gitignore file in you home directory I recommend doing the following in your home directory.  You'll need to be in the Terminal program. 
+If you do not already have a .gitignore file in your home directory I recommend the following.  You'll need to be in the Terminal program. 
 
 ```
-user@my-mac ~> curl  https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore > .gitignore # Get a reasonable set of defaults
+user@my-mac ~> curl  https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore > ~/.gitignore # Get a reasonable set of defaults
 user@my-mac ~> git config --global core.excludesFile '~/.gitignore                                              # Make sure git actually pays attention`
 
 ```
-Now you can clone the iSH repository.  If you don't have a preference then I'd recommend ~/git.
+Now clone the iSH repository.  If you don't have a preference then I'd recommend putting it in ~/git.
 
 ```
 user@my-mac ~> git clone https://github.com/ish-app/ish.git
@@ -47,21 +47,21 @@ Make sure you edit
 app/iSH.xcconfig
 ```
 
-to reflect your own Developers ID and bundle identifier.  The run the following command so that git will ignore future changes...
+to reflect your own Developers ID and bundle identifier.  Then run the following command so that git will ignore future changes...
 
 ```
 user@my-mac ~> git update-index --assume-unchanged app/iSH.xcconfig           # Make git ignore this file
 ```
 
 ## Creating your PR
-First of all, you should never alter your master branch.  It should always track the upstream/mainline iSHE master branch.  I recommend creating an alternate branch if you want to make your own changes.  For instance...
+First of all, you should never alter your master branch.  It should always track the upstream/mainline iSH master branch.  I recommend creating an alternate branch if you want to make your own changes.  For instance...
 
 user@my-mac ~> git branch myiSH
 
-You would of course have to switch into that branch when you wanted to make changes.  Rather than get into a detailed conversation on iSH I'll stop there and get to the main point.
+You would of course have to switch into that branch when you wanted to make changes.  
 
 ### The PR
-Once you are confident that your change does what you want create a clean new branch off of your master branch
+Once you are confident that your change does what you want create a clean new branch off of your master branch.  In theory this should match the upstream Master, but we'll make sure this isn't an issue below.
 
 ```
 user@my-mac ~> git switch master
@@ -79,7 +79,7 @@ user@my-mac ~> git push --set-upstream origin my_proposed_pr    # Push to your G
 
 Assuming your are logged in, if you go to the main GitHub iSH page you should see an option near the top of the page to submit a PR based on your newly pushed branch.  Click that and follow the instructions.
 
-In particular, be sure that only one commit appears in the Pull request and that only the files that are needed by your change are included.
+As mentioned at the start, be sure that only one commit appears in your Pull request and that only the files that are needed by your change are included.
 
 Do not delete your PR branch yet. 
 
@@ -87,8 +87,10 @@ Do not delete your PR branch yet.
 If changes are requested you will make them in your local branch and issue the following commands
 
 ```
+user@my-mac ~> git switch my_proposed_pr
+user@my-mac ~> # Make modifications, test
 user@my-mac ~> git commit --amend
 user@my-mac ~> push
 ```
 
-This will automatically update the PR request, no further action is needed, though you may need to iterate depending on the feedback you get.
+This will automatically update the PR request, no further action is required, though you may need to iterate depending on the feedback you get.
