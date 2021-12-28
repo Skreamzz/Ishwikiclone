@@ -13,6 +13,7 @@
 
 ## Tutorials
 
+* [Contributing to iSH Development](https://github.com/ish-app/ish/wiki/Contributing-to-iSH-Development)
 * [Extracting a dump of your files](Extracting-a-dump-of-your-files)
 * [Install & Activate Alternate Filesystems](Install-&-Activate-Alternate-Filesystems)
 * [Running a Python web server](Running-a-Python-Web-Server)
