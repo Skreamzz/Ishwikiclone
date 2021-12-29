@@ -27,7 +27,7 @@ If you do not already have a .gitignore file in your home directory I recommend 
 
 ```
 user@my-mac ~> curl  https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore > ~/.gitignore # Get a reasonable set of defaults
-user@my-mac ~> git config --global core.excludesFile '~/.gitignore                                              # Make sure git actually pays attention`
+user@my-mac ~> git config --global core.excludesFile '~/.gitignore`                                                # Make sure git actually pays attention
 
 ```
 Now clone the iSH repository.  If you don't have a preference then I'd recommend putting it in ~/git.
