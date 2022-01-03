@@ -90,7 +90,7 @@ If changes are requested you will make them in your local branch and issue the f
 user@my-mac ~> git switch my_proposed_pr
 user@my-mac ~> # Make modifications, test
 user@my-mac ~> git commit --amend
-user@my-mac ~> push
+user@my-mac ~> git push
 ```
 
 This will automatically update the PR request, no further action is required, though you may need to iterate depending on the feedback you get.
