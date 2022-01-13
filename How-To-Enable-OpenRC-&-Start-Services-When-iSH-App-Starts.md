@@ -79,3 +79,14 @@ In addition I've tested the following and they do not work at this time.
 * dbus
 * avahi-daemon
 
+Troubleshooting:
+
+If you get something like:
+```
+:~# rc-status
+-ash: rc-status: not found
+```
+Try:
+```
+apk add openrc
+```
