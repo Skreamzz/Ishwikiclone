@@ -79,7 +79,7 @@ In addition I've tested the following and they do not work at this time.
 * dbus
 * avahi-daemon
 
-Troubleshooting:
+### Troubleshooting:
 
 If you get something like:
 ```
