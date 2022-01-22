@@ -4,7 +4,11 @@ Strictly speaking iSH doesn't boot and as of iSH 1.0.1 build 77 Open RC does not
 
 Getting everything going is actually fairly simple.
 
-The first thing you will need to do is edit /etc/inittab.  You can use your favorite editor.  Many people seem to like nano, but emacs or vi are options as well.
+The first thing you will need to do is install openrc with 
+```
+apk add openrc
+```
+Then, edit /etc/inittab with an editor such as nano, micro, vim, etc.
 
 The third line of the file should like as follows...
 ```
