@@ -32,10 +32,8 @@ service sshd stop
 
 Now the ssh server on the phone is listening and will log activity to the screen.  I open another terminal window and ssh to the phone as root.  I am prompted for the password, but do not enter it yet.  Over in the debug output I see the following message:
 
-`
-trying public key file /root/.ssh/authorized_keys
-Authentication refused: bad ownership or modes for directory /root
-`
+`trying public key file /root/.ssh/authorized_keys`
+`Authentication refused: bad ownership or modes for directory /root`
 
 I enter the password, and am logged into the phone as root.  I change the ownership like this:
 
