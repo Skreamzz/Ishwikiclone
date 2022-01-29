@@ -18,7 +18,7 @@ After this, you can ssh (from iSH itself) using `ssh root@localhost -p 22000`
 
 ### Troubleshooting passwordless login
 
-To login as root without a password, I follow the usual steps to create a key with ssh-keygen and ssh-copy-id the public key to the phone.  But upon login, I am still prompted for password.  Permission of .ssh dir is 700, and permission of authorized_keys is 600.
+To login as root without a password, I follow the usual steps to create a key with ssh-keygen and ssh-copy-id the public key to the phone.  But when I attempt to login, I am still prompted for password.  Permission of .ssh dir is 700, and permission of authorized_keys is 600.
 
 On the iPhone I stop the sshd server:
 
