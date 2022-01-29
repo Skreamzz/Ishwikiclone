@@ -23,8 +23,12 @@ To login as root without a password, I follow the usual steps to create a key wi
 On the iPhone I stop the sshd server and restart in debug mode:
 
 
-`service sshd stop`
-`/usr/sbin/sshd -d -p 22`
+```
+service sshd stop
+```
+```
+/usr/sbin/sshd -d -p 22
+```
 
 
 Now the ssh server on the phone is listening and will log activity to the screen.  I open another terminal window and ssh to the phone as root.  I am prompted for the password, but do not enter it yet.  Over in the debug output I see the following message:
