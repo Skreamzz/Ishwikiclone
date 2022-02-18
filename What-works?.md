@@ -35,7 +35,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `ruby` | Yes ||34|
 | `irb` | Yes ||35|
 | `gem` | Yes ||38|
-| `go` | Yes | |67|
+| `go` | No | `go build` freezes, see #1230 |67|
 | `mate-session` | No | Bad system call |37|
 | `tmux` | Yes ||53|
 | `screen` | Yes |Detaches and reattaches!|53|
