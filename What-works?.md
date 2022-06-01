@@ -118,3 +118,4 @@ If you want a specific package to be tested, please add it here including specia
 | `gap`         | Testing packages written for gap-system.org |
 | `hugo`        | Static site generator written in golang |
 | `pwsh`        | Run Microsoft Powershell scripts |
+| `yay`         | Yes, this is one package manager of AUR. This may sound crazy, but it may be possible to install AUR packages on Alpine. By adding package “arch-install-script”, arch-chroot, pacman and pkgbuild will appear. However, although with repositories for Arch Linux configured, almost no packages can be installed, even vim for lack of dependancies. What’s more, pkgbuild does not work for “permission denied”. |
