@@ -117,3 +117,4 @@ If you want a specific package to be tested, please add it here including specia
 | `ocaml`       | Ocaml compiling / Installing Opam packages |
 | `gap`         | Testing packages written for gap-system.org |
 | `hugo`        | Static site generator written in golang |
+| `pwsh`        | Run Microsoft Powershell scripts |
