@@ -58,7 +58,11 @@ First of all, you should never alter your master branch.  It should always track
 
 user@my-mac ~> git branch myiSH
 
-You would of course have to switch into that branch when you wanted to make changes.  
+You would of course have to switch into that branch when you wanted to make changes.  You would do this by issuing the following command.
+
+```
+user@my-mac ~> git switch myiSH
+```
 
 ### The PR
 Once you are confident that your change does what you want create a clean new branch off of your master branch.  In theory this should match the upstream Master, but we'll make sure this isn't an issue below.
