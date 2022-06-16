@@ -47,7 +47,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat` |40|
 | `nmap` | No | Assertion failed | 40|
 | `&`, `bg`, `fg`, `jobs`|Yes||44|
-| `mc` | Yes | F-keys don't work |48|
+| `mc` | Yes | F-keys don't work, use `ESC 0` - `ESC 9` instead | 298 |
 | `ed` | Yes | |52|
 | `git` | Yes | |53|
 | `mosh` | Yes | |54|
@@ -99,6 +99,10 @@ If you add a new test for a package, please add a line (same if package was alre
 | `nginx` | No | [#137](https://github.com/ish-app/ish/issues/137) |  |
 | `dropbear` | Yes | Client works, server runs if invoked with -E and port higher than 1024 |  |
 | `cadaver` | No | Hangs on start, no message |  |
+| `sqlite3` | Yes | | 298 |
+| `adduser`, `addgroup` | Yes | Included in package `coreutils` | 298 |
+| `sudo` | Yes | | 298 |
+| `ssh-agent`, `ssh-add` | Yes | | 298 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
