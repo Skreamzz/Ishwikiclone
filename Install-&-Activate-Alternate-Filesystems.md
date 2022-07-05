@@ -2,7 +2,7 @@ The iSH App supports the ability to use filesystems other than the barebones Alp
 
 The Alpine Linux downloads page...
 
-[https://alpinelinux.org/downloads/](https://bit.ly/3DzjjbH)
+https://alpinelinux.org/downloads/
 
 Is the easiest place to find an image to import.  Specifically you will want to choose the x86 "Mini Root Filesystem".  Download it with you iPad.  It will be saved in your iCloud Downloads folder.
 
