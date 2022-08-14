@@ -116,7 +116,8 @@ If you want a specific package to be tested, please add it here including specia
 | :-------------|:---------------------------|
 | `example`     | ...   |   
 | `docker-ce`   | For running webapps |   
-| `code-server`   | To run vs code in browser |   
+| `code-server`   | To run vs code in browser |
+| `R`           | GNU R for basic statistics |   
 | `ghc`         | Haskell file compiling     |
 | `ocaml`       | Ocaml compiling / Installing Opam packages |
 | `gap`         | Testing packages written for gap-system.org |
