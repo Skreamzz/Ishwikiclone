@@ -24,7 +24,7 @@ While you are there you might want to comment out the extra tty's a little furth
 
 \# (hash) 
 
-In front of all the lines that begin "tty" EXCEPT "tty1".  Commenting that one out would be a bad plan.
+In front of all the lines that begin "tty"
 
 Now you need to restart iSH.  Exit the app and launch it again.
 
