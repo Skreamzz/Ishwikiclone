@@ -25,3 +25,18 @@
 **A:** Generally we look [here](https://www.felixcloutier.com/x86/).
 
 You can look up the instructions by number [here](https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_32.tbl)
+
+### Q: iSH looks cool, but I'm not sure what to use it for. What can I do in iSH?
+**A:** Most things you can do in a headless Linux environment. A few ideas:
+- Connect to telnet, SSH, and SFTP servers
+- Edit files with `vim`, `nano`, or `emacs`
+- Work with `git` repositories
+- Write and run programs in Python, C, C++, Bash, and many more languages
+- Edit text files that other editors might not support, like `.json` files
+- Convert images and videos
+- Test networks with `ping`, `nslookup`, `traceroute`, `nc`, and more
+- Chat on IRC
+- Play text-based games like `nethack` and the classic `advent` (Colossal Cave Adventure)
+- Read and download the sources of web pages
+- Use GPG to encrypt, decrypt, sign, and verify the signatures of files
+- Create and extract `tar` and `zip` archives
