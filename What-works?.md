@@ -103,6 +103,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `adduser`, `addgroup` | Yes | Included in package `coreutils` | 298 |
 | `sudo` | Yes | | 298 |
 | `ssh-agent`, `ssh-add` | Yes | | 298 |
+| `command-not-found` | no | 298 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
