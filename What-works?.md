@@ -104,6 +104,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `sudo` | Yes | | 298 |
 | `ssh-agent`, `ssh-add` | Yes | | 298 |
 | `command-not-found` | Yes | works in ash and bash but not zsh| 298 |
+| `pwsh` | No | exec error | 298 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
@@ -123,5 +124,4 @@ If you want a specific package to be tested, please add it here including specia
 | `ocaml`       | Ocaml compiling / Installing Opam packages |
 | `gap`         | Testing packages written for gap-system.org |
 | `hugo`        | Static site generator written in golang |
-| `pwsh`        | Run Microsoft Powershell scripts |
 | `yay`         | Yes, this is one package manager of AUR. This may sound crazy, but it may be possible to install AUR packages on Alpine. By adding package “arch-install-script”, arch-chroot, pacman and pkgbuild will appear. However, although with repositories for Arch Linux configured, almost no packages can be installed, even vim for lack of dependancies. What’s more, pkgbuild does not work for “permission denied”. |
