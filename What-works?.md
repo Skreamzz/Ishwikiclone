@@ -106,9 +106,10 @@ If you add a new test for a package, please add a line (same if package was alre
 | `command-not-found` | Yes | works in ash and bash but not zsh| 298 |
 | `pwsh` | No | exec error | 298 |
 | `R` | Yes | see [[Installing R and any package from the CRAN]] | 298 |
+| `rustup` | No | rustup: installer for platform 'i686-unknown-linux-musl' not found, this may be unsupported | 298 |
 
 Testers:
-jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
+jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed, Heavysnowjakarta
 
 
 ## Test Requests
