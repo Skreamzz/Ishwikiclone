@@ -105,6 +105,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `ssh-agent`, `ssh-add` | Yes | | 298 |
 | `command-not-found` | Yes | works in ash and bash but not zsh| 298 |
 | `pwsh` | No | exec error | 298 |
+| `R` | Yes | see [[Installing R and any package from the CRAN]] | 298 |
 
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed
@@ -119,7 +120,6 @@ If you want a specific package to be tested, please add it here including specia
 | `example`     | ...   |   
 | `docker-ce`   | For running webapps |   
 | `code-server`   | To run vs code in browser |
-| `R`           | GNU R for basic statistics |   
 | `ghc`         | Haskell file compiling     |
 | `ocaml`       | Ocaml compiling / Installing Opam packages |
 | `gap`         | Testing packages written for gap-system.org |
