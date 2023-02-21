@@ -3,3 +3,9 @@ Location tracking is enabled through /dev/location. Reading from this device wil
 ```bash
 $ cat /dev/location > /dev/null &
 ```
+
+And to stop running in background:
+
+```bash
+$ killall -9 cat
+```
