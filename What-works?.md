@@ -107,9 +107,10 @@ If you add a new test for a package, please add a line (same if package was alre
 | `pwsh` | No | exec error | 298 |
 | `R` | Yes | see [[Installing R and any package from the CRAN]] | 298 |
 | `rustup` | No | rustup: installer for platform 'i686-unknown-linux-musl' not found, this may be unsupported | 298 |
+| `tor` | Yes | Can proxy SSH and HTTP/browser clients. obfs4proxy apk not available, may be possible, but see [go build issues](https://github.com/ish-app/ish/issues/1230). SSH/HTTP settings [gist](https://gist.github.com/torsionion/af87b06f394a74db910153340435f529) | 298 |
 
 Testers:
-jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed, Heavysnowjakarta
+jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed, Heavysnowjakarta, torsionion
 
 
 ## Test Requests
@@ -126,4 +127,4 @@ If you want a specific package to be tested, please add it here including specia
 | `gap`         | Testing packages written for gap-system.org |
 | `hugo`        | Static site generator written in golang |
 | `yay`         | Yes, this is one package manager of AUR. This may sound crazy, but it may be possible to install AUR packages on Alpine. By adding package “arch-install-script”, arch-chroot, pacman and pkgbuild will appear. However, although with repositories for Arch Linux configured, almost no packages can be installed, even vim for lack of dependancies. What’s more, pkgbuild does not work for “permission denied”. |
-| `tor`         | to connect to ssh, www, etc. over Tor |
+| `obfs4proxy`        | For using Tor bridges |
