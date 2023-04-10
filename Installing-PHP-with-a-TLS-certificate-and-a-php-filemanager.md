@@ -65,6 +65,16 @@ To make this easy here is the command to install all those packages onto iSH:
 ```
 apk add openssl stunnel perl php php-json php-session php-fileinfo php-iconv php-zip php-mbstring php-ctype php-phar curl
 ```
+This installs PHP 7, but if that does not work, due to SSL errors in e.g. `get_headers()`, install PHP 8.
+
+```
+apk add openssl stunnel perl curl php8 php8-gd php8-json php8-session php8-fileinfo php8-iconv php8-zip php8-mbstring php8-ctype php8-phar php8-curl php8-apache2
+```
+If you need Apache, install:
+```
+apk add apache2 php8-apache2
+```
+When you use Apache, note that some i(Pad)OS apps already use port 80, like Readdie Documents, then change the line `Listen 80` to `Listen 8000` (or any other free port) in `/etc/apache2/httpd.conf`.
 
 Here is a list to make this more readable:
 
