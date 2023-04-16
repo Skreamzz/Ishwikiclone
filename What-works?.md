@@ -15,7 +15,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `nano` | Yes ||33|
 | `nvim` | Yes | |41|
 | `vim` | Yes ||33|
-| `vi` | Yes ||33|
+| `vi` | Yes ||33|mc
 | `fish` | Yes ||45|
 | `neofetch` | Yes ||52|
 | `screenfetch` | Yes w/ errors | /proc/cpuinfo: No such file or directory | 91 |
@@ -23,12 +23,14 @@ If you add a new test for a package, please add a line (same if package was alre
 | `curl` | Yes | HTTPS too |33|
 | `wget` | Yes | HTTPS too |33|
 | `python3` | Yes ||33|
+| `pip` | Yes | Yes, very slow and sometimes crashes
 | `youtube-dl` | Yes | Very slow to start |35|
+| `yt-dlp` | Yes | Very slow to start and sometimes crashes
 | `cmus` | No | First launch resulted in a failure to initialize error. Subsequent launches seemed OK, but cannot play audio (fails with `Error: opening audio device: No such file or directory` | 158 |
 | `ffmpeg` | Yes | Transcoding is slow, use `-c copy` to copy frames and save time. |35|
 | `emacs` | Yes |works recursively in `M-x term` !|36|
 | `openssh` (client)| Yes | |31|
-| `openssh` (server)| Yes | Follow the [instructions on the wiki](Running-an-SSH-server) |45|
+| `openssh` (server)| Yes | Follow the [instructions on the wiki](Running-an-SSH-server), but uses the deprecated SHA-1 instead of SHA-2, which inhibits SFTP clients to connect. `ssh` (including from `mc`) and `rsync` commands into iSH however, do work. |45|
 | `openssh` (server)| No | tested on Ubuntu 18.04.5 `illegal instruction at 0xf79f981d: 0f de d8 66 0f de e2 66 `| 74 |
 | `resolvconf` | Yes | Tested on Ubuntu 18.04.5 | 74 |
 | `ps` | Yes ||34|
@@ -46,8 +48,8 @@ If you add a new test for a package, please add a line (same if package was alre
 | `gdb` | No | Segfault, socketcall 16 |40|
 | `w3m` | Yes| Quits with `GC Warning: Couldn't read /proc/stat` |40|
 | `nmap` | No | Assertion failed | 40|
-| `&`, `bg`, `fg`, `jobs`|Yes||44|
-| `mc` | Yes | F-keys don't work, use `ESC 0` - `ESC 9` instead | 298 |
+| `&`, `bg`, `fg`, `jobs`|Yes||44|| `mc` | Yes | Midnight Commander, works, including editor and connecting to sftp servers.
+| `mc` | Yes | Midnight Commander, works, including editor and connecting to sftp servers. |298|
 | `ed` | Yes | |52|
 | `git` | Yes | |53|
 | `mosh` | Yes | |54|
@@ -56,7 +58,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `clang` | Yes | |55|
 | `arp` | No | can't open '/proc/net/arp': No such file or directory | 73 |
 | `php` | Yes | |65|
-| `php (extensions)`| Yes | |65|
+| `php (extensions)`| Yes. PHP 7 SSL does not work, but PHP 8 SSL does. | |65|
 | `stunnel3` | Yes | perl needs to be installed |65|
 | `perl` | Yes | |65|
 | `openssl` | Yes | Even signing certificates work perfectly fine |65|
@@ -87,7 +89,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `wptc-track` | Yes | | 78 |
 | `ddate` | Yes | | 1.0.1 |
 | `metasploit-framework` | Yes | launch with `msfconsole -n` | 78 |
-| `apache2` | Yes | launch with `/usr/sbin/httpd` note: couldn't get php to work in apache2 | 91 |
+| `apache2` | Yes | launch with `/usr/sbin/httpd` note: couldn't get php to work in apache2, but php 8 does work in Apache 2.4.x . | 91 |
 | `mysql` | No | ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (2) note: running with --user=root the program hard crashes.| 91 |
 | `useradd` | No | useradd: not found | 91 |
 | `htop` | No | Error: 'No btime in /proc/stat: No such file or directory' | 298 |
