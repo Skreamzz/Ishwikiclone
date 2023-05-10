@@ -22,9 +22,9 @@ If you add a new test for a package, please add a line (same if package was alre
 | `node` | Yes || 73 |
 | `curl` | Yes | HTTPS too |33|
 | `wget` | Yes | HTTPS too |33|
-| `python3` | Yes ||33|
-| `pip` | Yes | Yes, very slow and sometimes crashes
-| `yt-dlp` | Yes | Very slow to start and sometimes crashes
+| `python3` | Yes | Every applicaton based on python is slow | 491 |
+| `pip` | Yes | Yes, very slow | 491 |
+| `yt-dlp` | Yes | Slow to start | 491 |
 | `cmus` | No | First launch resulted in a failure to initialize error. Subsequent launches seemed OK, but cannot play audio (fails with `Error: opening audio device: No such file or directory` | 158 |
 | `ffmpeg` | Yes | Transcoding is slow, use `-c copy` to copy frames and save time. |35|
 | `emacs` | Yes |works recursively in `M-x term` !|36|
