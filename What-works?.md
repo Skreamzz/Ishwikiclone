@@ -109,7 +109,7 @@ If you add a new test for a package, please add a line (same if package was alre
 | `R` | Yes | see [[Installing R and any package from the CRAN]] | 298 |
 | `rustup` | No | rustup: installer for platform 'i686-unknown-linux-musl' not found, this may be unsupported | 298 |
 | `tor` | Yes | Can proxy SSH and HTTP/browser clients. obfs4proxy apk not available, may be possible, but see [go build issues](https://github.com/ish-app/ish/issues/1230). SSH/HTTP settings [gist](https://gist.github.com/torsionion/af87b06f394a74db910153340435f529) | 298 |
-
+| `qemu` | No | Bad system call (sys_splice missing on emu/sys_bpf missing on qemu_img) | 491 |
 Testers:
 jusdepatate, Mnpn, elchris414, JaquesBoum, wjid, DiscordDigital, Linux, assfugil, ReedSan, stheno, lkxed, Heavysnowjakarta, torsionion
 
