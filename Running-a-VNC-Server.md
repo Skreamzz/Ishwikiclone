@@ -7,9 +7,7 @@
 
 ## Next create needed files and directories.
 
-    if [ ! -e /etc/X11/xorg.conf.d ]; then
-       mkdir -p /etc/X11/xorg.conf.d # If it doesn't exist, create it.
-    fi
+    mkdir -p /etc/X11/xorg.conf.d
 
 ## Create X11 headless config
     cat <<HERE > /etc/X11/xorg.conf.d/10-headless.conf
