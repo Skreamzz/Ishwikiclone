@@ -1,4 +1,4 @@
-As said [here](https://github.com/tbodt/ish/wiki/FAQ#q-x-does-not-work) many programs do fail, so here is a list of programs known to be working (or not).
+As said [here](https://github.com/ish-app/ish/wiki/FAQ#q-my-favorite-program-doesnt-work) many programs do fail, so here is a list of programs known to be working (or not).
 
 If you add a new test for a package, please add a line (same if package was already tested). Feel free to update the device tested if the build is newer.
 
