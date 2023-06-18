@@ -22,7 +22,7 @@ Solutions to this:
 
 1. Connect to a WiFi network so iSH can get the nameservers automatically, or
 2. Set your own nameservers:
-```
+```bash
 $ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 ```
 Now try it again!
