@@ -2,13 +2,13 @@ iSH 1.1 includes the [APK package manager](https://wiki.alpinelinux.org/wiki/Alp
 
 If you updated from a previous version, you won't have the iSH-provided APK, since enabling it is a potentially destructive action (overwriting /etc/apk/repositories). To enable it manually, run this command after installing the 1.1 update:
 
-```
+```bash
 mkdir -p /ish/apk && printf 'file:///ish/apk/main\nfile:///ish/apk/community\n' > /etc/apk/repositories && mount -t apk apk /ish/apk && tar -xf /ish/apk/main/x86/apk-tools-static-2.10.5-r1.apk -C / && apk.static add apk-tools && rm /sbin/apk.static && apk upgrade
 ```
 
 If this fails with `mkdir: can't create directory '/ish/apk': Operation not permitted`, run this slightly different command:
 
-```
+```bash
 printf 'file:///ish/apk/main\nfile:///ish/apk/community\n' > /etc/apk/repositories && tar -xf /ish/apk/main/x86/apk-tools-static-2.10.5-r1.apk -C / && apk.static add apk-tools && rm /sbin/apk.static && apk upgrade
 ```
 
