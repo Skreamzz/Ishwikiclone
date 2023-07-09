@@ -27,4 +27,5 @@
 * [How To Enable OpenRC & Start Services When iSH App Starts](How-To-Enable-OpenRC-&-Start-Services-When-iSH-App-Starts)
 * [Installing R and any package from the CRAN](Installing-R-and-any-package-from-the-CRAN)
 * [Using Alpine Linux repositories](https://github.com/ish-app/ish/wiki/Using-Alpine-Linux-repositories)
+* [Shortcuts Integration Workaround](https://github.com/ish-app/ish/wiki/Shortcuts-Integration-Workaround)
 
