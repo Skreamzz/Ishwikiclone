@@ -19,6 +19,7 @@
 * [Running a Python web server](Running-a-Python-Web-Server)
 * [Running a VNC Server](Running-a-VNC-Server)
 * [Running an SSH server](Running-an-SSH-server)
+* [Running nmap](Running-nmap)
 * [Running in background](Running-in-background)
 * [View iSH files in Files App](View-iSH-files-in-Files-App)
 * [Running Ruby Programs](Running-Ruby-Programs)
