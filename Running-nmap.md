@@ -17,7 +17,7 @@ There are additional steps that can be taken to make things a little easier.
 
 First, lets add `sudo` and this new user to wheel:
 1. `apk add sudo`
-2. ` echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel` `
+2. `echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel`
 3. `adduser <user> wheel`
 
 Second, lets install `runuser` via `apk add runuser`.
