@@ -25,6 +25,8 @@ Second, lets install `runuser` via `apk add runuser`.
 Last, we set an alias for nmap to use runuser to execute the command when still root
 `alias nmap="runuser -u nmap -- nmap"`
 
+Don't forget to make the alias permanent `echo "alias nmap=\"runuser -u nmap -- nmap\"" >> /etc/profile`
+
 Depending on the args your use with nmap, you will still get some errors like this:
 
 ![image](https://github.com/ish-app/ish/assets/34378390/bd14c268-8a00-4a26-aba7-bd7068b7717e)
@@ -36,4 +38,4 @@ And this:
 
 While it can be spammy and annoying, they do not seem to affect the BASIC functionality of nmap.
 
-Enjoy!
+
