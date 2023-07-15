@@ -48,7 +48,5 @@ apk add runuser
 alias nmap="runuser -u nmap -- nmap"
 echo "alias nmap=\"runuser -u nmap -- nmap\"" >> /etc/profile
 nmap shiggl.es -sn
-apk add nmap
-nmap shiggl.es -sn
 ```
 
