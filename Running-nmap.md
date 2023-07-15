@@ -26,9 +26,12 @@ Last, we set an alias for nmap to use runuser to execute the command when still 
 `alias nmap="runuser -u nmap -- nmap"`
 
 Depending on the args your use with nmap, you will still get some errors like this:
+
 ![image](https://github.com/ish-app/ish/assets/34378390/bd14c268-8a00-4a26-aba7-bd7068b7717e)
 
+
 And this:
+
 ![image](https://github.com/ish-app/ish/assets/34378390/aa5af45d-d038-46d7-890d-99bc493eb3a5)
 
 While it can be spammy and annoying, they do not seem to affect the BASIC functionality of nmap.
