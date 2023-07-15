@@ -38,4 +38,15 @@ And this:
 
 While it can be spammy and annoying, they do not seem to affect the BASIC functionality of nmap.
 
+Copy Pasta:
+```adduser nmap
+apk add sudo
+echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+adduser nmap wheel
+apk add runuser
+alias nmap="runuser -u nmap -- nmap"
+echo "alias nmap=\"runuser -u nmap -- nmap\"" >> /etc/profile
+nmap shiggl.es -sn
+apk add nmap
+nmap shiggl.es -sn```
 
