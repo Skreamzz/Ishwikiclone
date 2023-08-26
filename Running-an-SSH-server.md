@@ -16,6 +16,16 @@ You can do this by editing `/etc/ssh/sshd_config` and set `Port 22000` (Replace 
 
 After this, you can ssh (from iSH itself) using `ssh root@localhost -p 22000`
 
+### To login without a password, using pubkey
+
+This assumes the destination device allows logins with password, in order to transfer the pubkey.
+
+To enable logins using your pubkey, use the same parameters as you use for a normal ssh, but replace the word ssh with ssh-copy-id. Using the above example this would be 
+`ssh-copy-id root@localhost -p 22000`
+
+When you run this, you will still need to supply the password one last time. 
+After this has completed, you are now able to login without providing the password for the remote account.
+
 ### Troubleshooting passwordless login
 
 To login as root without a password, I follow the usual steps to create a key with ssh-keygen and ssh-copy-id the public key to the phone.  But when I attempt to login, I am still prompted for password.  Permission of .ssh dir is 700, and permission of authorized_keys is 600.
