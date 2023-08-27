@@ -1,5 +1,7 @@
 # Using Alpine Linux repositories
 
+Your first step before changing repository should be to consider making a [backup](Making-a-backup) in case something goes wrong.
+
 ## Disable auto update of repository files
 
 To replace iSH's own repositories, first disable the automatic processing of the repositories file that happens by iSH. Since their repositories are date based, any time they release a new date instance, an automated task needs to be triggered to change the repositories file. So you will pretty soon revert to the previous state. To disable this, all you need to do is to remove the /ish file tree, you do that like this: 
