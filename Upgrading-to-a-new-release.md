@@ -36,7 +36,7 @@ Please keep in mind that you need to use one of the official Alpine repositories
 
 To upgrade, for instance, from version 3.14 to 3.16 or 3.18, all you need to do is edit `/etc/apk/repositories` and replace the numbers with the release you desire.
 
-If you're unsure about editing the file manually, you can use the snippet from [Using an official Alpine repository](Using-Alpine-Linux-repositories#use-an-official-alpine-repository), substituting the release number with the one you wish to upgrade to before pasting.
+If you're unsure about editing the file manually, you can use the snippet from [Using an Official Alpine Repository](Using-Alpine-Linux-repositories#using-an-official-alpine-repository), substituting the release number with the one you wish to upgrade to before pasting.
 
 ## Performing the Upgrade
 
