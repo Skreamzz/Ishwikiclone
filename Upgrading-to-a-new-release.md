@@ -1,6 +1,6 @@
 The upgrade to new release procedure at `https://wiki.alpinelinux.org/wiki/Upgrading_Alpine` 
 is overly complicated when it comes to iSH, since iSH is its own kernel. 
-It can be entirely ignored.
+That document can be entirely ignored.
 
 Your first step before upgrading to a new release should be to consider making a [backup](Making-a-backup) in case something goes wrong.
 
