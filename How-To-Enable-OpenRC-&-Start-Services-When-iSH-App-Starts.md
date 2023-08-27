@@ -94,15 +94,3 @@ Last update: 2023-08-27
 * rsyslog - Starts but programs that attempt to log lock up
 * dbus
 * avahi-daemon
-
-## Troubleshooting:
-
-If you get something like:
-```
-:~# rc-status
--ash: rc-status: not found
-```
-Try:
-```
-apk add openrc
-```
