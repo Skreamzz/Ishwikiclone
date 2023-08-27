@@ -34,7 +34,7 @@ If your system is not currently using the 3.14 release, either edit `/etc/apk/re
 After making this change, execute:
 
 ```sh
-sudo apk upgrade && apk fix
+sudo apk upgrade && sudo apk fix
 ```
 
 Since you have not changed the Alpine release, this procedure doesn't constitute a full system upgrade; you've simply adjusted the source from which you retrieve information about current package availability. Consequently, there's no need to reboot once this process has completed.
