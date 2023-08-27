@@ -21,7 +21,7 @@ The extra task `apk fix` is normally not needed, but it makes sense to do it aft
 To replace iSH's own repositories, first disable the automatic processing of the repositories file that happens by iSH. Since their repositories are date based, any time they release a new date instance, an automated task needs to be triggered to change the repositories file. So you will pretty soon revert to the previous state. To disable this, all you need to do is to remove the /ish file tree, you do that like this: 
 
 ```sh
-rm /ish -rf
+sudo rm /ish -rf
 ```
 
 If this is not present, iSH will not try to touch the repo file.
@@ -47,8 +47,8 @@ You can use this snippet to do the change, but you need to make sure the release
 is not below what is already used!
 
 ```sh
-echo https://dl-cdn.alpinelinux.org/alpine/v3.14/main > /etc/apk/repositories
-echo https://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories
+sudo echo https://dl-cdn.alpinelinux.org/alpine/v3.14/main > /etc/apk/repositories
+sudo echo https://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories
 ```
 
 In the case the above is not the installed release, either edit it inside iSH after pasting,
@@ -59,7 +59,7 @@ Then copy the new snippet before pasting it into iSH.
 Then do 
 
 ```sh
-apk upgrade && apk fix
+sudo apk upgrade && apk fix
 ```
 
 # Notes:
