@@ -18,7 +18,7 @@ The extra task `apk fix` is normally not needed, but it makes sense to do it aft
 
 ## Disable auto update of repository files
 
-To replace iSH's own repositories, first disable the automatic processing of the repositories file that happens by iSH. Since their repositories are date based, any time they release a new date instance, an automated task needs to be triggered to change the repositories file. To disable this, all you need to do is to remove the /ish file tree, you do that like this: 
+To replace iSH's own repositories, first disable the automatic processing of the repositories file that happens by iSH. Since their repositories are date based, any time they release a new date instance, an automated task needs to be triggered to change the repositories file. So you will pretty soon revert to the previous state. To disable this, all you need to do is to remove the /ish file tree, you do that like this: 
 
 ```sh
 rm /ish -rf
@@ -26,14 +26,11 @@ rm /ish -rf
 
 If this is not present, iSH will not try to touch the repo file.
 
-If this is not done, pretty soon it will point back to the iSH repos. 
-
-## Use official Alpine repository
+## Use an official Alpine repository
 
 The packages in Alpine Linux repositories are more updated than iSH's own repositories and have packages whose size > 512 MB as well. 
 
-Before doing this, one crucial step you need to do is to first check what release your current file system is basedd on,
-type: 
+Before doing this, one crucial step you need to do is to first check what release your current file system is based on, type: 
 
 ```sh
 cat /etc/apk/repositories
@@ -81,7 +78,7 @@ still prefer to stay on 3.16, since their apps work fine there, but they see iss
 in 3.18
 
 A new release typically is based on a newer kernel, with that comes that the apps are compiled
-for that kernel, and thus the higher the release number, the more likely the intended kernel will
+for that kernel, and thus the higher the release number, the more likely the expected kernel will
 be using features not yet implemented in iSH.
 
 Its not black or white, like a certain release can not be used at all, its more of a
@@ -102,24 +99,27 @@ Regardless of your usage style, as long as you did that backup, you might as wel
 and see if things still work for you. If not import the backup and upgrade to less bleeding edge
 release.
 
+Be aware that the way Alpine is setup, there is no downgrade path, so once you have committed to 
+a new release there is no way back, except for a full reinstall.
+
 ## Select a new release
 
 All you need to do is point to a new release and do a regular apk upgrade
 
 Please be aware that you need to use one of the official Alpine repositories for this to work.
 If you still use the initial iSH repository, you are recommended to first follow the procedure
-listed above in "Using Alpine Linux repositories"
+listed above in [Use an official Alpine repository](#use-an-official-alpine-repository)
 
 All you need to do to upgrade for example from 3.14 to 3.16 or 3.18 is to edit 
 /etc/apk/repositories and change the numbers into the release you want. 
 
 In case you are unfamiliar with how to edit the file, you can re-use the snippet from 
-"Using Alpine Linux repositories" above, replacing the release number with the release you 
-want to upgrade into before pasting.
+[Use an official Alpine repository](#use-an-official-alpine-repository) above, 
+replacing the release number with the release you want to upgrade into before pasting.
 
 ## Do the upgrade!
 
-Finally do `apk upgrade && apk fix`
+type: `apk upgrade && apk fix`
 
 You are recommended to reboot once this is completed.
 
