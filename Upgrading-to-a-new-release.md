@@ -2,6 +2,8 @@ The upgrade to new release procedure at `https://wiki.alpinelinux.org/wiki/Upgra
 is overly complicated when it comes to iSH, since iSH is its own kernel. 
 It can be entirely ignored.
 
+Your first step before upgrading to a new release should be to consider making a [backup](Making-a-backup) in case something goes wrong.
+
 ### Latest is not always best in the iSH case
 
 When upgrading, it is often tempting to go for the latest release. In the case of iSH a bit of
