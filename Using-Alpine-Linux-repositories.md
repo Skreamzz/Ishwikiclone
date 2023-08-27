@@ -7,13 +7,6 @@ Do this by going into Settings - Filesystems - Select the one labeled as "Mounte
 If something goes wrong, all you need to do is to go to Settings - Filesystems - import 
 and select your exported FS
 
-# About using apk
-
-Previously it was always necessary to first do `apk update` in order to retrieve the latest indexes and then do `apk upgrade` to update anything installed if a newer version is available. 
-Since a few years the update step is auto executed when you do upgrade, so it is no longer needed. But old habits die hard, so almost everywhere you see people suggesting both steps. Nothing bad happens if you do both, but you reduce the amount of typing by only doing what is actually needed. It also saves a noticeable amount of time to not have apk processing the indexes twice.
-
-The extra task `apk fix` is normally not needed, but it makes sense to do it after any major package manipulating action, since it will notice any glitches in the previous processes, and in most cases is able to auto fix them, if there are remaining unresolved issues they will be listed.
-
 # Using Alpine Linux repositories
 
 ## Disable auto update of repository files
