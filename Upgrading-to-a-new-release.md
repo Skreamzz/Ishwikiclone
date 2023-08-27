@@ -36,7 +36,7 @@ and see if things still work for you. If not import the backup and upgrade to a 
 release.
 
 Be aware that the way Alpine is setup, there is no downgrade path, so once you have committed to 
-a new release there is no way back, except for a full reinstall.
+a new release there is no way back, except for a full reinstall, or reverting to a backup from before the upgrade.
 
 ## Select a new release
 
