@@ -18,13 +18,16 @@ After this, you can ssh (from iSH itself) using `ssh root@localhost -p 22000`
 
 ### To login without a password, using pubkey
 
-This assumes the destination device allows logins with password, in order to transfer the pubkey.
+The simplest way to set this up is to let ssh do it for you, this saves you the hassle of fiddling with a remote config file, ensuring everything has the right permission, and so on.
 
-To enable logins using your pubkey, use the same parameters as you use for a normal ssh, but replace the word ssh with ssh-copy-id. Using the above example this would be 
+This assumes the destination device allows logins with password, in order to transfer the pubkey. If this is not the case you have to transfer the pubkey the traditional way.
+
+Use the same parameters as you use for a normal ssh session, but replace the word ssh 
+with ssh-copy-id. Using the above example this would be 
 `ssh-copy-id root@localhost -p 22000`
 
 When you run this, you will still need to supply the password one last time. 
-After this has completed, you are now able to login without providing the password for the remote account.
+After this has completed, you are now able to login without providing the password for the remote account. And you can disable password logins in your sshd server.
 
 ### Troubleshooting passwordless login
 
