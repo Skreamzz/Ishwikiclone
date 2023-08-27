@@ -1,50 +1,43 @@
-Your first step before changing repository should be to consider making a [backup](Making-a-backup) in case something goes wrong.
+Your first step before modifying the repository should be to consider creating a [backup](Making-a-backup) in case anything goes wrong.
 
-# Disable auto update of repository file
+# Disabling Auto Update of Repository File
 
-To replace iSH's own repositories, first disable the automatic processing of the repositories file that happens by iSH. Since their repositories are date based, any time they release a new date instance, an automated task needs to be triggered to change the repositories file. So you will pretty soon revert to the previous state. To disable this, all you need to do is to remove the /ish file tree, you do that like this: 
+To replace iSH's own repositories, it's essential to disable the automatic processing of the repositories file by iSH. Their repositories are date-based, and whenever a new date instance is released, an automated task triggers a change in the repositories file. To prevent this, you simply need to remove the `/ish` file tree like this:
 
 ```sh
 sudo rm /ish -rf
 ```
 
-If this is not present, iSH will not try to touch the repo file.
+If this directory is not present, iSH won't attempt to modify the repo file.
 
-# Use an official Alpine repository
+# Using an Official Alpine Repository
 
-The packages in Alpine Linux repositories are more updated than iSH's own repositories and have packages whose size > 512 MB as well. 
+The packages in Alpine Linux repositories are more up-to-date than those in iSH's repositories and include packages with sizes greater than 512 MB.
 
-Before doing this, one crucial step you need to do is to first check what release your current file system is based on, type: 
+Before proceeding, an important step is to check the release your current file system is based on. You can do this by typing:
 
 ```sh
 cat /etc/apk/repositories
-``` 
+```
 
-And look for the sequence somewhat like this: `v3.14-2023-08-15` 
-the release number part in this string is v3.14
+Look for a sequence resembling this: `v3.14-2023-08-15`. The release number in this string is `v3.14`. However, it might be a higher release in the future.
 
-But in the future it will most likely be a higher release.
-
-Next is to point to an Alpine repo, either the primary listed below, or any of its mirrors.
-
-You can use this snippet to do the change, but you need to make sure the release number
-is not below what is already used!
+Next, you should point to an Alpine repo, either the primary one listed below or one of its mirrors. You can use this snippet to make the change:
 
 ```sh
 sudo echo https://dl-cdn.alpinelinux.org/alpine/v3.14/main > /etc/apk/repositories
 sudo echo https://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories
 ```
 
-In the case the above is not the installed release, either edit it inside iSH after pasting,
-or lacking knowledge in how to edit linux config files, first paste it into an environment
-where you are familiar with editing text files and correct the release number.
-Then copy the new snippet before pasting it into iSH.
+If your system is not currently using the 3.14 release, either edit `/etc/apk/repositories` inside iSH after pasting, or if you're not familiar with editing Linux config files, first paste this into an environment where you're comfortable editing text files and correct the release number. Then copy the updated snippet before pasting it into iSH.
 
-Then do 
+After making this change, execute:
 
 ```sh
 sudo apk upgrade && apk fix
 ```
+
+Since you have not changed the Alpine release, this procedure doesn't constitute a full system upgrade; you've simply adjusted the source from which you retrieve information about current package availability. Consequently, there's no need to reboot once this process has completed.
 
 # Notes:
 
