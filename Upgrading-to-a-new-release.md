@@ -1,81 +1,49 @@
-The upgrade to new release procedure at `https://wiki.alpinelinux.org/wiki/Upgrading_Alpine` 
-is overly complicated when it comes to iSH, since iSH is its own kernel. 
-That document can be entirely ignored.
+The upgrade procedure detailed in [Alpine Linux's official documentation](https://wiki.alpinelinux.org/wiki/Upgrading_Alpine) can be overly complex when applied to iSH since iSH operates with its own kernel. Therefore, you can safely disregard that document for this process.
 
-Your first step before upgrading to a new release should be to consider making a [backup](Making-a-backup) in case something goes wrong.
+Before embarking on the upgrade, your first step should be to create a [backup](Making-a-backup) in case anything goes awry.
 
-### Latest is not always best in the iSH case
+### Latest Isn't Always Greatest in the iSH Context
 
-When upgrading, it is often tempting to go for the latest release. In the case of iSH a bit of
-caution would be wise. I have used 3.18 since it came out and only experienced a vim startup
-glitch, just a set of error messages every time I started and exited it, but once in it worked fine. 
-That was resolved by ISH dev team fairly quickly. But I have several colleagues that 
-still prefer to stay on 3.16, since their apps work fine there, but they see issues with them
-in 3.18
+A new Alpine release typically builds upon a more recent kernel. As a result, the bundled apps are compiled to leverage the capabilities of this updated kernel. Consequently, as the release number increases, it becomes more likely that some apps may expect kernel features that haven't been implemented in iSH yet.
 
-A new release typically is based on a newer kernel, with that comes that the apps are compiled
-for that kernel, and thus the higher the release number, the more likely the expected kernel will
-be using features not yet implemented in iSH.
+It's crucial to understand that this isn't a binary situation. It's more of a sliding scale. Apps that demand a lot from the CPU are often highly optimized and quick to adopt new kernel features. However, most apps remain unchanged, working just as they did in previous releases, unless they rely on a library that now uses non-iSH-compatible kernel features.
 
-Its not black or white, like a certain release can not be used at all, its more of a
-sliding scale. Where apps demanding a lot from the cpu, tend to be heavily optimized and are quick
-to use new kernel features. Whilst most apps have not changed, and thus they will typically work 
-the same as in previous releases, unless a library they depend on now uses non iSH-compatible
-kernel features.
+When new releases surface, early adopters often rush to give them a try. They may discover that apps which previously worked in iSH might now encounter issues. If you're one to embrace the cutting edge, feel free to dive right in. And, should you encounter apps that once worked but now fail, please report these issues. Your feedback is invaluable!
 
-As new releases come out, some early adopters try it right away, they often find what apps that
-previously worked in iSH now fail. If that is your game, go for it! And pretty please report 
-if you find things that used to work now failing!
+For those whose primary goal is to run specific apps and ensure their ongoing functionality, consider checking the Discord community or conducting online searches using terms like `ish alpine v3.18 go`. This will help you identify potential issues with critical apps when upgrading to a new release.
 
-If your iSH focus is more that you run certain apps and want to ensure they still work, 
-then checking the Discord or googling things like: `ish alpine v3.18 go`
-Will indicate if your important apps have issues with a certain new release.
+Regardless of your usage style, if you've been diligent in creating a backup, it's worthwhile to test the latest release to see if everything still functions as expected. If not, you can always restore from your backup and switch to a less cutting-edge release.
 
-Regardless of your usage style, as long as you did that backup, you might as well try the latest 
-and see if things still work for you. If not import the backup and upgrade to a less bleeding edge
-release.
+It's important to note that Alpine Linux doesn't offer a straightforward downgrade path. Once you commit to a new release, returning to the previous one isn't simple. Your options are limited to either performing a complete reinstallation or restoring from a backup created before the upgrade.
 
-Be aware that the way Alpine is designed, there is no downgrade path, so once you have committed to 
-a new release there is no way back, except for a full reinstall, or reverting to a backup from before the upgrade.
+## Shutting Down Services
 
-## Select a new release
+Shutting down all services offers the advantage of minimizing the risk of an older binary already running and accessing files that have been modified by a newer version of the same app. Although it's relatively rare, if such changes were to occur, they could potentially disrupt the data associated with that app.
 
-Please be aware that you need to use one of the official Alpine repositories for this to work.
-If you still use the initial iSH repository, you are recommended to first follow the procedure
-listed in [Using Alpine Linux repositories](Using-Alpine-Linux-repositories)
+If you haven't installed openrc, this step will fail, but it won't cause any harm. You'll simply receive a message stating `openrc: not found`. It's generally advisable to proceed with this step, with the only exception being if you're performing the upgrade via a remote session, as it would disconnect you.
 
-All you need to do to upgrade for example from 3.14 to 3.16 or 3.18 is to edit 
-/etc/apk/repositories and change the numbers into the release you want. 
-
-In case you are unfamiliar with how to edit the file, you can re-use the snippet from 
-[Use an official Alpine repository](Using-Alpine-Linux-repositories#use-an-official-alpine-repository), 
-replacing the release number with the release you want to upgrade into before pasting.
-
-## Shut down services
-
-The advantage of shutting down all services is that you minimize the risk of an old binary already running,
-accessing files also touched by a new version of the same app. Where the upgrade included some changes how files are written. This is pretty rare, but if it were to happen, it could cause utter mayhem with the data related to that app.
-
-If you have not installed openrc, this step will fail but in a harmless way, you will just get a message
-`openrc: not found`, you are better off doing this step. 
-The only exception being if you are doing the upgrade via a remote session, this would disconnect you!
-
-type: 
+To execute this step, type the following command:
 
 ```sh
 sudo openrc shutdown
 ```
 
-Despite the word shutdown above, nothing drastic will happen. All this does is to tell the init system to 
-enter the shutdown runlevel. This will terminate all services in a safe way. Your console session will continue
+Despite the term "shutdown," nothing drastic will happen. This command instructs the init system to transition to the shutdown runlevel, which safely terminates all services. Your console session will remain active.
 
+## Selecting a New Release
 
-## Do the upgrade!
+Please keep in mind that you need to use one of the official Alpine repositories for this to work correctly. If you're still using the initial iSH repository, it's recommended to first follow the procedure outlined in [Using Alpine Linux repositories](Using-Alpine-Linux-repositories).
 
-type: 
+To upgrade, for instance, from version 3.14 to 3.16 or 3.18, all you need to do is edit `/etc/apk/repositories` and replace the numbers with the release you desire.
+
+If you're unsure about editing the file manually, you can use the snippet from [Using an official Alpine repository](Using-Alpine-Linux-repositories#use-an-official-alpine-repository), substituting the release number with the one you wish to upgrade to before pasting.
+
+## Performing the Upgrade
+
+To initiate the upgrade, use the following command:
 
 ```sh
 sudo apk upgrade && apk fix
 ```
 
-Once this is completed you need to reboot.
+Once this process is complete, it's essential to reboot your system.
