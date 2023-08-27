@@ -43,7 +43,7 @@ If you're unsure about editing the file manually, you can use the snippet from [
 To initiate the upgrade, use the following command:
 
 ```sh
-sudo apk upgrade && apk fix
+sudo apk upgrade && sudo apk fix
 ```
 
 Once this process is complete, it's essential to reboot your system.
