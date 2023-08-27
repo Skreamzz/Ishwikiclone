@@ -40,8 +40,6 @@ a new release there is no way back, except for a full reinstall, or reverting to
 
 ## Select a new release
 
-All you need to do is point to a new release and do a regular apk upgrade
-
 Please be aware that you need to use one of the official Alpine repositories for this to work.
 If you still use the initial iSH repository, you are recommended to first follow the procedure
 listed in [Using Alpine Linux repositories](Using-Alpine-Linux-repositories)
