@@ -109,66 +109,6 @@ To temporarily stop a service during the current iSH session, use the following 
 sudo rc-service sshd stop
 ```
 
-Be aware that if the service is still active, it will auto start on next boot.
-----
-## Installing a Sample Service - `sshd`
-
-To install `sshd`, use the following command:
-
-```sh
-sudo apk add openssh
-```
-
-To add `sshd` as a service that starts automatically on future boot-ups, run:
-
-```sh
-sudo rc-update add sshd
-```
-
-This addition ensures the service will be automatically started during subsequent boot-ups.
-
-To remove the service from automatic startup, execute:
-
-```sh
-sudo rc-update del sshd
-```
-
-Like the `add` command, this change will only affect future boot-ups.
-
-If you want to manually start `sshd` immediately without rebooting, use this command:
-
-```sh
-sudo rc-service sshd start
-```
-
-The initial start may take a bit longer as host keys are generated. Subsequent starts of `sshd` will be nearly instantaneous.
-
-Even if you don't start it immediately as shown above, it will still work. However, the somewhat slow host key generation process will happen in the background during the next boot-up.
-
-If you're uncertain whether a service has started, such as after a reboot, you can check its status by running:
-
-```sh
-sudo rc-status
-```
-
-As long as you don't see `[ failed ]` or `[ stopped ]` on the same line as a service, assume that the startup process hasn't completed yet. Give it a few moments and run `rc-status` again. If you see `[ started ]`, the service is running.
-
-```sh
-localhost:~$ sudo rc-status
-Runlevel: default
- sshd                              [  started  ]
-Dynamic Runlevel: hotplugged
-Dynamic Runlevel: needed/wanted
-Dynamic Runlevel: manual
-localhost:~$
-```
-
-To temporarily stop a service during the current iSH session, use the following command:
-
-```sh
-sudo rc-service sshd stop
-```
-
 Keep in mind that if the service is still active, it will automatically start during the next boot-up.
 
 ## Some services and their working status
