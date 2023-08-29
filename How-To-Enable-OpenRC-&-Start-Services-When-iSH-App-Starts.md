@@ -42,6 +42,14 @@ openrc default
 
 ## Oddities with iSH
 
+In a standalone Linux environment, system configuration occurs during startup, typically through init tasks. These tasks include actions like mounting file systems, initializing random numbers, and configuring networking.
+
+However, in iSH, these system configuration tasks are handled by the iSH app before activating the virtual environment, and the virtual environment lacks access to hardware settings or network configuration.
+
+Because of this lack of hardware access, these tasks will fail in iSH and display error messages. These errors, while harmless, can be a bit of an eyesore. The recommendation is to disable tasks related to system initiation and configuration when working in iSH.
+
+In essence, in iSH, it's best to only start server daemons and background tasks via init scripts. Things like: sshd, apache, runbg
+
 Keep in mind that iSH is a somewhat limited system, so when you manually start or stop services, you may encounter warnings like the following:
 
 ```sh
