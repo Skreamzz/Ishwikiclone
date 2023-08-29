@@ -58,7 +58,7 @@ Service 'machine-id' needs non existent service 'dev'
 grep: /proc/filesystems: No such file or directory
 ```
 
-These warnings can typically be ignored. They result from features not yet implemented in iSH. As long as the line mentioning the service modification ends with `[ OK ]`, there's no cause for concern.
+These warnings can typically be ignored. They result from features not yet implemented in iSH. As long as the line mentioning the service status change ends with `[ OK ]`, there's no cause for concern.
 
 ## Installing a Sample Service - `sshd`
 
