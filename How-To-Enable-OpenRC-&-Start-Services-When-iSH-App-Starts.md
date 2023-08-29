@@ -46,7 +46,7 @@ In a standalone Linux environment, system configuration occurs during startup, t
 
 However, in iSH, these system configuration tasks are handled by the iSH app before activating the virtual environment, and the virtual environment lacks access to hardware settings or network configuration.
 
-Because of this lack of hardware access, these tasks will fail in iSH and display error messages. These errors, while harmless, can be a bit of an eyesore. The recommendation is to disable tasks related to system initiation and configuration when working in iSH.
+Because of this lack of hardware access, such tasks will fail in iSH and display error messages. These errors, while harmless, can be a bit of an eyesore. The recommendation is to disable tasks related to system initiation and configuration when working in iSH.
 
 In essence, in iSH, it's best to only start server daemons and background tasks via init scripts. Things like: sshd, apache, runbg
 
