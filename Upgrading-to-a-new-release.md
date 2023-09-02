@@ -2,6 +2,8 @@ The upgrade procedure detailed in [Alpine Linux's official documentation](https:
 
 Before embarking on the upgrade, your first step should be to create a [backup](Making-a-backup) in case anything goes awry.
 
+In the code snippets in this document it is assumed that you are the root user.
+
 ### Latest Isn't Always Greatest in the iSH Context
 
 A new Alpine release typically builds upon a more recent kernel. As a result, the bundled apps are compiled to leverage the capabilities of this updated kernel. Consequently, as the release number increases, it becomes more likely that some apps may expect kernel features that haven't been implemented in iSH yet.
@@ -25,7 +27,7 @@ If you haven't installed openrc, this step will fail, but it won't cause any har
 To execute this step, type the following command:
 
 ```sh
-sudo openrc shutdown
+openrc shutdown
 ```
 
 Despite the term "shutdown," nothing drastic will happen. This command instructs the init system to transition to the shutdown runlevel, which safely terminates all services. Your console session will remain active.
@@ -43,7 +45,7 @@ If you're unsure about editing the file manually, you can use the snippet from [
 To initiate the upgrade, use the following command:
 
 ```sh
-sudo apk upgrade && sudo apk fix
+apk upgrade && apk fix
 ```
 
 Once this process is complete, it's essential to reboot your system.
