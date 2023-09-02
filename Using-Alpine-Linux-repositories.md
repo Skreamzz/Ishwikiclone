@@ -1,11 +1,13 @@
 Your first step before modifying the repository should be to consider creating a [backup](Making-a-backup) in case anything goes wrong.
 
+In the code snippets in this document it is assumed that you are the root user.
+
 # Disabling Auto Update of Repository File
 
 To replace iSH's own repositories, it's essential to disable the automatic processing of the repositories file by iSH. Their repositories are date-based, and whenever a new date instance is released, an automated task triggers a change in the repositories file. To prevent this, you simply need to remove the `/ish` file tree like this:
 
 ```sh
-sudo rm /ish -rf
+rm /ish -rf
 ```
 
 If this directory is not present, iSH won't attempt to modify the repo file.
@@ -25,8 +27,8 @@ Look for a sequence resembling this: `v3.14-2023-08-15`. The release number in t
 Next, you should point to an Alpine repo, either the primary one listed below or one of its mirrors. You can use this snippet to make the change:
 
 ```sh
-sudo echo https://dl-cdn.alpinelinux.org/alpine/v3.14/main > /etc/apk/repositories
-sudo echo https://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories
+echo https://dl-cdn.alpinelinux.org/alpine/v3.14/main > /etc/apk/repositories
+echo https://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories
 ```
 
 If your system is not currently using the 3.14 release, either edit `/etc/apk/repositories` inside iSH after pasting, or if you're not familiar with editing Linux config files, first paste this into an environment where you're comfortable editing text files and correct the release number. Then copy the updated snippet before pasting it into iSH.
@@ -34,7 +36,7 @@ If your system is not currently using the 3.14 release, either edit `/etc/apk/re
 After making this change, execute:
 
 ```sh
-sudo apk upgrade && sudo apk fix
+apk upgrade && apk fix
 ```
 
 Since you have not changed the Alpine release, this procedure doesn't constitute a full system upgrade; you've simply adjusted the source from which you retrieve information about current package availability. Consequently, there's no need to reboot once this process has completed.
