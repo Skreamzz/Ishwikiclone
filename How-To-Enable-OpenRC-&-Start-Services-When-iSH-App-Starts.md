@@ -1,5 +1,7 @@
 ## Introduction
 
+For the code snippets in this document, it is assumed that you are doing them as user root
+
 OpenRC is the tool that Alpine Linux employs to manage services. It allows you to start, stop, and check the status of services such as `sshd` and the Apache web server. Additionally, you can use OpenRC to specify which services should run when an Alpine system boots.
 
 This tutorial will guide you through the process. Towards the end of this document, you'll find a list of services and their status within iSH.
@@ -7,7 +9,7 @@ This tutorial will guide you through the process. Towards the end of this docume
 Getting everything up and running is relatively straightforward. The first step is to install OpenRC using the following command:
 
 ```sh
-sudo apk add openrc
+apk add openrc
 ```
 
 Now, it's necessary to restart iSH to ensure the appropriate primary run level is selected. Exit the app and then relaunch it.
@@ -19,18 +21,18 @@ Although this situation can be addressed through manual adjustments, performing 
 Once you've completed the reboot, you can request a status update to obtain a list of active services and their statuses. At this point, no services will be running, but this step introduces you to the monitoring tool. Type the following command:
 
 ```sh
-sudo rc-status
+rc-status
 ```
 
 You should see something similar to the following...
 
 ```sh
-localhost:~$ sudo rc-status
+localhost:~# rc-status
 Runlevel: default
 Dynamic Runlevel: hotplugged
 Dynamic Runlevel: needed/wanted
 Dynamic Runlevel: manual
-localhost:~$
+localhost:~#
 ```
 
 One crucial thing to check is that the current run level is set to `default`.
@@ -65,19 +67,19 @@ These warnings can typically be ignored. They result from things not available i
 To install `sshd`, use the following command:
 
 ```sh
-sudo apk add openssh
+apk add openssh
 ```
 
 To add `sshd` as a service that starts automatically on future boot-ups, 
 
 ```sh
-sudo rc-update add sshd
+rc-update add sshd
 ```
 
 To remove the service from automatic startup, execute:
 
 ```sh
-sudo rc-update del sshd
+rc-update del sshd
 ```
 
 Like the `add` command, this change will only affect future boot-ups.
@@ -85,7 +87,7 @@ Like the `add` command, this change will only affect future boot-ups.
 If you want to manually start `sshd` immediately without rebooting, use this command:
 
 ```sh
-sudo rc-service sshd start
+rc-service sshd start
 ```
 
 The initial start may take a bit longer as host keys are generated. Subsequent starts of `sshd` will be nearly instantaneous.
@@ -95,26 +97,26 @@ Even if you don't start it immediately as shown above, it will still work. Howev
 If you're uncertain whether a service has started, such as after a reboot, you can check its status by running:
 
 ```sh
-sudo rc-status
+rc-status
 ```  
 
 As long as you don't see `[ failed ]` or `[ stopped ]` on the same line as a service, assume the startup hasn't completed yet. Give it a few moments and run `rc-status` again.
 If you see `[ started ]` the service is running.
 
 ```sh
-localhost:~$ sudo rc-status
+localhost:~# rc-status
 Runlevel: default
  sshd                              [  started  ]
 Dynamic Runlevel: hotplugged
 Dynamic Runlevel: needed/wanted
 Dynamic Runlevel: manual
-localhost:~$
+localhost:~#
 ```
 
 To temporarily stop a service during the current iSH session, use the following command:
 
 ```sh
-sudo rc-service sshd stop
+rc-service sshd stop
 ```
 
 Keep in mind that if the service is still active, it will automatically start during the next boot-up.
