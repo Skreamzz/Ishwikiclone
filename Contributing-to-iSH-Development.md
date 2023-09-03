@@ -65,7 +65,7 @@ user@my-mac ~> git switch myiSH
 ```
 
 ### The PR
-Once you are confident that your change does what you want create a clean new branch off of your master branch.  In theory this should match the upstream Master, but we'll make sure this isn't an issue below.
+Once you are confident that your change does what you want, create a clean new branch off of your master branch.  In theory this should match the upstream Master, but we'll make sure this isn't an issue below.
 
 ```
 user@my-mac ~> git switch master
