@@ -1,16 +1,18 @@
 Your first step before modifying the repository should be to consider creating a [backup](Making-a-backup) in case anything goes wrong.
 
-In the code snippets in this document it is assumed that you are the root user.
+In the code snippets in this document, it is assumed that you are the root user.
 
 # Disabling Auto Update of Repository File
 
-To replace iSH's own repositories, it's essential to disable the automatic processing of the repositories file by iSH. Their repositories are date-based, and whenever a new date instance is released, an automated task triggers a change in the repositories file. To prevent this, you simply need to remove the `/ish` file tree like this:
+To replace iSH's own repositories, it's essential to first disable the automatic processing of the repositories file by iSH. Their repositories are date-based, and whenever a new date instance is released, an automated task triggers a replacement of the /etc/apk/repositories file, pointing to the new iSH apk.ish.app files, overwriting any changes pointing to other Alpine repositories. The reason for this is to make the iSH app conformant to AppStore policies, and should not be seen as a hostile action. Especially given the fact that an easy method of disabling this is provided.
+
+To prevent this, you simply need to remove the `/ish` file tree like this:
 
 ```sh
 rm /ish -rf
 ```
 
-If this directory is not present, iSH won't attempt to modify the repo file.
+This folder only contains some files, indicating what version of the iSH apk index is currently used, helping the app to know when to replace /etc/apk/repositories. If this folder is not present, iSH won't attempt to modify the repo file. 
 
 # Using an Official Alpine Repository
 
