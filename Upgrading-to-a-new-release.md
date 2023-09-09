@@ -2,15 +2,15 @@ The upgrade procedure detailed in [Alpine Linux's official documentation](https:
 
 Before embarking on the upgrade, your first step should be to create a [backup](Making-a-backup) in case anything goes awry.
 
-In the code snippets in this document it is assumed that you are the root user.
+In the code snippets in this document, it is assumed that you are the root user.
 
 ### Latest Isn't Always Greatest in the iSH Context
 
 A new Alpine release typically builds upon a more recent kernel. As a result, the bundled apps are compiled to leverage the capabilities of this updated kernel. Consequently, as the release number increases, it becomes more likely that some apps may expect kernel features that haven't been implemented in iSH yet.
 
-It's crucial to understand that this isn't a binary situation. It's more of a sliding scale. Apps that demand a lot from the CPU are often highly optimized and quick to adopt new kernel features. However, most apps remain unchanged, working just as they did in previous releases, unless they rely on a library that now uses non-iSH-compatible kernel features.
+It's crucial to understand that this isn't a binary situation. It's more of a sliding scale. Apps that demand a lot from the CPU are often highly optimized and quick to adopt new kernel features. However, most apps remain unchanged, working just as they did in previous releases unless they rely on a library that now uses non-iSH-compatible kernel features.
 
-When new releases surface, early adopters often rush to give them a try. They may discover that apps which previously worked in iSH might now encounter issues. If you're one to embrace the cutting edge, feel free to dive right in. And, should you encounter apps that once worked but now fail, please report these issues. Your feedback is invaluable!
+When new releases surface, early adopters often rush to give them a try. They may discover that apps that previously worked in iSH might now encounter issues. If you're one to embrace the cutting-edge, feel free to dive right in. And, should you encounter apps that once worked but now fail, please report these issues. Your feedback is invaluable!
 
 For those whose primary goal is to run specific apps and ensure their ongoing functionality, consider checking the Discord community or conducting online searches using terms like `ish alpine v3.18 go`. This will help you identify potential issues with critical apps when upgrading to a new release.
 
@@ -22,7 +22,7 @@ It's important to note that Alpine Linux doesn't offer a straightforward downgra
 
 Shutting down all services offers the advantage of minimizing the risk of an older binary already running and accessing files that have been modified by a newer version of the same app. Although it's relatively rare, if such changes were to occur, they could potentially disrupt the data associated with that app.
 
-If you haven't installed openrc, this step will fail, but it won't cause any harm. You'll simply receive a message stating `openrc: not found`. It's generally advisable to proceed with this step, with the only exception being if you're performing the upgrade via a remote session, as it would disconnect you.
+If you haven't installed openrc, this step will fail, but it won't cause any harm. You'll simply receive a message stating `openrc: not found`. It's generally advisable to proceed with this step, with the only exception being if you're performing the upgrade via a remote session, as it might disconnect you.
 
 To execute this step, type the following command:
 
