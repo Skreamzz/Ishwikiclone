@@ -156,3 +156,17 @@ struct dev_ops *char_devs[256] = {
 ...
 }
 ```
+
+# A little more detail
+
+Probably the most important thing here is to understand that in order to make this work it was necessary to create a data structure that was compatible with what the RTC_RD_TIME ioctl() would generate and then make sure to cast the result appropriately via...
+
+```
+ *(rtc_time *) arg = *data; // This is the magic that gets the value back to the "kernel"
+```
+
+Where 'arg' is passed into the function...
+
+```
+static int rtc_ioctl(struct fd *fd, int cmd, void *arg)
+```
