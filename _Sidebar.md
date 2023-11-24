@@ -11,10 +11,13 @@
 * [What works?](What-works%3F)
 * [iSH's built in APK](iSH's-built-in-APK)
 
-## Tutorials
+## Tutorials (Developer)
 
 * [Contributing to iSH Development](https://github.com/ish-app/ish/wiki/Contributing-to-iSH-Development)
 * [How to add a new Character Device to iSH](https://github.com/ish-app/ish/wiki/Adding-a-character-device-to-iSH)
+
+## Tutorials (General)
+
 * [Extracting a dump of your files](Extracting-a-dump-of-your-files)
 * [Install & Activate Alternate Filesystems](Install-&-Activate-Alternate-Filesystems)
 * [Running a Python web server](Running-a-Python-Web-Server)
