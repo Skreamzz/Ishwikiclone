@@ -1,5 +1,5 @@
 # Introduction
-This page documents the implementation of a new character device to iSH.  In this case, a minimal Real Time Clock 
+This page documents the implementation of a new character device to iSH.  In this case, a minimal (emulated) Real Time Clock 
 
 # Create #defines in fs/devices.h for device major and minor numbers
 
