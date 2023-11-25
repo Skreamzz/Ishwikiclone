@@ -131,6 +131,7 @@ struct dev_ops rtc_dev = {
 extern struct dev_ops rtc_dev;
 
 # Register the device and create the appropriate /dev entries in App/AppDelegate.m
+#include "app/RTCDevice.h"
 
 ```
 // Implement minimal RTC
