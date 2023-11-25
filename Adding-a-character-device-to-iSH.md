@@ -1,14 +1,39 @@
 # Introduction
-This page documents the implementation of a new character device to iSH.  In this case, a minimal (emulated) Real Time Clock 
+This page documents the implementation of a new character device to iSH.  In this case, a
+minimal (emulated) Real Time Clock.
+
+It is assumed the reader has a decent understanding of how devices work in Linux.
+This tutorial is not meant to be an introduction to that topic.
 
 # Create #defines in fs/devices.h for device major and minor numbers
 
+You can either define DEV_RTC_MAJOR to be the same as DYN_DEV_MAJOR, or 
+have it be the same as in Linux.  I prefer that devices 
+correspond as closely as possible to Linux conventions.  If you don't care 
+about that then you can save a little work later.  See below for further 
+information.
+
+In either case, the DEV_RTC_MINOR number must be unique, as it is used as an
+index.  As of this writing, the following are in use.
+
+```
+// /dev/clipboard
+#define DEV_CLIPBOARD_MINOR 0
+// /dev/location
+#define DEV_LOCATION_MINOR 1
+```
+
+You could also just use DYN_DEV_MAJOR instead of DEV_RTC_MAJOR.  Assuming 
+you don't then make the following addition...
+
 ```
 // /dev/rtc
-#define DEV_RTC_MAJOR 252 // Or make it the same as DYN_DEV_MAJOR.  I prefer that devices 
-                          // correspond as closely as possible to Linux conventions
+#define DEV_RTC_MAJOR 252 
 #define DEV_RTC_MINOR 2 // This must be unique!  Do not duplicate.
 ```
+
+If you choose to use DYN_DEV_MAJOR than just remove the DEV_RTC_MAJOR entry 
+above and make the appropriate changes below.
 
 # Create the device file.  In this case, app/RTCDevice.m
 
@@ -81,7 +106,7 @@ static int rtc_close(rtc_fd *fd) {
     return 0;
 }
 
-#define RTC_RD_TIME 0x80247009 // Example definition, adjust as necessary
+#define RTC_RD_TIME 0x80247009
 
 static ssize_t rtc_ioctl_size(int cmd) {
     switch (cmd) {
@@ -124,20 +149,23 @@ struct dev_ops rtc_dev = {
 ```
 
 # You'll need a .h file as well (App/RTCDevice.h)
-
-//
+```
 //  RTCDevice.h
 
 extern struct dev_ops rtc_dev;
+```
 
 # Register the device and create the appropriate /dev entries in App/AppDelegate.m
 
-```
-// Need include file
-#include "app/RTCDevice.h"
-...
 
-// Implement minimal RTC
+Need include file
+```
+#include "app/RTCDevice.h"
+```
+
+Also need to register the new device and create the device entries.
+```
+// Register minimal RTC
 err = dyn_dev_register(&rtc_dev, DEV_CHAR, DEV_RTC_MAJOR, DEV_RTC_MINOR);
 if (err != 0)
     return err;
@@ -149,27 +177,30 @@ generic_symlinkat("/dev/rtc0", AT_PWD, "/dev/rtc");
 # Modify fs/dev.c to include the "include" file and to add the device to the char_devs[] data structure
 
 ```
-...
 #include "app/RTCDevice.h"
-...
+```
 
+```
 struct dev_ops *char_devs[256] = {
-...
+```
+
+```
     [DEV_RTC_MAJOR] = &rtc_dev,
-...
+```
+```
 }
 ```
 
-# Modify fs/dyndev.c (Or change DEV_RTC_MAJOR to be the same as DYN_DEV_MAJOR)
-```
+# Modify fs/dyndev.c (If you didn't change DEV_RTC_MAJOR to be the same as DYN_DEV_MAJOR above)
+
 At this point you have two choices.  If you have set DEV_RTC_MAJOR to be the 
 same as DYN_DEV_MAJOR then ignore this section.  Otherwise the dyn_dev_register 
 function needs a small modification to recognize the new RTC Major number.
-
+```
 // if (major != DYN_DEV_MAJOR) {
 // Becomes
 // if ((major != DYN_DEV_MAJOR) && (major != DEV_RTC_MAJOR)) {
-
+```
 # A little more detail
 
 Probably the most important thing here is to understand that in order to make this work it was necessary to create a data structure that was compatible with what the RTC_RD_TIME ioctl() would generate and then make sure to cast the result appropriately via...
