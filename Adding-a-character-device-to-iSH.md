@@ -6,7 +6,7 @@ This page documents the implementation of a new character device to iSH.  In thi
 ```
 // /dev/rtc
 #define DEV_RTC_MAJOR 252
-#define DEV_RTC_MINOR 1 // This must be unique!  Do not duplicate
+#define DEV_RTC_MINOR 2 // This must be unique!  Do not duplicate
 ```
 
 # Create the device file.  In this case, app/RTCDevice.m
