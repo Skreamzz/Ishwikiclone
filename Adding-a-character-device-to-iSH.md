@@ -5,7 +5,8 @@ This page documents the implementation of a new character device to iSH.  In thi
 
 ```
 // /dev/rtc
-#define DEV_RTC_MAJOR 252 // Or make it the same as DYN_DEV_MAJOR.  I prefer that devices correspond as closely as possible to Linux conventions
+#define DEV_RTC_MAJOR 252 // Or make it the same as DYN_DEV_MAJOR.  I prefer that devices 
+                          // correspond as closely as possible to Linux conventions
 #define DEV_RTC_MINOR 2 // This must be unique!  Do not duplicate.
 ```
 
@@ -39,8 +40,7 @@ static rtc_time *get_current_time(rtc_fd *fd, size_t *len) {
     NSCalendar *calendar = [NSCalendar currentCalendar];
 
     // Define the desired date components
-    NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
-                                               fromDate:currentDate];
+    NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:currentDate];
 
     // Allocate and populate the rtc_time structure
     rtc_time *timeStruct = malloc(sizeof(rtc_time));
@@ -162,7 +162,10 @@ struct dev_ops *char_devs[256] = {
 
 # Modify fs/dyndev.c (Or change DEV_RTC_MAJOR to be the same as DYN_DEV_MAJOR)
 ```
-At this point you have two choices.  If you have set DEV_RTC_MAJOR to be the same as DYN_DEV_MAJOR then ignore this section.  Otherwise the dyn_dev_register function needs a small modification to recognize the new RTC Major #
+At this point you have two choices.  If you have set DEV_RTC_MAJOR to be the 
+same as DYN_DEV_MAJOR then ignore this section.  Otherwise the dyn_dev_register 
+function needs a small modification to recognize the new RTC Major number.
+
 // if (major != DYN_DEV_MAJOR) {
 // Becomes
 // if ((major != DYN_DEV_MAJOR) && (major != DEV_RTC_MAJOR)) {
