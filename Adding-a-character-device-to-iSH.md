@@ -131,14 +131,16 @@ struct dev_ops rtc_dev = {
 extern struct dev_ops rtc_dev;
 
 # Register the device and create the appropriate /dev entries in App/AppDelegate.m
-#include "app/RTCDevice.h"
 
 ```
+// Need include file
+#include "app/RTCDevice.h"
+...
+
 // Implement minimal RTC
 err = dyn_dev_register(&rtc_dev, DEV_CHAR, DEV_RTC_MAJOR, DEV_RTC_MINOR);
 if (err != 0)
     return err;
-
 // Create device entries
 generic_mknodat(AT_PWD, "/dev/rtc0", S_IFCHR|0666, dev_make(DEV_RTC_MAJOR, DEV_RTC_MINOR));
 generic_symlinkat("/dev/rtc0", AT_PWD, "/dev/rtc");
