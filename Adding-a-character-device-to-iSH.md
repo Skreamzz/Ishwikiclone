@@ -160,6 +160,13 @@ struct dev_ops *char_devs[256] = {
 }
 ```
 
+# Modify fs/dyndev.c
+```
+// The den_dev_register function needs a small modification to recognize the new RTC Major #
+// if (major != DYN_DEV_MAJOR) {
+// Becomes
+// if ((major != DYN_DEV_MAJOR) && (major != DEV_RTC_MAJOR)) {
+
 # A little more detail
 
 Probably the most important thing here is to understand that in order to make this work it was necessary to create a data structure that was compatible with what the RTC_RD_TIME ioctl() would generate and then make sure to cast the result appropriately via...
