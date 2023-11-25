@@ -162,7 +162,7 @@ struct dev_ops *char_devs[256] = {
 
 # Modify fs/dyndev.c
 ```
-// The den_dev_register function needs a small modification to recognize the new RTC Major #
+// The dyn_dev_register function needs a small modification to recognize the new RTC Major #
 // if (major != DYN_DEV_MAJOR) {
 // Becomes
 // if ((major != DYN_DEV_MAJOR) && (major != DEV_RTC_MAJOR)) {
