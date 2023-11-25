@@ -5,8 +5,8 @@ This page documents the implementation of a new character device to iSH.  In thi
 
 ```
 // /dev/rtc
-#define DEV_RTC_MAJOR 252
-#define DEV_RTC_MINOR 2 // This must be unique!  Do not duplicate
+#define DEV_RTC_MAJOR 252 // Or make it the same as DYN_DEV_MAJOR.  I prefer that devices correspond as closely as possible to Linux conventions
+#define DEV_RTC_MINOR 2 // This must be unique!  Do not duplicate.
 ```
 
 # Create the device file.  In this case, app/RTCDevice.m
@@ -160,9 +160,9 @@ struct dev_ops *char_devs[256] = {
 }
 ```
 
-# Modify fs/dyndev.c
+# Modify fs/dyndev.c (Or change DEV_RTC_MAJOR to be the same as DYN_DEV_MAJOR)
 ```
-// The dyn_dev_register function needs a small modification to recognize the new RTC Major #
+At this point you have two choices.  If you have set DEV_RTC_MAJOR to be the same as DYN_DEV_MAJOR then ignore this section.  Otherwise the dyn_dev_register function needs a small modification to recognize the new RTC Major #
 // if (major != DYN_DEV_MAJOR) {
 // Becomes
 // if ((major != DYN_DEV_MAJOR) && (major != DEV_RTC_MAJOR)) {
