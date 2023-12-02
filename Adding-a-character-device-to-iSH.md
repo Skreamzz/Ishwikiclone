@@ -24,7 +24,7 @@ index.  As of this writing, the following are in use.
 ```
 
 You could also just use DYN_DEV_MAJOR instead of DEV_RTC_MAJOR.  Assuming 
-you don't then make the following addition...
+you don't, then make the following addition...
 
 ```
 // /dev/rtc
