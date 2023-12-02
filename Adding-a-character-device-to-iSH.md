@@ -59,7 +59,7 @@ typedef struct rtc_time {
 } rtc_time;
 
 // Get the time, put it in the appropriate structure
-static rtc_time *get_current_time(rtc_fd *fd, size_t *len) {
+static rtc_time get_current_time(rtc_fd *fd, size_t *len) {
     // Obtain the current date
     NSDate *currentDate = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -67,26 +67,15 @@ static rtc_time *get_current_time(rtc_fd *fd, size_t *len) {
     // Define the desired date components
     NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:currentDate];
 
-    // Allocate and populate the rtc_time structure
-    rtc_time *timeStruct = malloc(sizeof(rtc_time));
-    if (!timeStruct) {
-        // Handle memory allocation failure
-        *len = 0;
-        return NULL;
-    }
-
     // Populate the structure
     // Note: tm_mon is 0-based (0 for January) and tm_year is years since 1900
-    timeStruct->tm_sec = (int)[components second];
-    timeStruct->tm_min = (int)[components minute];
-    timeStruct->tm_hour = (int)[components hour];
-    timeStruct->tm_mday = (int)[components day];
-    timeStruct->tm_mon = (int)[components month] - 1; // Adjust for tm_mon
-    timeStruct->tm_year = (int)[components year] - 1900; // Adjust for tm_year
-
-    // Update the size
-    *len = sizeof(rtc_time);
-
+    rtc_time timeStruct;
+    timeStruct.tm_sec = (int)[components second];
+    timeStruct.tm_min = (int)[components minute];
+    timeStruct.tm_hour = (int)[components hour];
+    timeStruct.tm_mday = (int)[components day];
+    timeStruct.tm_mon = (int)[components month] - 1; // Adjust for tm_mon
+    timeStruct.tm_year = (int)[components year] - 1900; // Adjust for tm_year
     return timeStruct;
 }
 
@@ -121,15 +110,7 @@ static int rtc_ioctl(struct fd *fd, int cmd, void *arg) {
     @autoreleasepool {
         switch (cmd) {
             case RTC_RD_TIME: { // On a real Linux, there are a number of other possible ioctl()'s.  We don't really need them
-                size_t length = 0;
-                rtc_time *data = get_current_time(fd, &length);
-
-                if (arg == NULL) {
-                    return _EFAULT; // Null pointer argument
-                }
-
-                *(rtc_time *) arg = *data; // This is the magic that gets the value back to the "kernel"
-
+                *(rtc_time *) arg = *get_current_time(fd, &length); // This is the magic that gets the value back to the "kernel"
                 return 0; // Success
             }
             default:
