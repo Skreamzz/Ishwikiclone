@@ -3,13 +3,16 @@ workaround to handle this.
 
 ### Set hostname
 
-echo hostname > /etc/hostname
+Uppercase and dashes work, spaces cant be used
+
+```shell
+echo MyOwnIsh > /etc/hostname
+```
 
 ### Alternate hostname cmd
 
 ```shell
 #!/bin/sh
-
 cat /etc/hostname
 ```
 
