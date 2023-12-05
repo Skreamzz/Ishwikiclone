@@ -22,8 +22,15 @@ Then make it runable like this:
 chmod 755 /path/to/alternate/hostname
 ```
 
-You can soft link the regular /bin/hostname with this, the drawback is that
-next time /bin/hostname is upgraded, your alternate will be replaced.
-The advantage is that there is no risk any script not having /usr/local/bin
+You can soft link the regular /bin/hostname with this
+
+```shell
+rm /bin/hostname
+ln -sf /usr/local/bin/hostname /bin/hostname
+```
+
+The thing to be aware of is that next time /bin/hostname is updated by apk, your alternate will be replaced, so you would then need to repeat thatt step.
+
+The advantage by doing this is that there is no risk any script not having /usr/local/bin
 in PATH will end up displaying "localhost" instead of the intended hostname.
 One such example is shell prompts.
