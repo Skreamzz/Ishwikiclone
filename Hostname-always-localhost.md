@@ -24,16 +24,26 @@ Then make it runable like this:
 ```shell
 chmod 755 /path/to/alternate/hostname
 ```
+This will show the intended hostname if you type hostname. If it doesn't check your PATH
 
-You can soft link the regular /bin/hostname with this
+```shell
+echo $PATH
+```
+
+You want the directory where you saved your alternate hostname to be listed before /bin in your PATH, otherwise, it will not be found
+
+### General tools, such as shell prompts etc
+
+Adding an alternate hostname in /usr/local/bin will have close to no effect on system tools. They will typically not have /usr/local/bin in their PATH and in some cases, they are hardcoded to use /bin/hostname
+
+For this reason, to get everything to use your intended hostname, you need to replace /bin/hostname with yours.
+
+You can either soft link your alternate hostname to that location. That would be the best practice approach since then it is instantly obvious that something custom is being used, and if you change it you only need to do it in one place. But from a usability point of view it works just as well to copy your alternate hostname to that location.
 
 ```shell
 rm /bin/hostname
 ln -sf /usr/local/bin/hostname /bin/hostname
 ```
 
-The thing to be aware of is that next time /bin/hostname is updated by apk, your alternate will be replaced, so you would then need to repeat thatt step.
+The thing to be aware of is that the next time /bin/hostname is updated by apk, your alternate will be replaced, so you will then need to repeat that step.
 
-The advantage by doing this is that there is no risk any script not having /usr/local/bin
-in PATH will end up displaying "localhost" instead of the intended hostname.
-One such example is shell prompts.
