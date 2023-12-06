@@ -58,7 +58,7 @@ text | Simple solution, if you only have iSH installed on one device, this is su
 $(/bin/hostname) | This way you abstract setting the hostname to a separate tool, and nothing in your shell setup is hardcoded to a specific hostname. You can copy your shell env to all your iSH devices and they will display their hostname when the env files are updated to other nodes.<br> This will also work in the future when the default /bin/hostname can report the intended name. So it is Future-proof, and you won't have to change it later on.<br><br> The CPU overhead by running /bin/hostname in a shell vs using the shortcut and getting it directly from the kernel would not have any impact - how many times per second do you normally press Enter?
 
 
-## Other general tools
+## Other general environments
 
 ### POSIX & Bash
 Most general scripts use /bin/hostname, so they would typically show your intended hostname.
