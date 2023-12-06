@@ -30,7 +30,7 @@ chmod 755 /usr/local/bin/hostname
 # Replace the original /bin/hostname with a soft link to your alternate hostname
 #
 mv /bin/hostname /bin/hostname.org
-ln -sf /usr/local/bin/hostname /bin/hostname|
+ln -sf /usr/local/bin/hostname /bin/hostname
 ```
 
 At this point, if you type hostname at the prompt you should get the expected result.
