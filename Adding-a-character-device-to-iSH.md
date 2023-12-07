@@ -110,7 +110,7 @@ static int rtc_ioctl(struct fd *fd, int cmd, void *arg) {
     @autoreleasepool {
         switch (cmd) {
             case RTC_RD_TIME: { // On a real Linux, there are a number of other possible ioctl()'s.  We don't really need them
-                *(rtc_time *) arg = *get_current_time(fd); // This is the magic that gets the value back to the "kernel"
+                *(rtc_time *) arg = get_current_time(fd); // This is the magic that gets the value back to the "kernel"
                 return 0; // Success
             }
             default:
